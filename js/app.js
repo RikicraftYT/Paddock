@@ -41,7 +41,6 @@
   // Campionati che si possono mostrare in "Prossimi" (scelta nelle Impostazioni, tutti attivi all'inizio)
   const UPCOMING_ALL = ['f1', 'motogp', 'moto2', 'moto3', 'sbk'];
   const upcomingSeries = () => UPCOMING_ALL.filter(id => state.upcoming[id] !== false);
-  const UPCOMING_DAYS = 7;
 
   /* ---------------- Stato (le preferenze restano salvate sul telefono) ---------------- */
   const state = {
@@ -179,10 +178,20 @@
     return renderRaces();
   }
 
-  /** Prossimi: sessioni in corso e dei prossimi 7 giorni di tutti i campionati */
+  /** Inizio di oggi e fine della domenica di questa settimana (ora locale) */
+  function thisWeek(now = new Date()) {
+    const start = new Date(now); start.setHours(0, 0, 0, 0);
+    const end = new Date(start); end.setDate(start.getDate() + (7 - start.getDay()) % 7); end.setHours(23, 59, 59, 999);
+    return { start: start.getTime(), end: end.getTime() };
+  }
+
+  /**
+   * Prossimi: le sessioni di questa settimana, da oggi a domenica, di tutti i campionati.
+   * Quelle di oggi restano anche dopo la fine (con il link ai risultati).
+   */
   function renderUpcoming() {
     const now = Date.now();
-    const limit = now + UPCOMING_DAYS * DAY;
+    const week = thisWeek();
     const live = [], items = [], later = [], failed = [];
 
     upcomingSeries().forEach(id => {
@@ -191,13 +200,14 @@
       if (!d) { failed.push(s); return; }
       let found = false;
       d.weekends.forEach((w, wi) => w.sessions.forEach((sess, si) => {
-        if (!isVisible(sess) || sess.end.getTime() <= now || sess.start.getTime() > limit) return;
+        const t0 = sess.start.getTime(), t1 = sess.end.getTime();
+        if (!isVisible(sess) || t0 > week.end || (t1 <= now && t0 < week.start)) return;
         found = true;
         const it = { series: s, weekend: w, session: sess, key: `${id}:${wi}:${si}` };
-        (sess.start.getTime() <= now ? live : items).push(it);
+        (t0 <= now && t1 > now ? live : items).push(it);
       }));
-      // Niente nei 7 giorni: il prossimo weekend; a stagione finita il campionato non compare
-      const next = !found && d.weekends.find(w => w.sessions.some(x => x.start.getTime() > now));
+      // Niente questa settimana: il prossimo weekend; a stagione finita il campionato non compare
+      const next = !found && d.weekends.find(w => w.sessions.some(x => x.start.getTime() > week.end));
       if (next) later.push({ series: s, weekend: next });
     });
 

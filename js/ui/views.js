@@ -79,24 +79,26 @@
 
     /**
      * @param o.live     [{ series, weekend, session, key }]  sessioni in corso
-     * @param o.items    [{ series, weekend, session, key }]  prossimi 7 giorni, in ordine
-     * @param o.later    [{ series, weekend }]  campionati senza sessioni nei 7 giorni, con il prossimo weekend
+     * @param o.items    [{ series, weekend, session, key }]  da oggi a domenica, in ordine (anche le concluse di oggi)
+     * @param o.later    [{ series, weekend }]  campionati senza sessioni questa settimana, con il prossimo weekend
      * @param o.failed   [series]  campionati non caricati
      */
     upcoming(o) {
       const now = new Date();
       const row = it => {
         const s = it.session;
-        const live = U.sessionStatus(s, now) === 'live';
-        const when = live ? 'in corso' : `${U.fmtLong(s.start)}, ore ${U.fmtTime(s.start)}`;
+        const st = U.sessionStatus(s, now);
+        const live = st === 'live', done = st === 'done';
+        const when = live ? 'in corso' : `${U.fmtLong(s.start)}, ore ${U.fmtTime(s.start)}${done ? ', conclusa, apri la classifica' : ''}`;
         return `<li>
-          <button type="button" class="up-row${s.kind === 'race' ? ' is-race' : ''}${live ? ' live' : ''}" data-up="${esc(it.key)}"
+          <button type="button" class="up-row${s.kind === 'race' ? ' is-race' : ''}${live ? ' live' : ''}${done ? ' done' : ''}" data-up="${esc(it.key)}"
             aria-label="${esc(`${it.series.fullName}, ${s.label}, ${it.weekend.name}, ${when}`)}">
             <span class="time" aria-hidden="true">${live ? 'Live' : s.tbc ? 'da def.' : U.fmtTime(s.start)}</span>
             <span class="up-main" aria-hidden="true">
               <span class="up-title">${seriesChip(it.series)}<span class="name">${esc(s.label)}</span></span>
               <span class="up-sub">${esc(it.weekend.name)}</span>
             </span>
+            ${done ? '<span class="done-mark" aria-hidden="true">Risultati</span>' : ''}
             <span class="chev" aria-hidden="true">›</span>
           </button>
         </li>`;
@@ -115,7 +117,7 @@
         </section>`).join('');
 
       const empty = !o.live.length && !o.items.length
-        ? `<div class="card">${this.message('Nessuna sessione nei prossimi 7 giorni', o.later.length ? 'Ecco quando si riparte.' : '')}</div>`
+        ? `<div class="card">${this.message('Nessuna sessione questa settimana', o.later.length ? 'Ecco quando si riparte.' : '')}</div>`
         : '';
 
       const later = o.later.length ? `

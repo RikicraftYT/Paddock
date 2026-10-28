@@ -7,7 +7,7 @@ Pensata per l'iPhone (si installa nella schermata Home), funziona anche su compu
 
 ## Funzioni
 
-- **Prossimi**: le sessioni dei prossimi 7 giorni di tutti i campionati insieme, in ordine di orario.
+- **Prossimi**: le sessioni di questa settimana (da oggi a domenica) di tutti i campionati insieme, in ordine di orario; quelle di oggi restano visibili anche dopo la fine.
 - **Gare**: il weekend in corso o il prossimo, con gli orari nel tuo fuso, la prossima sessione in evidenza e la classifica di ogni sessione. Il calendario della stagione mostra tutti i round con i vincitori.
 - **Mondiale**: piloti, costruttori e (per MotoGP, Moto2, Moto3) squadre, con il distacco dal primo. Il Mondiale costruttori MotoGP è calcolato dal robot come da regolamento: in ogni gara e sprint ogni casa prende i punti del suo pilota meglio piazzato.
 - **Filtro sessioni**: mostra solo prove libere, qualifiche, sprint e/o gare.
