@@ -10,154 +10,154 @@
      "pos": 1,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#D4D7DB",
+     "color": "#54545A",
      "points": 265.5
     },
     {
      "pos": 2,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#1B3C9B",
+     "color": "#173A72",
      "points": 260
     },
     {
      "pos": 3,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - JP Financial - MSI",
-     "color": "#D30027",
+     "color": "#C70026",
      "points": 191.5
     },
     {
      "pos": 4,
      "name": "Daniel Holgado",
      "team": "CFMOTO Power Electronics Aspar Team",
-     "color": "#00A3A3",
+     "color": "#0CA9B3",
      "points": 170
     },
     {
      "pos": 5,
      "name": "David Alonso",
      "team": "CFMOTO Power Electronics Aspar Team",
-     "color": "#00A3A3",
+     "color": "#0CA9B3",
      "points": 166
     },
     {
      "pos": 6,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#D4D7DB",
+     "color": "#54545A",
      "points": 165
     },
     {
      "pos": 7,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#1035A3",
+     "color": "#132EAA",
      "points": 153
     },
     {
      "pos": 8,
      "name": "Celestino Vietti",
      "team": "BETA Tools SpeedRS Team",
-     "color": "#A0A4DA",
+     "color": "#148DBC",
      "points": 133
     },
     {
      "pos": 9,
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#383C3F",
+     "color": "#9EABE2",
      "points": 125.5
     },
     {
      "pos": 10,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#1072BA",
+     "color": "#1B6FA7",
      "points": 83
     },
     {
      "pos": 11,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#5E172B",
+     "color": "#B2BAB9",
      "points": 82.5
     },
     {
      "pos": 12,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#EE5913",
+     "color": "#F35C06",
      "points": 80.5
     },
     {
      "pos": 13,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#72CEAE",
+     "color": "#7CD7BC",
      "points": 63
     },
     {
      "pos": 14,
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#5E172B",
+     "color": "#B2BAB9",
      "points": 60
     },
     {
      "pos": 15,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#C0C5CA",
+     "color": "#622338",
      "points": 47.5
     },
     {
      "pos": 16,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#1035A3",
+     "color": "#132EAA",
      "points": 44
     },
     {
      "pos": 17,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#EE5913",
+     "color": "#F35C06",
      "points": 43
     },
     {
      "pos": 18,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#1072BA",
+     "color": "#1B6FA7",
      "points": 42
     },
     {
      "pos": 19,
      "name": "Luca Lunetta",
      "team": "BETA Tools SpeedRS Team",
-     "color": "#A0A4DA",
+     "color": "#148DBC",
      "points": 27
     },
     {
      "pos": 20,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#ED4E23",
+     "color": "#DE5223",
      "points": 24
     },
     {
      "pos": 21,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#1B3C9B",
+     "color": "#173A72",
      "points": 17.5
     },
     {
      "pos": 22,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#C0C5CA",
+     "color": "#622338",
      "points": 17.5
     },
     {
@@ -171,21 +171,21 @@
      "pos": 24,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#ED4E23",
+     "color": "#DE5223",
      "points": 14
     },
     {
      "pos": 25,
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#383C3F",
+     "color": "#9EABE2",
      "points": 11
     },
     {
      "pos": 26,
      "name": "Angel Piqueras",
      "team": "QJMOTOR - JP Financial - MSI",
-     "color": "#D30027",
+     "color": "#C70026",
      "points": 4
     },
     {
@@ -199,35 +199,35 @@
      "pos": 28,
      "name": "Marcos Ramirez",
      "team": "KLINT Racing Team",
-     "color": "#72CEAE",
+     "color": "#7CD7BC",
      "points": 0
     },
     {
      "pos": 29,
      "name": "Xabi Zurutuza",
      "team": "KLINT Racing Team",
-     "color": "#72CEAE",
+     "color": "#7CD7BC",
      "points": 0
     },
     {
      "pos": 30,
      "name": "Unai Orradre",
      "team": "QJMOTOR - JP Financial - MSI",
-     "color": "#D30027",
+     "color": "#C70026",
      "points": 0
     },
     {
      "pos": 31,
      "name": "Jorge Navarro",
      "team": "REDS Fantic Racing",
-     "color": "#5E172B",
+     "color": "#B2BAB9",
      "points": 0
     },
     {
      "pos": 32,
      "name": "Dennis Foggia",
      "team": "BETA Tools SpeedRS Team",
-     "color": "#A0A4DA",
+     "color": "#148DBC",
      "points": 0
     },
     {
@@ -241,7 +241,7 @@
      "pos": 34,
      "name": "Milan Pawelec",
      "team": "Red Bull KTM Ajo",
-     "color": "#EE5913",
+     "color": "#F35C06",
      "points": 0
     }
    ]
@@ -255,91 +255,91 @@
      "pos": 1,
      "name": "LIQUI MOLY Dynavolt Intact GP",
      "team": "Kalex",
-     "color": "#D4D7DB",
+     "color": "#54545A",
      "points": 430.5
     },
     {
      "pos": 2,
      "name": "CFMOTO Power Electronics Aspar Team",
      "team": "Kalex",
-     "color": "#00A3A3",
+     "color": "#0CA9B3",
      "points": 336
     },
     {
      "pos": 3,
      "name": "BLU CRU Pramac Yamaha Moto2",
      "team": "Boscoscuro",
-     "color": "#1B3C9B",
+     "color": "#173A72",
      "points": 277.5
     },
     {
      "pos": 4,
      "name": "OnlyFans American Racing Team",
      "team": "Kalex",
-     "color": "#1035A3",
+     "color": "#132EAA",
      "points": 197
     },
     {
      "pos": 5,
      "name": "QJMOTOR - JP Financial - MSI",
      "team": "Kalex",
-     "color": "#D30027",
+     "color": "#C70026",
      "points": 195.5
     },
     {
      "pos": 6,
      "name": "BETA Tools SpeedRS Team",
      "team": "Boscoscuro",
-     "color": "#A0A4DA",
+     "color": "#148DBC",
      "points": 160
     },
     {
      "pos": 7,
      "name": "REDS Fantic Racing",
      "team": "Kalex",
-     "color": "#5E172B",
+     "color": "#B2BAB9",
      "points": 142.5
     },
     {
      "pos": 8,
      "name": "ITALJET Gresini Moto2",
      "team": "Kalex",
-     "color": "#383C3F",
+     "color": "#9EABE2",
      "points": 136.5
     },
     {
      "pos": 9,
      "name": "Italtrans Racing Team",
      "team": "Kalex",
-     "color": "#1072BA",
+     "color": "#1B6FA7",
      "points": 125
     },
     {
      "pos": 10,
      "name": "Red Bull KTM Ajo",
      "team": "Kalex",
-     "color": "#EE5913",
+     "color": "#F35C06",
      "points": 123.5
     },
     {
      "pos": 11,
      "name": "ELF Marc VDS Racing Team",
      "team": "Boscoscuro",
-     "color": "#C0C5CA",
+     "color": "#622338",
      "points": 65
     },
     {
      "pos": 12,
      "name": "KLINT Racing Team",
      "team": "Forward",
-     "color": "#72CEAE",
+     "color": "#7CD7BC",
      "points": 63
     },
     {
      "pos": 13,
      "name": "Momoven Idrofoglia RW Racing Team",
      "team": "Kalex",
-     "color": "#ED4E23",
+     "color": "#DE5223",
      "points": 38
     },
     {
@@ -380,5 +380,5 @@
   }
  ],
  "source": "MotoGP.com",
- "updatedAt": "2026-10-28T18:04:47.729Z"
+ "updatedAt": "2026-10-28T19:55:38.009Z"
 }
