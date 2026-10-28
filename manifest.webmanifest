@@ -1,6 +1,6 @@
 {
-  "name": "Paddock",
-  "short_name": "Paddock",
+  "name": "Pitwall",
+  "short_name": "Pitwall",
   "description": "Orari e classifiche di F1, MotoGP e Superbike, senza distrazioni.",
   "start_url": "./",
   "scope": "./",

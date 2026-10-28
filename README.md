@@ -1,4 +1,4 @@
-# Paddock
+# Pitwall
 
 Orari e classifiche di **Formula 1**, **MotoGP** (con Moto2 e Moto3) e **Superbike** in un'unica web app, senza notizie, video o pubblicità.
 Pensata per l'iPhone (si installa nella schermata Home), funziona anche su computer.

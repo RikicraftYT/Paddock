@@ -15,7 +15,8 @@
     moto3:  { ...green, badge: 'outline' },
   };
 
-  Paddock.series.motogp = Paddock.makeRobotSeries({ id: 'motogp', name: 'MotoGP', fullName: 'MotoGP', theme: themes.motogp });
-  Paddock.series.moto2  = Paddock.makeRobotSeries({ id: 'moto2',  name: 'Moto2',  fullName: 'Moto2',  theme: themes.moto2 });
-  Paddock.series.moto3  = Paddock.makeRobotSeries({ id: 'moto3',  name: 'Moto3',  fullName: 'Moto3',  theme: themes.moto3 });
+  // Quanti piloti della Q1 passano in Q2 (evidenziati nella classifica della sessione)
+  Paddock.series.motogp = Paddock.makeRobotSeries({ id: 'motogp', name: 'MotoGP', fullName: 'MotoGP', theme: themes.motogp, advance: { Q1: 2 } });
+  Paddock.series.moto2  = Paddock.makeRobotSeries({ id: 'moto2',  name: 'Moto2',  fullName: 'Moto2',  theme: themes.moto2,  advance: { Q1: 4 } });
+  Paddock.series.moto3  = Paddock.makeRobotSeries({ id: 'moto3',  name: 'Moto3',  fullName: 'Moto3',  theme: themes.moto3,  advance: { Q1: 4 } });
 })();

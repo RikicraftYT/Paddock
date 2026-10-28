@@ -1,4 +1,4 @@
-# Robot dei dati di Paddock
+# Robot dei dati di Pitwall
 # Ogni 15 minuti scarica MotoGP e Superbike e salva i file in data/.
 # Fa un commit solo se qualcosa è cambiato.
 # Si può lanciare anche a mano: scheda "Actions" > "Aggiorna dati" > "Run workflow".

@@ -281,7 +281,7 @@
         announce('Classifica non ancora disponibile');
         return;
       }
-      $res.innerHTML = V.results(rows, source, `Classifica ${session.label}, ${weekend.name}`);
+      $res.innerHTML = V.results(rows, source, `Classifica ${session.label}, ${weekend.name}`, s.advance?.[session.id]);
       announce(`Classifica ${session.label} caricata, ${rows.length} piloti`);
     } catch (err) {
       console.error(err);

@@ -1,5 +1,5 @@
 /* ==========================================================
-   Robot dei dati di Paddock
+   Robot dei dati di Pitwall
    Scarica calendario, classifiche di sessione e classifica mondiale
    di MotoGP, Moto2, Moto3 e Superbike e li salva in data/ nel
    formato che l'app legge.
@@ -73,7 +73,7 @@ async function fetchWithRetry(url, tries = 3) {
     try {
       requests++;
       await sleep(150);                       // gentilezza verso i server
-      const res = await fetch(url, { headers: { 'User-Agent': 'Paddock personal app (GitHub Actions)', Accept: 'application/json' } });
+      const res = await fetch(url, { headers: { 'User-Agent': 'Pitwall personal app (GitHub Actions)', Accept: 'application/json' } });
       if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
       return await res.json();
     } catch (err) {

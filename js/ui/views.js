@@ -294,15 +294,21 @@
         <div id="results">${this.skeleton(8)}</div>`;
     },
 
-    /** Classifica di una sessione */
-    results(rows, source, caption) {
-      const body = rows.map(r => `
-        <tr${Number(r.pos) <= 3 ? ' class="podium"' : ''}>
-          <td class="pos">${esc(r.pos)}</td>
+    /** Classifica di una sessione; `advance` = quanti passano al turno dopo (Q1 → Q2) */
+    results(rows, source, caption, advance = 0) {
+      const body = rows.map(r => {
+        const pos = Number(r.pos);
+        const cls = advance ? (pos <= advance ? 'through' : '') : (pos <= 3 ? 'podium' : '');
+        return `
+        <tr${cls ? ` class="${cls}"` : ''}>
+          <td class="pos">${esc(r.pos)}${cls === 'through' ? '<span class="sr-only">, passa in Q2</span>' : ''}</td>
           <td class="who"${r.color ? ` style="--team:${esc(r.color)}"` : ''}><b>${esc(r.name)}</b><small>${esc(r.team)}</small></td>
           <td class="val${r.out ? ' out' : ''}">${esc(r.value)}</td>
-        </tr>`).join('');
+        </tr>`;
+      }).join('');
+      const note = advance ? `<p class="board-note"><span class="through-key" aria-hidden="true"></span>I primi ${advance} passano in Q2</p>` : '';
       return `
+        ${note}
         <div class="card">
           <table class="board">
             <caption class="sr-only">${esc(caption)}</caption>

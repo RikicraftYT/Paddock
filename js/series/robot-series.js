@@ -12,7 +12,7 @@
   const data = Paddock.api.paddockData;
 
   /**
-   * @param {object} info  { id, name, fullName, theme }
+   * @param {object} info  { id, name, fullName, theme, advance? }
    * @returns un campionato che rispetta il contratto di registry.js
    */
   Paddock.makeRobotSeries = function (info) {

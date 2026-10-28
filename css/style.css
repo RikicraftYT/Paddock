@@ -1,5 +1,5 @@
 /* ==========================================================
-   Paddock — stile
+   Pitwall — stile
    - Tutte le misure in rem: il testo segue la dimensione scelta
      nelle impostazioni dell'iPhone (Dimensione testo / Testo più grande).
    - Tema chiaro e scuro: automatico, oppure scelto nelle impostazioni.
@@ -438,6 +438,13 @@ h1:focus, h2:focus { outline: none; }
 .board .val, .board .pts { width: 7rem; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .board td.val { font-size: .95rem; }
 .board .val.out { color: var(--muted); }
+/* Q1: chi passa in Q2 ha la riga in negativo (bianca in tema scuro, nera in tema chiaro) */
+.board .through td { background: var(--text); color: var(--bg); }
+.board .through + .through td { border-top-color: color-mix(in srgb, var(--bg) 15%, var(--text)); }
+.board .through .pos, .board .through .who small { color: color-mix(in srgb, var(--bg) 72%, var(--text)); }
+.board .through .pos { color: var(--bg); font-weight: 800; }
+.board-note { display: flex; align-items: center; gap: .5rem; margin: 0 0 var(--s3); color: var(--muted); font-size: .85rem; }
+.through-key { width: .9rem; height: .9rem; border-radius: 3px; background: var(--text); }
 .board .pts { font-weight: 700; }
 .board .gap { display: block; font-weight: 500; color: var(--muted); font-size: .8rem; }
 
