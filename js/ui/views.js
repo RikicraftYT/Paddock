@@ -141,7 +141,7 @@
           <h1 id="page-title" tabindex="-1">Prossimi</h1>
           <p>${esc(fmtDayHead(now))}</p>
         </div>
-        <div class="narrow">${live}${days}${empty}${later}${failed}</div>`;
+        <div class="up-grid">${live}${days}${empty}${later}${failed}</div>`;
     },
 
     /* ---------------- Calendario del weekend ---------------- */
