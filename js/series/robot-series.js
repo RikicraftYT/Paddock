@@ -46,8 +46,10 @@
     }
 
     async function getResults(season, weekend, session) {
+      // Anche le classifiche vecchie possono cambiare (colori, correzioni del robot):
+      // dopo 10 minuti si richiede il file; se non è cambiato il sito risponde subito senza riscaricarlo
       const settled = Date.now() - session.end.getTime() > DAY;
-      const file = await data.weekend(info.id, weekend.id, settled ? DAY : 2 * MIN);
+      const file = await data.weekend(info.id, weekend.id, settled ? 10 * MIN : 2 * MIN);
       const entry = file?.sessions?.[session.id];
       return { rows: entry?.rows || [], source: entry?.source || null };
     }
