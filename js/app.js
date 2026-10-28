@@ -100,13 +100,13 @@
     if (state.theme === 'light' || state.theme === 'dark') root.dataset.theme = state.theme;
     else delete root.dataset.theme;
 
-    // In "Prossimi" ci sono tutti i campionati: colori neutri (quelli di style.css)
+    // L'interfaccia resta neutra: il colore del campionato serve solo a pochi segni
+    // (pallino del logo, bordo della prossima sessione). In "Prossimi" non c'è un campionato solo.
     const t = state.view === 'upcoming' ? null : series().theme;
     const set = (k, v) => (v ? root.style.setProperty(k, v) : root.style.removeProperty(k));
-    set('--accent', t?.accent);
-    set('--on-accent', t?.onAccent);
-    set('--accent-text-dark', t?.textDark);
-    set('--accent-text-light', t?.textLight);
+    set('--series', t?.accent);
+    set('--series-text-dark', t?.textDark);
+    set('--series-text-light', t?.textLight);
   }
 
   /* ---------------- Barra superiore ---------------- */
@@ -114,11 +114,11 @@
     $views.innerHTML = V.seg(VIEWS, state.view, 'view');
 
     $seriesBar.hidden = state.view === 'upcoming';
-    $tabs.innerHTML = V.seg(Paddock.groups.map(g => ({ id: g.id, label: g.label })), state.groupId, 'group');
+    $tabs.innerHTML = V.seg(Paddock.groups.map(g => ({ id: g.id, label: g.label, theme: { ...Paddock.series[g.series[0]].theme, badge: 'solid' } })), state.groupId, 'group');
     const g = group();
     $classes.hidden = g.series.length < 2;
     if (g.series.length > 1) {
-      $classes.innerHTML = V.seg(g.series.map(id => ({ id, label: Paddock.series[id].name })), seriesId(), 'class');
+      $classes.innerHTML = V.seg(g.series.map(id => ({ id, label: Paddock.series[id].name, theme: Paddock.series[id].theme })), seriesId(), 'class');
     }
     applyTheme();
   }
@@ -225,7 +225,7 @@
 
     // Telefono con una sessione aperta: solo la classifica
     if (!isWide() && chosen !== null) {
-      $app.innerHTML = `<div class="pane-detail">${V.sessionShell(w, w.sessions[chosen], series().fullName, 1)}</div>`;
+      $app.innerHTML = `<div class="pane-detail">${V.sessionShell(w, w.sessions[chosen], series(), 1)}</div>`;
       loadResults(w, w.sessions[chosen]);
       return;
     }
@@ -248,7 +248,7 @@
 
     const detail = detailIdx === null
       ? V.message('Nessuna sessione', 'Il filtro nasconde tutte le sessioni.')
-      : V.sessionShell(w, w.sessions[detailIdx], series().fullName);
+      : V.sessionShell(w, w.sessions[detailIdx], series());
     $app.innerHTML = `
       <div class="layout">
         <div class="pane-weekend">${weekendHtml}</div>
@@ -302,7 +302,7 @@
     }
     const active = st.tables.some(t => t.id === state.standingsTab[id]) ? state.standingsTab[id] : st.tables[0].id;
     $app.innerHTML = V.standings({
-      seriesName: series().fullName,
+      series: series(),
       season: current()?.season || '',
       tables: st.tables,
       source: st.source,

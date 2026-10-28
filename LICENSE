@@ -26,3 +26,5 @@ the contents of the data/ folder, which are downloaded from third-party services
 and remain the property of their respective owners (see README.md).
 The flags in assets/flags/ come from flag-icons (https://github.com/lipis/flag-icons),
 MIT License, Copyright (c) 2013 Panayiotis Lipiridis.
+The Inter font in assets/fonts/ (https://github.com/rsms/inter) is licensed under
+the SIL Open Font License 1.1, Copyright 2016 The Inter Project Authors (see assets/fonts/OFL.txt).

@@ -7,11 +7,14 @@
 
    Ogni campionato (Paddock.series[id]) è un oggetto con:
      id, name, fullName
-     theme       { accent, onAccent, textDark, textLight }
-                 accent    = sfondo del pulsante attivo
+     theme       { accent, onAccent, textDark, textLight, badge }
+                 Colori usati solo per riconoscere il campionato (etichette, pallini):
+                 l'interfaccia resta neutra.
+                 accent    = sfondo dell'etichetta piena
                  onAccent  = testo sopra accent
-                 textDark  = accento come testo su sfondo scuro
-                 textLight = accento come testo su sfondo chiaro
+                 textDark  = colore come testo su sfondo scuro
+                 textLight = colore come testo su sfondo chiaro
+                 badge     = 'solid' | 'tint' | 'outline' (stile dell'etichetta)
 
      getCalendar() -> Promise<{
        season: '2026', updatedAt?: Date,

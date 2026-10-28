@@ -5,9 +5,19 @@
    - Tema chiaro e scuro: automatico, oppure scelto nelle impostazioni.
    - Colori verificati per contrasto minimo 4,5:1 (WCAG AA).
    - Da 960 px in su (computer, iPad orizzontale) layout a due colonne.
-   I colori del campionato (--accent, --on-accent, --accent-text) li
-   imposta js/app.js; in "Prossimi" restano quelli neutri qui sotto.
+   - Interfaccia neutra: il colore dei campionati compare solo nelle
+     etichette (.badge-series) e in pochi segni (--series, impostato da js/app.js).
+   - Font: Inter (licenza SIL OFL, file in assets/fonts), ospitato qui:
+     nessun collegamento a servizi esterni.
    ========================================================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ---------- Colori: tema scuro (predefinito) ---------- */
 :root {
@@ -18,11 +28,13 @@
   --line: #2a2a2f;
   --text: #f4f4f6;
   --muted: #a1a1aa;
-  --live: #3ddc84;
+  --live: #f87171;            /* "in corso": rosso, distinto dal verde della MotoGP */
 
-  --accent: #f4f4f6;          /* sfondo degli elementi attivi */
+  --accent: #f4f4f6;          /* sfondo degli elementi attivi (neutro) */
   --on-accent: #0b0b0d;       /* testo sopra --accent */
-  --accent-text: var(--accent-text-dark, var(--text));   /* accento usato come colore del testo */
+  --accent-text: var(--text);
+  --series: var(--text);      /* colore del campionato aperto (js/app.js) */
+  --series-text: var(--series-text-dark, var(--text));
 
   /* Spaziatura e forme */
   --s1: .25rem; --s2: .5rem; --s3: .75rem; --s4: 1rem; --s5: 1.5rem; --s6: 2rem;
@@ -42,10 +54,10 @@
   --line: #e3e3e8;
   --text: #111114;
   --muted: #5f5f69;
-  --live: #087236;
+  --live: #b91c1c;
   --accent: #111114;
   --on-accent: #ffffff;
-  --accent-text: var(--accent-text-light, var(--text));
+  --series-text: var(--series-text-light, var(--text));
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -56,10 +68,10 @@
     --line: #e3e3e8;
     --text: #111114;
     --muted: #5f5f69;
-    --live: #087236;
+    --live: #b91c1c;
     --accent: #111114;
     --on-accent: #ffffff;
-    --accent-text: var(--accent-text-light, var(--text));
+    --series-text: var(--series-text-light, var(--text));
   }
 }
 
@@ -81,7 +93,8 @@ body {
   padding: env(safe-area-inset-top) max(var(--gutter), env(safe-area-inset-right)) calc(var(--s6) + env(safe-area-inset-bottom)) max(var(--gutter), env(safe-area-inset-left));
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-feature-settings: "cv11", "ss01";      /* Inter: "a" a un piano e cifre più leggibili */
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
@@ -110,7 +123,7 @@ h1:focus, h2:focus { outline: none; }
 .topbar-row { display: flex; align-items: center; gap: var(--s3); }
 
 .brand { display: inline-flex; align-items: center; gap: var(--s2); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
-.brand-dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--accent-text); }
+.brand-dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--series-text); }
 
 .actions { display: flex; gap: var(--s1); margin-left: auto; }
 .icon-btn {
@@ -158,6 +171,16 @@ h1:focus, h2:focus { outline: none; }
 .chips button::after { content: ""; position: absolute; inset: -4px 0; }   /* area di tocco di 44 px */
 .chips button:hover { color: var(--text); }
 .chips button[aria-pressed="true"] { background: var(--surface-2); border-color: transparent; color: var(--text); }
+/* Classe attiva: stesso stile della sua etichetta (piena, tenue, solo bordo) */
+.chips button.has-series[aria-pressed="true"].is-solid { background: var(--c); color: var(--oc); }
+.chips button.has-series[aria-pressed="true"].is-tint { background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--ct); }
+.chips button.has-series[aria-pressed="true"].is-outline { background: none; border: 2px solid var(--ct); color: var(--ct); }
+
+/* Campionato nel selettore: pallino nel suo colore */
+.seg button.has-series::before {
+  content: ""; width: .5rem; height: .5rem; border-radius: 50%; flex: none;
+  background: var(--c); box-shadow: 0 0 0 1px rgba(128, 128, 128, .35);
+}
 
 /* Sezioni: in alto sul computer, barra in basso sul telefono */
 .tabbar { display: flex; gap: var(--s1); }
@@ -183,7 +206,8 @@ h1:focus, h2:focus { outline: none; }
   .tabbar button { flex: 1; flex-direction: column; justify-content: center; gap: .15rem; min-height: 3.25rem; font-size: .75rem; }
   .tabbar button svg { width: 1.45rem; height: 1.45rem; }
   .tabbar button:hover, .tabbar button[aria-pressed="true"] { background: none; }
-  .tabbar button[aria-pressed="true"] { color: var(--accent-text); }
+  .tabbar button[aria-pressed="true"] { color: var(--text); font-weight: 800; }
+  .tabbar button[aria-pressed="true"] svg { stroke-width: 2.5; }
   body { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
 }
 @media (min-width: 960px) { .tabbar { margin-left: var(--s4); } }
@@ -255,11 +279,22 @@ h1:focus, h2:focus { outline: none; }
 .up-row.is-race .name { font-weight: 800; }
 .up-sub { color: var(--muted); font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.chip-series {
-  flex: none;
-  padding: .1rem .45rem; border-radius: 6px;
-  font-size: .7rem; font-weight: 800; letter-spacing: .02em;
-  background: var(--c); color: var(--oc);
+/* Etichetta del campionato: l'unico posto in cui il suo colore si vede pieno.
+   --ct = colore come testo, diverso in tema chiaro e scuro (contrasto ≥ 4,5:1). */
+.badge-series {
+  --ct: var(--ctd);
+  flex: none; display: inline-block;
+  min-width: 3.6rem; padding: .12rem .45rem; border-radius: 6px;
+  border: 1.5px solid transparent;
+  font-size: .7rem; font-weight: 800; letter-spacing: .02em; text-align: center; line-height: 1.3;
+}
+.badge-series.is-solid { background: var(--c); color: var(--oc); }
+.badge-series.is-tint { background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--ct); }
+.badge-series.is-outline { border-color: var(--ct); color: var(--ct); }
+.chips button.has-series { --ct: var(--ctd); }
+:root[data-theme="light"] .badge-series, :root[data-theme="light"] .chips button.has-series { --ct: var(--ctl); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .badge-series, :root:not([data-theme="dark"]) .chips button.has-series { --ct: var(--ctl); }
 }
 
 /* ---------- Navigazione tra weekend ---------- */
@@ -309,9 +344,9 @@ h1:focus, h2:focus { outline: none; }
   margin-bottom: var(--s5); padding: var(--s4);
   border-radius: var(--radius-lg);
   background: var(--surface);
-  box-shadow: inset 4px 0 0 var(--accent);
+  box-shadow: inset 4px 0 0 var(--series);
 }
-.next-up .next-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+.next-up .next-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 .next-up .next-main { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s3); }
 .next-up b { font-size: 1.3rem; }
 .next-up .count { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -371,7 +406,8 @@ h1:focus, h2:focus { outline: none; }
 .detail-head { margin: var(--s1) 0 var(--s4); }
 .detail-head h1, .detail-head h2 { font-size: 1.75rem; font-weight: 800; line-height: 1.15; }
 .detail-head p { margin: var(--s1) 0 0; color: var(--muted); font-size: .95rem; }
-.detail-head .eyebrow { margin: 0 0 var(--s1); color: var(--accent-text); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.detail-head .eyebrow, .page-sub { display: flex; align-items: center; gap: var(--s2); }
+.detail-head .eyebrow { margin: 0 0 var(--s2); color: var(--muted); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
 @media (min-width: 960px) { .detail-head { margin-top: var(--s4); } }
 
 /* ---------- Tabelle (classifiche) ---------- */
@@ -394,7 +430,7 @@ h1:focus, h2:focus { outline: none; }
 .board .who { position: relative; padding-left: 1.6rem; }
 .board .who::before {                                   /* barra colore squadra */
   content: ""; position: absolute; left: .75rem; top: .6rem; bottom: .6rem;
-  width: 4px; border-radius: 2px; background: var(--team, var(--line));
+  width: 5px; border-radius: 3px; background: var(--team, var(--line));
   box-shadow: inset 0 0 0 1px rgba(128, 128, 128, .35);   /* si vedono anche bianco e nero */
 }
 .board .who b { display: block; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -506,7 +542,7 @@ legend { font-weight: 700; margin-bottom: var(--s2); padding: 0; }
 .season-sub { color: var(--muted); font-size: .85rem; }
 .season-row.done .name { font-weight: 500; }
 .season-row.is-current .name { font-weight: 800; }
-.season-row.is-current .season-round { color: var(--accent-text); }
+.season-row.is-current .season-round { color: var(--text); }
 
 /* ---------- Footer: note su dati, privacy e licenze ---------- */
 .site-footer {

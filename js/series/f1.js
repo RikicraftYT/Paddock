@@ -226,7 +226,7 @@
     name: 'F1',
     fullName: 'Formula 1',
     // Giallo con testo scuro sopra: il bianco sul giallo non si legge
-    theme: { accent: '#f5c400', onAccent: '#1a1400', textDark: '#fcd34d', textLight: '#7a5c00' },
+    theme: { accent: '#f5c400', onAccent: '#1a1400', textDark: '#fcd34d', textLight: '#7a5c00', badge: 'solid' },
     getCalendar,
     getResults,
     getStandings,

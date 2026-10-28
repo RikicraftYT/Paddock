@@ -35,9 +35,13 @@
     return days;
   }
 
-  /** Chip con il nome del campionato, nei suoi colori */
-  const seriesChip = s =>
-    `<span class="chip-series" style="--c:${esc(s.theme.accent)};--oc:${esc(s.theme.onAccent)}">${esc(s.name)}</span>`;
+  /** Colori del campionato come variabili CSS (vedi .badge-series in style.css) */
+  const seriesVars = t =>
+    `--c:${esc(t.accent)};--oc:${esc(t.onAccent)};--ctd:${esc(t.textDark)};--ctl:${esc(t.textLight)}`;
+
+  /** Etichetta del campionato: piena, tenue o solo bordo secondo il tema */
+  const seriesBadge = s =>
+    `<span class="badge-series is-${esc(s.theme.badge || 'solid')}" style="${seriesVars(s.theme)}">${esc(s.name)}</span>`;
 
   Paddock.ui.views = {
     /**
@@ -59,11 +63,15 @@
       </div>`;
     },
 
-    /** Gruppo di pulsanti a scelta singola. items = [{ id, label, icon? }] */
+    /**
+     * Gruppo di pulsanti a scelta singola. items = [{ id, label, icon?, theme? }]
+     * Con theme il pulsante mostra il colore del campionato (pallino o stile dell'etichetta).
+     */
     seg(items, currentId, attr) {
-      return items.map(it =>
-        `<button type="button" data-${attr}="${esc(it.id)}" aria-pressed="${it.id === currentId}">${it.icon || ''}<span>${esc(it.label)}</span></button>`
-      ).join('');
+      return items.map(it => {
+        const series = it.theme ? ` class="has-series is-${esc(it.theme.badge || 'solid')}" style="${seriesVars(it.theme)}"` : '';
+        return `<button type="button"${series} data-${attr}="${esc(it.id)}" aria-pressed="${it.id === currentId}">${it.icon || ''}<span>${esc(it.label)}</span></button>`;
+      }).join('');
     },
 
     /** "Dati: Jolpica · aggiornati alle 17:42" */
@@ -95,7 +103,7 @@
             aria-label="${esc(`${it.series.fullName}, ${s.label}, ${it.weekend.name}, ${when}`)}">
             <span class="time" aria-hidden="true">${live ? 'Live' : s.tbc ? 'da def.' : U.fmtTime(s.start)}</span>
             <span class="up-main" aria-hidden="true">
-              <span class="up-title">${seriesChip(it.series)}<span class="name">${esc(s.label)}</span></span>
+              <span class="up-title">${seriesBadge(it.series)}<span class="name">${esc(s.label)}</span></span>
               <span class="up-sub">${esc(it.weekend.name)}</span>
             </span>
             ${done ? '<span class="done-mark" aria-hidden="true">Risultati</span>' : ''}
@@ -125,7 +133,7 @@
           <h2 class="group-head" id="up-later">Più avanti</h2>
           <ul class="list card">${o.later.map(l => `
             <li><div class="later-row">
-              ${seriesChip(l.series)}
+              ${seriesBadge(l.series)}
               <span class="up-main">
                 <span class="name">${esc(l.weekend.name)}</span><span class="up-sub">${esc(U.dateRange(l.weekend))}</span>
               </span>
@@ -274,12 +282,12 @@
     /* ---------------- Dettaglio sessione ---------------- */
 
     /** Intestazione della sessione; la classifica arriva dopo in #results */
-    sessionShell(weekend, session, seriesName, level = 2) {
+    sessionShell(weekend, session, series, level = 2) {
       const h = level === 1 ? 'h1' : 'h2';
       return `
         <button type="button" class="back" data-back aria-label="${esc(`Indietro, torna a ${weekend.name}`)}"><span aria-hidden="true">‹</span> Indietro</button>
         <div class="detail-head">
-          <p class="eyebrow">${esc(seriesName)} · ${esc(KIND_IT[session.kind] || '')}</p>
+          <p class="eyebrow">${seriesBadge(series)}<span>${esc(KIND_IT[session.kind] || '')}</span></p>
           <${h} id="detail-title" tabindex="-1">${esc(session.label)}</${h}>
           <p>${U.fmtLong(session.start)}${session.tbc ? '' : ' · ' + U.fmtTime(session.start)}</p>
         </div>
@@ -307,7 +315,7 @@
 
     /* ---------------- Classifica mondiale ---------------- */
 
-    standings({ seriesName, season, tables, source, updatedAt, active }) {
+    standings({ series, season, tables, source, updatedAt, active }) {
       const tabs = tables.length > 1
         ? `<div class="seg seg-sub standings-tabs" role="group" aria-label="Tipo di classifica">
              ${this.seg(tables.map(t => ({ id: t.id, label: t.label })), active, 'table')}
@@ -340,8 +348,8 @@
 
       return `
         <div class="page-head">
-          <h1 id="page-title" tabindex="-1">Mondiale ${esc(seriesName)}</h1>
-          <p>Stagione ${esc(season)}</p>
+          <h1 id="page-title" tabindex="-1">Mondiale ${esc(series.fullName)}</h1>
+          <p class="page-sub">${seriesBadge(series)}<span>Stagione ${esc(season)}</span></p>
         </div>
         ${tabs}
         <div class="tables">${sections}</div>

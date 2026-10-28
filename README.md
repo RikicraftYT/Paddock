@@ -60,6 +60,7 @@ node scripts/update-data.mjs
 
 Il codice è distribuito con licenza [MIT](LICENSE).
 Le bandiere in `assets/flags/` vengono da [flag-icons](https://github.com/lipis/flag-icons) (licenza MIT, © Panayiotis Lipiridis).
+Il font [Inter](https://github.com/rsms/inter) in `assets/fonts/` è distribuito con licenza SIL Open Font License 1.1 (testo in `assets/fonts/OFL.txt`).
 
 La licenza **non copre i dati** in `data/` né quelli mostrati dall'app: appartengono ai rispettivi proprietari
 (Formula One Group, Dorna Sports, WorldSBK) e alle fonti indicate sopra. Sono usati solo a scopo personale e non commerciale.

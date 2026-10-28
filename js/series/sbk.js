@@ -10,5 +10,5 @@ Paddock.series.sbk = Paddock.makeRobotSeries({
   id: 'sbk',
   name: 'SBK',
   fullName: 'Superbike',
-  theme: { accent: '#7c4a1e', onAccent: '#ffffff', textDark: '#d4a373', textLight: '#7c4a1e' },
+  theme: { accent: '#8b5a2b', onAccent: '#ffffff', textDark: '#d4a373', textLight: '#7c4a1e', badge: 'solid' },
 });
