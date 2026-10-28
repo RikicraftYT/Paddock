@@ -194,7 +194,9 @@
         const it = { series: s, weekend: w, session: sess, key: `${id}:${wi}:${si}` };
         (sess.start.getTime() <= now ? live : items).push(it);
       }));
-      if (!found) later.push({ series: s, weekend: d.weekends.find(w => w.sessions.some(x => x.start.getTime() > now)) || null });
+      // Niente nei 7 giorni: il prossimo weekend; a stagione finita il campionato non compare
+      const next = !found && d.weekends.find(w => w.sessions.some(x => x.start.getTime() > now));
+      if (next) later.push({ series: s, weekend: next });
     });
 
     items.sort((a, b) => a.session.start - b.session.start);

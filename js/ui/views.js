@@ -80,7 +80,7 @@
     /**
      * @param o.live     [{ series, weekend, session, key }]  sessioni in corso
      * @param o.items    [{ series, weekend, session, key }]  prossimi 7 giorni, in ordine
-     * @param o.later    [{ series, weekend }]  campionati senza sessioni nei 7 giorni (weekend = prossimo o null)
+     * @param o.later    [{ series, weekend }]  campionati senza sessioni nei 7 giorni, con il prossimo weekend
      * @param o.failed   [series]  campionati non caricati
      */
     upcoming(o) {
@@ -115,7 +115,7 @@
         </section>`).join('');
 
       const empty = !o.live.length && !o.items.length
-        ? `<div class="card">${this.message('Nessuna sessione nei prossimi 7 giorni', o.failed.length ? '' : 'Ecco quando si riparte.')}</div>`
+        ? `<div class="card">${this.message('Nessuna sessione nei prossimi 7 giorni', o.later.length ? 'Ecco quando si riparte.' : '')}</div>`
         : '';
 
       const later = o.later.length ? `
@@ -125,9 +125,7 @@
             <li><div class="later-row">
               ${seriesChip(l.series)}
               <span class="up-main">
-                ${l.weekend
-                  ? `<span class="name">${esc(l.weekend.name)}</span><span class="up-sub">${esc(U.dateRange(l.weekend))}</span>`
-                  : `<span class="name">Stagione conclusa</span>`}
+                <span class="name">${esc(l.weekend.name)}</span><span class="up-sub">${esc(U.dateRange(l.weekend))}</span>
               </span>
             </div></li>`).join('')}
           </ul>
