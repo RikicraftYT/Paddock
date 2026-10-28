@@ -1,103 +1,65 @@
 # Paddock
 
-Web app personale con orari e classifiche di **Formula 1**, **MotoGP** e **Superbike**, senza notizie, video e distrazioni.
-È completamente gratuita: GitHub Pages ospita l'app, GitHub Actions fa girare il robot dei dati, nessuna chiave API.
+Orari e classifiche di **Formula 1**, **MotoGP** (con Moto2 e Moto3) e **Superbike** in un'unica web app, senza notizie, video o pubblicità.
+Pensata per l'iPhone (si installa nella schermata Home), funziona anche su computer.
+
+> App personale e **non ufficiale**: non ha legami con Formula 1, FIA, Dorna Sports, MotoGP o WorldSBK.
 
 ## Funzioni
 
-- **Gare**: weekend in corso o prossimo, orari nel fuso del telefono, prossima sessione in evidenza, classifica di ogni sessione.
-- **Mondiale**: classifica piloti + costruttori (F1, SBK) o squadre (MotoGP, Moto2, Moto3).
-- **Filtro sessioni** (icona impostazioni): mostra solo prove libere, qualifiche, sprint e/o gare.
-- **Tema** chiaro, scuro o automatico come l'iPhone.
-- **Computer e iPad orizzontale**: sessioni a sinistra e classifica a destra; mondiale con le tabelle affiancate.
-- **Accessibilità**: contrasti AA (verificati con axe-core), testo che segue "Dimensione testo" dell'iPhone,
-  aree di tocco di 44 px, etichette e annunci per VoiceOver, rispetto di "Riduci movimento".
+- **Gare**: il weekend in corso o il prossimo, con gli orari nel tuo fuso, la prossima sessione in evidenza e la classifica di ogni sessione.
+- **Mondiale**: classifica piloti e costruttori o squadre.
+- **Filtro sessioni**: mostra solo prove libere, qualifiche, sprint e/o gare.
+- **Tema** chiaro, scuro o automatico.
+- **Accessibile**: buoni contrasti, testo che segue le impostazioni del telefono, supporto a VoiceOver.
 
-## Stato
+## Come funziona
 
-| Campionato | Calendario | Classifiche sessione | Mondiale | Fonte dati | Come arrivano |
-|---|---|---|---|---|---|
-| Formula 1 | ✅ | ✅ tutte | Piloti, Costruttori | Jolpica + OpenF1 | L'app li scarica direttamente |
-| MotoGP / Moto2 / Moto3 | ✅ | ✅ tutte | Piloti, Squadre* | Servizi di motogp.com | Robot ogni 15 minuti |
-| Superbike | ✅ | ✅ tutte | Piloti, Costruttori | Servizi di worldsbk.com | Robot ogni 15 minuti |
+| Campionato | Fonte dati | Come arrivano |
+|---|---|---|
+| Formula 1 | [Jolpica](https://github.com/jolpica/jolpica-f1) e [OpenF1](https://openf1.org) | L'app li scarica direttamente |
+| MotoGP, Moto2, Moto3 | Servizi di motogp.com | Robot su GitHub Actions ogni 15 minuti → `data/` |
+| Superbike | Servizi di worldsbk.com | Robot su GitHub Actions ogni 15 minuti → `data/` |
 
-\* Il servizio MotoGP non fornisce la classifica costruttori. Quella a squadre è calcolata dal robot
-sommando i punti dei piloti di ogni squadra, come prevede il regolamento; un pilota che ha cambiato
-squadra a metà stagione viene contato tutto nella squadra attuale.
+I siti MotoGP e WorldSBK non permettono al browser di leggere i loro dati da un altro sito (CORS), quindi un robot
+([`scripts/update-data.mjs`](scripts/update-data.mjs)) li scarica e li salva nella cartella `data/` del repository.
+L'app li legge come file del proprio sito.
 
-## Struttura
+Nessuna dipendenza, nessun build: HTML, CSS e JavaScript semplici.
 
 ```
-paddock/
-├── index.html                  Pagina unica: carica CSS e script
-├── manifest.webmanifest        Nome e icona quando è installata sul telefono
-├── css/style.css               Tutta la grafica (colori in :root)
-├── assets/                     Icone
-├── js/                         L'APP (gira sul telefono)
-│   ├── core/
-│   │   ├── config.js           Indirizzi API e impostazioni
-│   │   ├── utils.js            Date, tempi, bandiere, nomi paesi
-│   │   └── cache.js            Scaricamento con cache sul telefono
-│   ├── api/
-│   │   ├── jolpica.js          F1: calendario, qualifiche, sprint, gara
-│   │   ├── openf1.js           F1: classifiche di tutte le sessioni
-│   │   └── paddock-data.js     MotoGP e SBK: legge i file del robot in data/
-│   ├── series/
-│   │   ├── registry.js         Gruppi (F1 · MotoGP · SBK) + "contratto" dei campionati
-│   │   ├── f1.js               Formula 1
-│   │   ├── robot-series.js     Stampo comune per i campionati del robot
-│   │   ├── motogp.js           MotoGP, Moto2, Moto3
-│   │   └── sbk.js              Superbike
-│   ├── ui/views.js             Le schermate (uguali per tutti i campionati)
-│   └── app.js                  Avvio, stato e navigazione
-├── scripts/                    IL ROBOT (gira su GitHub, non sul telefono)
-│   ├── update-data.mjs         Programma principale
-│   ├── sources/motogp.mjs      Come leggere i dati MotoGP, Moto2, Moto3
-│   ├── sources/sbk.mjs         Come leggere i dati Superbike
-│   └── lib/format.mjs          Tempi, distacchi, paesi, colori costruttori
-├── .github/workflows/
-│   └── update-data.yml         Fa partire il robot ogni 15 minuti
-└── data/                       Creata dal robot: calendari e classifiche
-    └── <motogp|moto2|moto3|sbk>/
-        ├── calendar.json       Weekend e orari (+ calendar.js per il doppio clic)
-        ├── <weekend>.json      Classifiche delle sessioni
-        └── standings.json      Classifica mondiale
+index.html            Pagina unica
+css/style.css         Grafica
+js/core/              Configurazione, utilità, cache
+js/api/               Client dei servizi dati
+js/series/            Un file per campionato
+js/ui/views.js        Schermate
+js/app.js             Avvio e navigazione
+scripts/              Il robot (Node 18+)
+data/                 Creata dal robot, non modificarla a mano
 ```
 
-**Come scorrono i dati**
+## Usarla in locale
 
-- **F1:** il telefono chiede i dati a Jolpica e OpenF1 (`js/api/`), `js/series/f1.js` li trasforma e `js/ui/views.js` li disegna.
-- **MotoGP e SBK:** il robot su GitHub scarica i dati (`scripts/sources/`) e li salva in `data/`. Il telefono legge quei file (`js/api/paddock-data.js`) e li disegna con le stesse schermate.
+Doppio clic su `index.html`. La F1 funziona subito; per MotoGP e SBK serve la cartella `data/`, che arriva con `git pull`.
 
-Perché il robot? I servizi di MotoGP non permettono a un'app di un altro sito di leggere le classifiche dal browser (CORS); il robot gira su un server e non ha questo limite.
+Il robot si può lanciare anche dal computer con Node 18 o più recente:
 
-## Metterla online (gratis, con GitHub)
+```bash
+node scripts/update-data.mjs
+```
 
-1. Crea un account gratuito su [github.com](https://github.com).
-2. Crea un nuovo repository **pubblico**, ad esempio `paddock`.
-3. **Add file → Upload files**: trascina *il contenuto* della cartella, così `index.html` sta nella radice.
-   ⚠️ Su Mac e Windows la cartella `.github` è nascosta e spesso non viene caricata. Controlla che compaia nel repository; se manca, vai su **Add file → Create new file**, scrivi come nome `.github/workflows/update-data.yml` e incolla il contenuto del file.
-4. **Settings → Actions → General → Workflow permissions** → scegli **Read and write permissions** → Save. Serve al robot per salvare i dati.
-5. **Settings → Pages** → Source: *Deploy from a branch*, branch `main`, cartella `/ (root)` → Save.
-6. Primo avvio del robot: scheda **Actions** → **Aggiorna dati** → **Run workflow**. In 1–2 minuti compare la cartella `data/` con tutta la stagione. Da lì in poi parte da solo ogni 15 minuti.
-7. L'app è su `https://<tuonome>.github.io/paddock/`. Aprila con **Safari** sull'iPhone → **Condividi** → **Aggiungi alla schermata Home**.
+## Note
 
-## Provarla sul computer
+- Il robot fa un commit solo quando i dati cambiano. Prima di fare push delle tue modifiche, esegui `git pull --rebase`.
+- GitHub sospende i workflow programmati dopo 60 giorni senza attività (succede nella pausa invernale): per riattivarlo vai su **Actions → Aggiorna dati → Enable workflow**.
+- I servizi di MotoGP e WorldSBK non sono API pubbliche documentate e possono cambiare senza preavviso: in quel caso va aggiornato solo `scripts/sources/`.
 
-Doppio clic su `index.html`: la F1 funziona subito. Per MotoGP e SBK serve la cartella `data/`, che crea il robot su GitHub: scaricala dal repository e mettila accanto a `index.html`.
-Aperta con doppio clic il browser blocca la lettura dei `.json` (`file://` non è un sito), quindi l'app legge i gemelli `.js` che il robot scrive accanto a ogni file.
-In alternativa, in `js/core/config.js` metti in `dataBase` l'indirizzo del tuo sito (es. `'https://tuonome.github.io/paddock/'`).
+## Licenza e dati
 
-Il robot si può lanciare anche dal computer con Node 18+: `node scripts/update-data.mjs`.
+Il codice è distribuito con licenza [MIT](LICENSE).
 
-## Note sui dati
-
-- **Jolpica** (`api.jolpi.ca`): gratuita, limite di 500 richieste/ora. La cache dell'app ne usa pochissime.
-- **OpenF1** (`api.openf1.org`): gratuita per le sessioni concluse.
-- **MotoGP e WorldSBK** (servizi Pulselive dei siti ufficiali): non sono API pubbliche documentate e possono cambiare. Se un giorno il robot fallisce, GitHub ti manda un'email e la correzione riguarda solo `scripts/sources/`.
-- Il robot richiede ogni classifica finché non è definitiva (3 ore dopo la fine della sessione), poi non la scarica più. Fa un commit solo quando qualcosa cambia.
-- GitHub sospende i robot programmati dopo 60 giorni senza commit (succede in pausa invernale). Per riattivarlo: scheda **Actions** → **Aggiorna dati** → **Enable workflow**.
-- Dati di Dorna e WorldSBK: vanno bene per un'app personale, non per pubblicarla o distribuirla.
-- Il pulsante aggiorna svuota la cache recente e riscarica.
-- Filtro, tema e campionato scelto restano salvati sul telefono (memoria del browser).
-#
+La licenza **non copre i dati** in `data/` né quelli mostrati dall'app: appartengono ai rispettivi proprietari
+(Formula One Group, Dorna Sports, WorldSBK) e alle fonti indicate sopra. Sono usati solo a scopo personale e non commerciale.
+Nomi, loghi e marchi citati appartengono ai rispettivi titolari.
+Se sei titolare di questi dati e vuoi che vengano rimossi, apri una [issue](https://github.com/RikicraftYT/Paddock/issues).

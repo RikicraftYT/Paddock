@@ -1,0 +1,3 @@
+# Fine riga uniformi (LF) anche se si lavora da Windows
+* text=auto eol=lf
+*.png binary

@@ -14,6 +14,9 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
 
+  <!-- App personale: non farla comparire nei motori di ricerca -->
+  <meta name="robots" content="noindex, nofollow">
+
   <title>Paddock</title>
   <link rel="stylesheet" href="css/style.css">
 
@@ -79,6 +82,13 @@
           <label class="opt"><input type="radio" name="theme" value="light"> Chiaro</label>
           <label class="opt"><input type="radio" name="theme" value="dark"> Scuro</label>
         </fieldset>
+
+        <section class="about" aria-labelledby="about-title">
+          <h3 id="about-title">Informazioni</h3>
+          <p>App personale e non ufficiale, senza legami con Formula 1, FIA, Dorna, MotoGP o WorldSBK. Nomi e marchi appartengono ai rispettivi proprietari.</p>
+          <p>Dati: Jolpica, OpenF1, MotoGP.com, WorldSBK.com. Possono contenere errori o ritardi.</p>
+          <p><a href="https://github.com/RikicraftYT/Paddock" target="_blank" rel="noopener">Codice su GitHub</a> · licenza MIT</p>
+        </section>
       </div>
       <div class="dialog-actions">
         <button class="btn" value="close">Fatto</button>

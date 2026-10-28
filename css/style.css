@@ -372,6 +372,10 @@ legend { font-weight: 700; margin-bottom: .5rem; padding: 0; }
 }
 .opt:hover { background: var(--surface-2); }
 .opt input { width: 1.25rem; height: 1.25rem; accent-color: var(--accent); margin: 0; }
+.about { border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .85rem; }
+.about h3 { font-size: 1rem; color: var(--text); margin-bottom: .5rem; }
+.about p { margin: 0 0 .5rem; }
+.about a { color: var(--accent-text); font-weight: 600; text-underline-offset: 3px; }
 .dialog-actions { display: flex; justify-content: flex-end; padding: 0 1.25rem 1.25rem; }
 .btn {
   min-height: var(--tap); padding: 0 1.5rem;

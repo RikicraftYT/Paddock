@@ -1,0 +1,13 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor e strumenti locali
+.vscode/
+.idea/
+.claude/
+*.log
+
+# Node (se un giorno servirà)
+node_modules/
