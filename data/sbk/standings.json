@@ -10,14 +10,14 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "points": 726
     },
     {
      "pos": 2,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "points": 563
     },
     {
@@ -87,14 +87,14 @@
      "pos": 12,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "points": 121
     },
     {
      "pos": 13,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "points": 113
     },
     {
@@ -115,7 +115,7 @@
      "pos": 16,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "points": 63
     },
     {
@@ -129,14 +129,14 @@
      "pos": 18,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "points": 46
     },
     {
      "pos": 19,
      "name": "Jake Dixon",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 41
     },
     {
@@ -150,14 +150,14 @@
      "pos": 21,
      "name": "Somkiat Chantra",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 23
     },
     {
      "pos": 22,
      "name": "Tetsuta Nagashima",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 7
     },
     {
@@ -171,7 +171,7 @@
      "pos": 24,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 6
     },
     {
@@ -192,7 +192,7 @@
      "pos": 27,
      "name": "Ryan Vickers",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 1
     }
    ]
@@ -205,7 +205,7 @@
      "pos": 1,
      "name": "Ducati",
      "team": "",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "points": 744
     },
     {
@@ -226,7 +226,7 @@
      "pos": 4,
      "name": "Yamaha",
      "team": "",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "points": 183
     },
     {
@@ -240,12 +240,12 @@
      "pos": 6,
      "name": "Honda",
      "team": "",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 64
     }
    ]
   }
  ],
  "source": "WorldSBK.com",
- "updatedAt": "2026-10-28T16:16:12.217Z"
+ "updatedAt": "2026-10-28T17:36:29.263Z"
 }

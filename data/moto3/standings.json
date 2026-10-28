@@ -115,14 +115,14 @@
      "pos": 16,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 64
     },
     {
      "pos": 17,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 60
     },
     {
@@ -233,26 +233,6 @@
    ]
   },
   {
-   "id": "constructors",
-   "label": "Costruttori",
-   "rows": [
-    {
-     "pos": 1,
-     "name": "KTM",
-     "team": "",
-     "color": "#FF6600",
-     "points": 420
-    },
-    {
-     "pos": 2,
-     "name": "Honda",
-     "team": "",
-     "color": "#E8E8E8",
-     "points": 213
-    }
-   ]
-  },
-  {
    "id": "teams",
    "label": "Squadre",
    "note": "Somma dei punti dei piloti di ogni squadra.",
@@ -310,7 +290,7 @@
      "pos": 8,
      "name": "GRYD Racing",
      "team": "Honda",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "points": 124
     },
     {
@@ -349,8 +329,28 @@
      "points": 10
     }
    ]
+  },
+  {
+   "id": "constructors",
+   "label": "Costruttori",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "KTM",
+     "team": "",
+     "color": "#F37021",
+     "points": 420
+    },
+    {
+     "pos": 2,
+     "name": "Honda",
+     "team": "",
+     "color": "#D01012",
+     "points": 213
+    }
+   ]
   }
  ],
  "source": "MotoGP.com",
- "updatedAt": "2026-10-28T17:18:46.209Z"
+ "updatedAt": "2026-10-28T17:36:22.668Z"
 }

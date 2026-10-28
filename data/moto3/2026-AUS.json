@@ -33,7 +33,7 @@
      "pos": 4,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.244",
      "out": false
     },
@@ -41,7 +41,7 @@
      "pos": 5,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.353",
      "out": false
     },
@@ -231,7 +231,7 @@
      "pos": 2,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.026",
      "out": false
     },
@@ -335,7 +335,7 @@
      "pos": 15,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.903",
      "out": false
     },
@@ -485,7 +485,7 @@
      "pos": 7,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+2.312",
      "out": false
     },
@@ -565,7 +565,7 @@
      "pos": 17,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+3.152",
      "out": false
     },
@@ -667,7 +667,7 @@
      "pos": 3,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.057",
      "out": false
     },
@@ -769,7 +769,7 @@
      "pos": 3,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.067",
      "out": false
     },
@@ -785,7 +785,7 @@
      "pos": 5,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.148",
      "out": false
     },
@@ -901,5 +901,5 @@
    "rows": []
   }
  },
- "updatedAt": "2026-10-28T17:18:45.641Z"
+ "updatedAt": "2026-10-28T17:36:22.665Z"
 }

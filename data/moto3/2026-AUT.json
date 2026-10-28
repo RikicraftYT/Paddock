@@ -97,7 +97,7 @@
      "pos": 12,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.346",
      "out": false
     },
@@ -113,7 +113,7 @@
      "pos": 14,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.682",
      "out": false
     },
@@ -311,7 +311,7 @@
      "pos": 12,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.815",
      "out": false
     },
@@ -399,7 +399,7 @@
      "pos": 23,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.798",
      "out": false
     },
@@ -605,7 +605,7 @@
      "pos": "–",
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "",
      "out": false
     },
@@ -629,7 +629,7 @@
      "pos": "–",
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "",
      "out": false
     },
@@ -675,7 +675,7 @@
      "pos": 4,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.638",
      "out": false
     },
@@ -801,7 +801,7 @@
      "pos": 7,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.967",
      "out": false
     },
@@ -833,7 +833,7 @@
      "pos": 11,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.180",
      "out": false
     },
@@ -933,7 +933,7 @@
      "pos": 4,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+20.717",
      "out": false,
      "points": 13,
@@ -1003,7 +1003,7 @@
      "pos": 11,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+21.880",
      "out": false,
      "points": 5,
@@ -1162,5 +1162,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-28T17:18:43.566Z"
+ "updatedAt": "2026-10-28T17:36:22.661Z"
 }

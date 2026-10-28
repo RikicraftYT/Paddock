@@ -9,7 +9,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "1:33.952",
      "out": false
     },
@@ -17,7 +17,7 @@
      "pos": 2,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+0.256",
      "out": false
     },
@@ -41,7 +41,7 @@
      "pos": 5,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.761",
      "out": false
     },
@@ -105,7 +105,7 @@
      "pos": 13,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.197",
      "out": false
     },
@@ -145,7 +145,7 @@
      "pos": 18,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.533",
      "out": false
     },
@@ -153,7 +153,7 @@
      "pos": 19,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.640",
      "out": false
     },
@@ -169,7 +169,7 @@
      "pos": 21,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+2.177",
      "out": false
     },
@@ -177,7 +177,7 @@
      "pos": 22,
      "name": "Somkiat Chantra",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+2.324",
      "out": false
     },
@@ -199,7 +199,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "1:33.687",
      "out": false
     },
@@ -215,7 +215,7 @@
      "pos": 3,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+0.330",
      "out": false
     },
@@ -231,7 +231,7 @@
      "pos": 5,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.410",
      "out": false
     },
@@ -295,7 +295,7 @@
      "pos": 13,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.989",
      "out": false
     },
@@ -319,7 +319,7 @@
      "pos": 16,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.302",
      "out": false
     },
@@ -343,7 +343,7 @@
      "pos": 19,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.437",
      "out": false
     },
@@ -351,7 +351,7 @@
      "pos": 20,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.564",
      "out": false
     },
@@ -359,7 +359,7 @@
      "pos": 21,
      "name": "Somkiat Chantra",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.566",
      "out": false
     },
@@ -389,7 +389,7 @@
      "pos": 1,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "1:32.823",
      "out": false
     },
@@ -421,7 +421,7 @@
      "pos": 5,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+0.499",
      "out": false
     },
@@ -429,7 +429,7 @@
      "pos": 6,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.582",
      "out": false
     },
@@ -445,7 +445,7 @@
      "pos": 8,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.693",
      "out": false
     },
@@ -485,7 +485,7 @@
      "pos": 13,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.105",
      "out": false
     },
@@ -525,7 +525,7 @@
      "pos": 18,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.283",
      "out": false
     },
@@ -541,7 +541,7 @@
      "pos": 20,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.448",
      "out": false
     },
@@ -565,7 +565,7 @@
      "pos": 23,
      "name": "Somkiat Chantra",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+2.430",
      "out": false
     }
@@ -579,7 +579,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "1:32.144",
      "out": false
     },
@@ -595,7 +595,7 @@
      "pos": 3,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+0.423",
      "out": false
     },
@@ -611,7 +611,7 @@
      "pos": 5,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.802",
      "out": false
     },
@@ -635,7 +635,7 @@
      "pos": 8,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+0.935",
      "out": false
     },
@@ -651,7 +651,7 @@
      "pos": 10,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+1.085",
      "out": false
     },
@@ -715,7 +715,7 @@
      "pos": 18,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.712",
      "out": false
     },
@@ -731,7 +731,7 @@
      "pos": 20,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+2.069",
      "out": false
     },
@@ -761,7 +761,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "33:12.444",
      "out": false
     },
@@ -769,7 +769,7 @@
      "pos": 2,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+1.618",
      "out": false
     },
@@ -801,7 +801,7 @@
      "pos": 6,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+17.167",
      "out": false
     },
@@ -833,7 +833,7 @@
      "pos": 10,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+18.779",
      "out": false
     },
@@ -865,7 +865,7 @@
      "pos": 14,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+22.646",
      "out": false
     },
@@ -889,7 +889,7 @@
      "pos": 17,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+41.459",
      "out": false
     },
@@ -905,7 +905,7 @@
      "pos": 19,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+50.165",
      "out": false
     },
@@ -943,7 +943,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "15:35.366",
      "out": false
     },
@@ -951,7 +951,7 @@
      "pos": 2,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+1.742",
      "out": false
     },
@@ -983,7 +983,7 @@
      "pos": 6,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+9.318",
      "out": false
     },
@@ -1007,7 +1007,7 @@
      "pos": 9,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+11.347",
      "out": false
     },
@@ -1015,7 +1015,7 @@
      "pos": 10,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+11.590",
      "out": false
     },
@@ -1063,7 +1063,7 @@
      "pos": 16,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+16.856",
      "out": false
     },
@@ -1071,7 +1071,7 @@
      "pos": 17,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+18.759",
      "out": false
     },
@@ -1125,7 +1125,7 @@
      "pos": 1,
      "name": "Nicolo Bulega",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "32:58.347",
      "out": false
     },
@@ -1133,7 +1133,7 @@
      "pos": 2,
      "name": "Iker Lecuona",
      "team": "Aruba.it Racing - Ducati",
-     "color": "#D40E14",
+     "color": "#C51E14",
      "value": "+2.724",
      "out": false
     },
@@ -1173,7 +1173,7 @@
      "pos": 7,
      "name": "Xavi Vierge",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+17.363",
      "out": false
     },
@@ -1181,7 +1181,7 @@
      "pos": 8,
      "name": "Andrea Locatelli",
      "team": "Pata Maxus Yamaha",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+18.294",
      "out": false
     },
@@ -1229,7 +1229,7 @@
      "pos": 14,
      "name": "Remy Gardner",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+25.391",
      "out": false
     },
@@ -1237,7 +1237,7 @@
      "pos": 15,
      "name": "Stefano Manzi",
      "team": "GYTR GRT Yamaha WorldSBK Team",
-     "color": "#2B4FD6",
+     "color": "#0033A0",
      "value": "+25.394",
      "out": false
     },
@@ -1269,7 +1269,7 @@
      "pos": 19,
      "name": "Jonathan Rea",
      "team": "Honda HRC",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+36.230",
      "out": false
     },
@@ -1300,5 +1300,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-28T16:15:34.854Z"
+ "updatedAt": "2026-10-28T17:36:29.242Z"
 }

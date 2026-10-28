@@ -247,33 +247,6 @@
    ]
   },
   {
-   "id": "constructors",
-   "label": "Costruttori",
-   "rows": [
-    {
-     "pos": 1,
-     "name": "Kalex",
-     "team": "",
-     "color": "#3BA3D9",
-     "points": 392.5
-    },
-    {
-     "pos": 2,
-     "name": "Boscoscuro",
-     "team": "",
-     "color": "#B5121B",
-     "points": 281
-    },
-    {
-     "pos": 3,
-     "name": "Forward",
-     "team": "",
-     "color": "#8E8E8E",
-     "points": 63
-    }
-   ]
-  },
-  {
    "id": "teams",
    "label": "Squadre",
    "note": "Somma dei punti dei piloti di ogni squadra.",
@@ -377,8 +350,35 @@
      "points": 20
     }
    ]
+  },
+  {
+   "id": "constructors",
+   "label": "Costruttori",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Kalex",
+     "team": "",
+     "color": "#3BA3D9",
+     "points": 392.5
+    },
+    {
+     "pos": 2,
+     "name": "Boscoscuro",
+     "team": "",
+     "color": "#B5121B",
+     "points": 281
+    },
+    {
+     "pos": 3,
+     "name": "Forward",
+     "team": "",
+     "color": "#8E8E8E",
+     "points": 63
+    }
+   ]
   }
  ],
  "source": "MotoGP.com",
- "updatedAt": "2026-10-28T17:18:22.015Z"
+ "updatedAt": "2026-10-28T17:36:21.964Z"
 }

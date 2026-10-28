@@ -33,7 +33,7 @@
      "pos": 4,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.517",
      "out": false
     },
@@ -105,7 +105,7 @@
      "pos": 13,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.206",
      "out": false
     },
@@ -303,7 +303,7 @@
      "pos": 11,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.518",
      "out": false
     },
@@ -359,7 +359,7 @@
      "pos": 18,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.981",
      "out": false
     },
@@ -493,7 +493,7 @@
      "pos": 8,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.645",
      "out": false
     },
@@ -541,7 +541,7 @@
      "pos": 14,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.098",
      "out": false
     },
@@ -659,7 +659,7 @@
      "pos": 2,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.520",
      "out": false
     },
@@ -825,7 +825,7 @@
      "pos": 10,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.851",
      "out": false
     },
@@ -865,7 +865,7 @@
      "pos": 15,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.499",
      "out": false
     },
@@ -953,7 +953,7 @@
      "pos": 6,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+11.614",
      "out": false,
      "points": 10,
@@ -973,7 +973,7 @@
      "pos": 8,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+11.818",
      "out": false,
      "points": 8,
@@ -1152,5 +1152,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-28T17:18:39.460Z"
+ "updatedAt": "2026-10-28T17:36:22.655Z"
 }

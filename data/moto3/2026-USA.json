@@ -81,7 +81,7 @@
      "pos": 10,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.292",
      "out": false
     },
@@ -153,7 +153,7 @@
      "pos": 19,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+2.442",
      "out": false
     },
@@ -263,7 +263,7 @@
      "pos": 7,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.603",
      "out": false
     },
@@ -303,7 +303,7 @@
      "pos": 12,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+0.646",
      "out": false
     },
@@ -533,7 +533,7 @@
      "pos": 15,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.151",
      "out": false
     },
@@ -557,7 +557,7 @@
      "pos": 18,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.412",
      "out": false
     },
@@ -801,7 +801,7 @@
      "pos": 11,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.217",
      "out": false
     },
@@ -849,7 +849,7 @@
      "pos": 17,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+1.581",
      "out": false
     },
@@ -971,7 +971,7 @@
      "pos": 11,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "+16.204",
      "out": false,
      "points": 5,
@@ -1101,7 +1101,7 @@
      "pos": "–",
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#E8E8E8",
+     "color": "#D01012",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1120,5 +1120,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-28T17:18:26.384Z"
+ "updatedAt": "2026-10-28T17:36:22.638Z"
 }
