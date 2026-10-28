@@ -6,7 +6,8 @@
    ========================================================== */
 
 (function () {
-  const theme = { accent: '#c80f2e', onAccent: '#ffffff', textDark: '#ff6b80', textLight: '#b00d28' };
+  // Blu: distinto dal rosso della F1 e dal giallo della SBK
+  const theme = { accent: '#1d4ed8', onAccent: '#ffffff', textDark: '#7aa2ff', textLight: '#1d4ed8' };
 
   Paddock.series.motogp = Paddock.makeRobotSeries({ id: 'motogp', name: 'MotoGP', fullName: 'MotoGP', theme });
   Paddock.series.moto2  = Paddock.makeRobotSeries({ id: 'moto2',  name: 'Moto2',  fullName: 'Moto2',  theme });

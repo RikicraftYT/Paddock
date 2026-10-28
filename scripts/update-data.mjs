@@ -22,7 +22,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { motogpCalendar, motogpResultsReader, motogpStandings } from './sources/motogp.mjs';
+import { motogpCalendar, motogpResultsReader, motogpStandings, motogpTeamColors } from './sources/motogp.mjs';
 import { sbkCalendar, sbkResultsReader, sbkStandings } from './sources/sbk.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -40,6 +40,7 @@ const motoClass = classId => ({
   calendar: o => motogpCalendar({ ...o, classId }),
   reader: o => motogpResultsReader({ ...o, classId }),
   standings: o => motogpStandings({ ...o, classId }),
+  teamColors: o => motogpTeamColors({ ...o, classId }),
   source: 'MotoGP.com',
 });
 
@@ -105,6 +106,14 @@ async function writeIfChanged(path, data) {
 
 /* ---------------- Lavoro per campionato ---------------- */
 
+/** Colori delle squadre: si applicano a tutte le righe, anche alle classifiche già definitive */
+function recolor(rows, colorOf, key) {
+  for (const r of rows || []) {
+    const c = colorOf(r[key]);
+    if (c) r.color = c;
+  }
+}
+
 async function updateSeries(id, def) {
   const dir = join(DATA, id);
   const now = Date.now();
@@ -123,6 +132,10 @@ async function updateSeries(id, def) {
     })),
   };
   if (await writeIfChanged(join(dir, 'calendar.json'), publicCal)) log('calendario aggiornato');
+
+  const colorOf = def.teamColors
+    ? await def.teamColors({ year: YEAR, fetchJSON }).catch(err => { log('colori squadre non disponibili:', err.message); return null; })
+    : null;
 
   /* Classifiche di sessione */
   const read = def.reader({ year: YEAR, fetchJSON });
@@ -148,6 +161,7 @@ async function updateSeries(id, def) {
         log(`classifica ${w.id} ${s.id} non disponibile:`, err.message);
       }
     }
+    if (colorOf) Object.values(next.sessions).forEach(s => recolor(s.rows, colorOf, 'team'));
     if (await writeIfChanged(path, next)) log(`classifiche ${w.id} aggiornate`);
   }
 
@@ -163,6 +177,14 @@ async function updateSeries(id, def) {
     } catch (err) {
       log('classifica mondiale non disponibile:', err.message);
     }
+  }
+
+  // Squadre: nella tabella "teams" il nome della squadra è in name, altrove in team
+  const saved = colorOf && (await readJSON(standingsPath));
+  if (saved) {
+    const { updatedAt, ...rest } = saved;
+    rest.tables.forEach(tb => recolor(tb.rows, colorOf, tb.id === 'teams' ? 'name' : 'team'));
+    if (await writeIfChanged(standingsPath, rest)) log('colori squadre aggiornati');
   }
 }
 

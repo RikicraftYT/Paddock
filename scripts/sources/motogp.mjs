@@ -71,6 +71,59 @@ export async function motogpCalendar({ year, fetchJSON, classId = 'motogp' }) {
   return { series: classId, season: String(year), weekends };
 }
 
+/* ---------------- Colori delle squadre ---------------- */
+
+// Il servizio dà a ogni squadra il colore delle grafiche di motogp.com.
+// #262626 vuol dire "non impostato": lì si usa il colore della livrea,
+// o in mancanza quello del costruttore.
+const NO_COLOR = '#262626';
+const LIVERY = [
+  ['vr46', '#FFD200'],
+  ['pramac', '#8E44AD'],
+  ['tech3', '#2B4C9B'],
+  ['trackhouse', '#1E90FF'],
+  ['intact', '#1F5AA6'],
+];
+
+// Parole che non aiutano a riconoscere una squadra
+const STOP = new Set(['team', 'racing', 'motogp', 'moto2', 'moto3', 'the']);
+const words = s => String(s).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 1 && !STOP.has(w));
+const compact = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
+
+function teamColor(t) {
+  const c = String(t.color || '').toLowerCase();
+  if (/^#[0-9a-f]{6}$/.test(c) && c !== NO_COLOR) return c.toUpperCase();
+  const hit = LIVERY.find(([k]) => compact(t.name).includes(k));
+  return hit ? hit[1] : makerColor(t.constructor?.name, t.name);
+}
+
+/**
+ * Restituisce una funzione: nome squadra (come nelle classifiche) -> colore, o null.
+ * I nomi delle classifiche cambiano con gli sponsor ("Castrol Honda LCR" / "Honda LCR"),
+ * quindi si sceglie la squadra con più parole in comune.
+ */
+export async function motogpTeamColors({ year, fetchJSON, classId = 'motogp' }) {
+  const cats = await fetchJSON(`${BROADCAST}/categories?seasonYear=${year}`);
+  const cat = cats.find(c => compact(c.name).startsWith(compact(CLASSES[classId].name)));
+  if (!cat) return () => null;
+  const teams = (await fetchJSON(`${BROADCAST}/teams?categoryUuid=${cat.id}&seasonYear=${year}`))
+    .map(t => ({ words: words(t.name), color: teamColor(t) }))
+    .filter(t => t.words.length);
+
+  const memo = {};
+  return name => {
+    if (!name) return null;
+    if (name in memo) return memo[name];
+    const c = compact(name);
+    let best = null, score = 0;
+    for (const t of teams) {
+      const s = t.words.filter(w => c.includes(w)).length / t.words.length;
+      if (s > score) { score = s; best = t; }
+    }
+    return (memo[name] = score >= 0.6 ? best.color : null);
+  };
+}
+
 /* ---------------- Identificativi della Results API ---------------- */
 
 // Condivisi tra le tre classi nella stessa esecuzione del robot
