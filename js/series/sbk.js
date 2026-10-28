@@ -3,12 +3,12 @@
    Dati preparati dal robot (scripts/sources/sbk.mjs) e letti
    da data/sbk/. Sessioni: Libere 1-2-3, Superpole, Gara 1,
    Superpole Race, Gara 2.
-   Il giallo ha testo scuro sopra: il bianco sul giallo non si legge.
+   Colore marrone, con testo bianco sopra.
    ========================================================== */
 
 Paddock.series.sbk = Paddock.makeRobotSeries({
   id: 'sbk',
   name: 'SBK',
   fullName: 'Superbike',
-  theme: { accent: '#f2b705', onAccent: '#1a1400', textDark: '#f2b705', textLight: '#7a5a00' },
+  theme: { accent: '#7c4a1e', onAccent: '#ffffff', textDark: '#d4a373', textLight: '#7c4a1e' },
 });

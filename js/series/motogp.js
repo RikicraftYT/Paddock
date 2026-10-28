@@ -6,12 +6,12 @@
    ========================================================== */
 
 (function () {
-  // Tinte fredde, distinte dal rosso della F1 e dal giallo della SBK:
-  // MotoGP blu, Moto2 verde acqua, Moto3 viola. Testo bianco sopra ognuna (contrasto ≥ 4,5:1).
+  // Tre sfumature di verde, distinte dal giallo della F1 e dal marrone della SBK:
+  // MotoGP verde, Moto2 smeraldo, Moto3 verde oliva. Testo bianco sopra ognuna (contrasto ≥ 4,5:1).
   const themes = {
-    motogp: { accent: '#1d4ed8', onAccent: '#ffffff', textDark: '#7aa2ff', textLight: '#1d4ed8' },
-    moto2:  { accent: '#0f766e', onAccent: '#ffffff', textDark: '#2dd4bf', textLight: '#0f766e' },
-    moto3:  { accent: '#6d28d9', onAccent: '#ffffff', textDark: '#a78bfa', textLight: '#6d28d9' },
+    motogp: { accent: '#15803d', onAccent: '#ffffff', textDark: '#4ade80', textLight: '#166534' },
+    moto2:  { accent: '#047857', onAccent: '#ffffff', textDark: '#34d399', textLight: '#047857' },
+    moto3:  { accent: '#4d7c0f', onAccent: '#ffffff', textDark: '#a3e635', textLight: '#3f6212' },
   };
 
   Paddock.series.motogp = Paddock.makeRobotSeries({ id: 'motogp', name: 'MotoGP', fullName: 'MotoGP', theme: themes.motogp });
