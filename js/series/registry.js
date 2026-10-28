@@ -14,8 +14,9 @@
                  textLight = accento come testo su sfondo chiaro
 
      getCalendar() -> Promise<{
-       season: '2026',
+       season: '2026', updatedAt?: Date,
        weekends: [{ id, round, name, country, flag, city, circuit,
+                    winners?: [{ label, name }],      // gare già corse
                     sessions: [{ id, label, kind, start: Date, end: Date, tbc }] }]
      }>
 
@@ -24,7 +25,7 @@
      }>
 
      getStandings(season) -> Promise<{
-       tables: [{ id, label, note?, rows: [{ pos, name, team, color, points }] }], source
+       tables: [{ id, label, note?, rows: [{ pos, name, team, color, points }] }], source, updatedAt?: Date
      }>
 
    kind: 'practice' | 'quali' | 'sprintQuali' | 'sprint' | 'race'

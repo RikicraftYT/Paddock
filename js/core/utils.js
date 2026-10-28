@@ -19,6 +19,10 @@
     'San Marino': 'SM', 'Kazakhstan': 'KZ',
   };
 
+  // Bandiere disponibili in assets/flags (da flag-icons, licenza MIT)
+  const FLAGS = new Set(('ae ar at au az be bh br ca cn cz de es fr gb hu id in it jp kr kz mc mx my nl ' +
+    'pt qa sa sg sm th tr us vn za').split(' '));
+
   const regionNames = (() => {
     try { return new Intl.DisplayNames(['it'], { type: 'region' }); } catch (e) { return null; }
   })();
@@ -30,17 +34,22 @@
         ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     },
 
-    /** Paese (nome inglese, es. "Italy") -> { code, name (in italiano), flag (emoji) } */
+    /** Paese (nome inglese, es. "Italy") -> { code, name (in italiano), flag (HTML) } */
     country(englishName) {
       return this.countryByCode(COUNTRY_CODES[englishName] || null, englishName);
     },
 
-    /** Codice ISO a 2 lettere (es. "IT") -> { code, name (in italiano), flag (emoji) } */
+    /**
+     * Codice ISO a 2 lettere (es. "IT") -> { code, name (in italiano), flag (HTML) }
+     * La bandiera è un'immagine: le emoji delle bandiere su Windows appaiono come lettere.
+     * È decorativa (alt vuoto): il nome del paese è sempre scritto accanto.
+     */
     countryByCode(code, fallbackName = '') {
       const name = code && regionNames ? regionNames.of(code) : (fallbackName || code || '');
-      const flag = code
-        ? code.replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt(0)))
-        : '🏁';
+      const cc = (code || '').toLowerCase();
+      const flag = FLAGS.has(cc)
+        ? `<img class="flag" src="assets/flags/${cc}.svg" alt="" width="28" height="21" loading="lazy">`
+        : `<span class="flag flag-code">${this.esc(code || '?')}</span>`;
       return { code, name, flag };
     },
 
@@ -52,6 +61,17 @@
     fmtDay:  d => d.toLocaleDateString(locale, { weekday: 'short', day: 'numeric' }),
     fmtTime: d => d.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' }),
     fmtLong: d => d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long' }),
+    fmtDayMonth: d => d.toLocaleDateString(locale, { day: 'numeric', month: 'long' }),
+
+    /** Date del weekend: "24–26 ottobre", "31 ottobre – 2 novembre" */
+    dateRange(w) {
+      if (!w.sessions.length) return '';
+      const a = w.sessions[0].start, b = w.sessions[w.sessions.length - 1].start;
+      const month = d => d.toLocaleDateString(locale, { month: 'long' });
+      if (a.toDateString() === b.toDateString()) return this.fmtDayMonth(a);
+      if (a.getMonth() === b.getMonth()) return `${a.getDate()}–${b.getDate()} ${month(b)}`;
+      return `${this.fmtDayMonth(a)} – ${this.fmtDayMonth(b)}`;
+    },
 
     /** Millisecondi -> "tra 2g 4h", "tra 3h 10m", "tra 12m" */
     until(ms) {

@@ -7,8 +7,9 @@ Pensata per l'iPhone (si installa nella schermata Home), funziona anche su compu
 
 ## Funzioni
 
-- **Gare**: il weekend in corso o il prossimo, con gli orari nel tuo fuso, la prossima sessione in evidenza e la classifica di ogni sessione.
-- **Mondiale**: classifica piloti e costruttori o squadre.
+- **Prossimi**: le sessioni dei prossimi 7 giorni di tutti i campionati insieme, in ordine di orario.
+- **Gare**: il weekend in corso o il prossimo, con gli orari nel tuo fuso, la prossima sessione in evidenza e la classifica di ogni sessione. Il calendario della stagione mostra tutti i round con i vincitori.
+- **Mondiale**: classifica piloti e costruttori o squadre, con il distacco dal primo.
 - **Filtro sessioni**: mostra solo prove libere, qualifiche, sprint e/o gare.
 - **Tema** chiaro, scuro o automatico.
 - **Accessibile**: buoni contrasti, testo che segue le impostazioni del telefono, supporto a VoiceOver.
@@ -58,6 +59,7 @@ node scripts/update-data.mjs
 ## Licenza e dati
 
 Il codice è distribuito con licenza [MIT](LICENSE).
+Le bandiere in `assets/flags/` vengono da [flag-icons](https://github.com/lipis/flag-icons) (licenza MIT, © Panayiotis Lipiridis).
 
 La licenza **non copre i dati** in `data/` né quelli mostrati dall'app: appartengono ai rispettivi proprietari
 (Formula One Group, Dorna Sports, WorldSBK) e alle fonti indicate sopra. Sono usati solo a scopo personale e non commerciale.

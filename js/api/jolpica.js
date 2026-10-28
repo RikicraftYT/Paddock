@@ -24,6 +24,17 @@
       return firstRace(await getJSON(`${BASE}/${season}/${round}/results.json?limit=100`, ttl));
     },
 
+    /** Vincitori delle gare già corse: { round: "Nome Cognome" } (una sola richiesta) */
+    async winners(season, ttl) {
+      const data = await getJSON(`${BASE}/${season}/results/1.json?limit=100`, ttl);
+      const out = {};
+      (data.MRData.RaceTable.Races || []).forEach(r => {
+        const d = r.Results?.[0]?.Driver;
+        if (d) out[r.round] = `${d.givenName} ${d.familyName}`;
+      });
+      return out;
+    },
+
     /** Risultati della sprint */
     async sprintResults(season, round, ttl) {
       return firstRace(await getJSON(`${BASE}/${season}/${round}/sprint.json?limit=100`, ttl));

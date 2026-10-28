@@ -31,38 +31,37 @@
 <body>
   <a class="skip" href="#app">Vai al contenuto</a>
 
-  <header class="topbar">
+  <header class="topbar" id="topbar">
     <div class="topbar-row">
       <span class="brand" aria-hidden="true"><span class="brand-dot"></span>Paddock</span>
-      <!-- Pulsanti generati da js/app.js in base a js/series/registry.js -->
-      <nav class="seg seg-main" id="tabs" aria-label="Campionato"></nav>
+      <!-- Prossimi · Gare · Mondiale: in alto sul computer, barra in basso sul telefono -->
+      <nav class="tabbar" id="views" aria-label="Sezione"></nav>
       <div class="actions">
-      <button class="icon-btn" id="open-settings" aria-label="Impostazioni e filtro sessioni" title="Impostazioni e filtro sessioni" aria-haspopup="dialog">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-        <span class="btn-label" aria-hidden="true">Filtri</span>
-      </button>
-      <button class="icon-btn" id="refresh" aria-label="Aggiorna i dati" title="Aggiorna i dati">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
-        <span class="btn-label" aria-hidden="true">Aggiorna</span>
-      </button>
+        <button class="icon-btn" id="open-settings" aria-label="Impostazioni e filtro sessioni" title="Impostazioni e filtro sessioni" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+        </button>
+        <button class="icon-btn" id="refresh" aria-label="Aggiorna i dati" title="Aggiorna i dati">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+        </button>
       </div>
     </div>
-    <!-- Sul telefono #views diventa la barra in basso (Gare · Mondiale) -->
-    <div class="topbar-row topbar-sub">
-      <nav class="seg seg-sub" id="views" aria-label="Sezione"></nav>
-      <nav class="seg seg-sub" id="classes" aria-label="Classe" hidden></nav>
+    <!-- Campionato e classe: solo in Gare e Mondiale. Pulsanti generati da js/app.js -->
+    <div class="series-bar" id="series-bar" hidden>
+      <nav class="seg" id="tabs" aria-label="Campionato"></nav>
+      <nav class="chips" id="classes" aria-label="Classe" hidden></nav>
     </div>
   </header>
 
-  <main id="app" tabindex="-1">
-    <div class="msg">Caricamento…</div>
-  </main>
+  <main id="app" tabindex="-1"></main>
 
   <!-- Annunci per VoiceOver (caricamenti, errori) -->
   <div id="status" class="sr-only" role="status" aria-live="polite"></div>
 
+  <!-- Calendario della stagione: contenuto generato da js/app.js -->
+  <dialog id="season" class="sheet" aria-labelledby="season-title"></dialog>
+
   <!-- Impostazioni: filtro sessioni e tema -->
-  <dialog id="settings" aria-labelledby="settings-title">
+  <dialog id="settings" class="sheet" aria-labelledby="settings-title">
     <form method="dialog">
       <div class="dialog-body">
         <h2 id="settings-title">Impostazioni</h2>
@@ -78,7 +77,7 @@
 
         <fieldset id="theme-set">
           <legend>Aspetto</legend>
-          <label class="opt"><input type="radio" name="theme" value="auto"> Automatico (come l'iPhone)</label>
+          <label class="opt"><input type="radio" name="theme" value="auto"> Automatico</label>
           <label class="opt"><input type="radio" name="theme" value="light"> Chiaro</label>
           <label class="opt"><input type="radio" name="theme" value="dark"> Scuro</label>
         </fieldset>

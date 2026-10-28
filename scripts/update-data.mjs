@@ -123,16 +123,6 @@ async function updateSeries(id, def) {
   const calendar = await def.calendar({ year: YEAR, fetchJSON });
   if (!calendar.weekends.length) throw new Error('calendario vuoto');
 
-  // Il calendario pubblico non ha bisogno dei codici interni usati per le classifiche
-  const publicCal = {
-    ...calendar,
-    weekends: calendar.weekends.map(({ code, ...w }) => ({
-      ...w,
-      sessions: w.sessions.map(({ sourceId, srcKey, ...s }) => s),
-    })),
-  };
-  if (await writeIfChanged(join(dir, 'calendar.json'), publicCal)) log('calendario aggiornato');
-
   const colorOf = def.teamColors
     ? await def.teamColors({ year: YEAR, fetchJSON }).catch(err => { log('colori squadre non disponibili:', err.message); return null; })
     : null;
@@ -140,6 +130,7 @@ async function updateSeries(id, def) {
   /* Classifiche di sessione */
   const read = def.reader({ year: YEAR, fetchJSON });
   let recentRace = false;
+  const winners = {};       // weekend -> [{ label, name }], per il calendario della stagione
 
   for (const w of calendar.weekends) {
     const ended = w.sessions.filter(s => new Date(s.end).getTime() < now);
@@ -163,7 +154,25 @@ async function updateSeries(id, def) {
     }
     if (colorOf) Object.values(next.sessions).forEach(s => recolor(s.rows, colorOf, 'team'));
     if (await writeIfChanged(path, next)) log(`classifiche ${w.id} aggiornate`);
+
+    winners[w.id] = w.sessions
+      .filter(s => s.kind === 'race')
+      .map(s => ({ label: s.label, first: next.sessions[s.id]?.rows?.[0] }))
+      .filter(x => String(x.first?.pos) === '1')
+      .map(x => ({ label: x.label, name: x.first.name }));
   }
+
+  /* Calendario (dopo le classifiche, perché contiene i vincitori).
+     Quello pubblico non ha bisogno dei codici interni usati per le classifiche. */
+  const publicCal = {
+    ...calendar,
+    weekends: calendar.weekends.map(({ code, ...w }) => ({
+      ...w,
+      ...(winners[w.id]?.length ? { winners: winners[w.id] } : {}),
+      sessions: w.sessions.map(({ sourceId, srcKey, ...s }) => s),
+    })),
+  };
+  if (await writeIfChanged(join(dir, 'calendar.json'), publicCal)) log('calendario aggiornato');
 
   /* Classifica mondiale: si riscarica se c'è stata da poco una gara, se manca,
      e comunque una volta ogni 6 ore (per penalità o correzioni successive) */

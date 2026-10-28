@@ -69,7 +69,11 @@
 
   async function getCalendar() {
     const { season, races } = await jolpica.calendar(6 * H);
-    return { season, weekends: races.map(toWeekend) };
+    // I vincitori servono solo al calendario della stagione: se non arrivano, pazienza
+    const winners = await jolpica.winners(season, H).catch(() => ({}));
+    const weekends = races.map(toWeekend);
+    weekends.forEach(w => { if (winners[w.round]) w.winners = [{ label: 'Gara', name: winners[w.round] }]; });
+    return { season, weekends, updatedAt: new Date() };
   }
 
   /* ---------------- Classifiche ---------------- */

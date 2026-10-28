@@ -2,9 +2,10 @@
    Avvio dell'app: stato, navigazione e collegamento tra
    campionati (js/series) e schermate (js/ui/views.js).
 
-   Sezioni:  Gare (calendario + classifiche di sessione)
+   Sezioni:  Prossimi (sessioni dei prossimi 7 giorni, tutti i campionati)
+             Gare (calendario del weekend + classifiche di sessione)
              Mondiale (classifica piloti / costruttori o squadre)
-   Layout:   telefono = una schermata alla volta
+   Layout:   telefono = una schermata alla volta, sezioni nella barra in basso
              computer (≥ 960 px) = sessioni a sinistra, classifica a destra
    ========================================================== */
 
@@ -15,29 +16,37 @@
   const store = Paddock.cache.store;
 
   const $app = document.getElementById('app');
+  const $topbar = document.getElementById('topbar');
   const $tabs = document.getElementById('tabs');
   const $views = document.getElementById('views');
+  const $seriesBar = document.getElementById('series-bar');
   const $classes = document.getElementById('classes');
   const $refresh = document.getElementById('refresh');
   const $status = document.getElementById('status');
   const $dialog = document.getElementById('settings');
+  const $season = document.getElementById('season');
 
   const wideMQ = window.matchMedia('(min-width: 960px)');
   const isWide = () => wideMQ.matches;
 
   const icon = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
   const VIEWS = [
+    { id: 'upcoming', label: 'Prossimi', icon: icon('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>') },
     { id: 'races', label: 'Gare', icon: icon('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>') },
     { id: 'standings', label: 'Mondiale', icon: icon('<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/>') },
   ];
   const RETRY = { label: 'Riprova', attr: 'data-retry' };
   const DEFAULT_FILTER = { practice: true, quali: true, sprint: true, race: true };
 
+  // Campionati mostrati in "Prossimi": per la MotoGP solo la classe regina
+  const UPCOMING_SERIES = ['f1', 'motogp', 'sbk'];
+  const UPCOMING_DAYS = 7;
+
   /* ---------------- Stato (le preferenze restano salvate sul telefono) ---------------- */
   const state = {
     groupId: store.get('paddock:group') || 'f1',
     classBy: store.get('paddock:class') || {},           // classe scelta per gruppo, es. { moto: 'moto2' }
-    view: store.get('paddock:view') || 'races',
+    view: 'upcoming',                                     // l'app si apre sempre su "Prossimi"
     filter: { ...DEFAULT_FILTER, ...(store.get('paddock:filter') || {}) },
     theme: store.get('paddock:theme') || 'auto',
     weekendBy: {},          // weekend scelto per gruppo, uguale per tutte le classi (assente = quello attuale)
@@ -90,18 +99,21 @@
     if (state.theme === 'light' || state.theme === 'dark') root.dataset.theme = state.theme;
     else delete root.dataset.theme;
 
-    const t = series().theme;
-    root.style.setProperty('--accent', t.accent);
-    root.style.setProperty('--on-accent', t.onAccent);
-    root.style.setProperty('--accent-text-dark', t.textDark);
-    root.style.setProperty('--accent-text-light', t.textLight);
+    // In "Prossimi" ci sono tutti i campionati: colori neutri (quelli di style.css)
+    const t = state.view === 'upcoming' ? null : series().theme;
+    const set = (k, v) => (v ? root.style.setProperty(k, v) : root.style.removeProperty(k));
+    set('--accent', t?.accent);
+    set('--on-accent', t?.onAccent);
+    set('--accent-text-dark', t?.textDark);
+    set('--accent-text-light', t?.textLight);
   }
 
   /* ---------------- Barra superiore ---------------- */
   function renderChrome() {
-    $tabs.innerHTML = V.seg(Paddock.groups.map(g => ({ id: g.id, label: g.label })), state.groupId, 'group');
     $views.innerHTML = V.seg(VIEWS, state.view, 'view');
 
+    $seriesBar.hidden = state.view === 'upcoming';
+    $tabs.innerHTML = V.seg(Paddock.groups.map(g => ({ id: g.id, label: g.label })), state.groupId, 'group');
     const g = group();
     $classes.hidden = g.series.length < 2;
     if (g.series.length > 1) {
@@ -109,6 +121,11 @@
     }
     applyTheme();
   }
+
+  // Altezza della barra superiore: serve alla colonna della classifica che resta ferma (computer)
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--header-h', $topbar.offsetHeight + 'px');
+  }).observe($topbar);
 
   /* ---------------- Caricamento dati ---------------- */
 
@@ -119,26 +136,28 @@
     return i === -1 ? weekends.length - 1 : i;
   }
 
-  async function ensureCalendar(force) {
-    const id = seriesId();
+  async function ensureCalendar(id = seriesId(), force = false) {
     if (state.data[id] && !force) return;
-    const { season, weekends } = await series().getCalendar();
+    const { season, weekends, updatedAt } = await Paddock.series[id].getCalendar();
     if (!weekends.length) throw new Error('Calendario vuoto');
     const index = pickWeekend(weekends);
-    state.data[id] = { season, weekends, index, currentIndex: index };
+    state.data[id] = { season, weekends, index, currentIndex: index, updatedAt };
   }
 
   async function ensureStandings(force) {
     const id = seriesId();
     if (state.standings[id] && !force) return;
     const season = current()?.season || 'current';
-    state.standings[id] = await series().getStandings(season);
+    const st = await series().getStandings(season);
+    state.standings[id] = { ...st, updatedAt: st.updatedAt || new Date() };
   }
 
   /* ---------------- Sessioni visibili secondo il filtro ---------------- */
+  const isVisible = s => state.filter[Paddock.filterGroupOf(s.kind)];
+
   function visibleSessions(w) {
     const vis = [];
-    w.sessions.forEach((s, i) => { if (state.filter[Paddock.filterGroupOf(s.kind)]) vis.push(i); });
+    w.sessions.forEach((s, i) => { if (isVisible(s)) vis.push(i); });
     return vis;
   }
 
@@ -153,8 +172,33 @@
   /* ---------------- Disegno ---------------- */
   function render() {
     renderChrome();
+    if (state.view === 'upcoming') return renderUpcoming();
     if (state.view === 'standings') return renderStandings();
     return renderRaces();
+  }
+
+  /** Prossimi: sessioni in corso e dei prossimi 7 giorni di tutti i campionati */
+  function renderUpcoming() {
+    const now = Date.now();
+    const limit = now + UPCOMING_DAYS * DAY;
+    const live = [], items = [], later = [], failed = [];
+
+    UPCOMING_SERIES.forEach(id => {
+      const s = Paddock.series[id];
+      const d = state.data[id];
+      if (!d) { failed.push(s); return; }
+      let found = false;
+      d.weekends.forEach((w, wi) => w.sessions.forEach((sess, si) => {
+        if (!isVisible(sess) || sess.end.getTime() <= now || sess.start.getTime() > limit) return;
+        found = true;
+        const it = { series: s, weekend: w, session: sess, key: `${id}:${wi}:${si}` };
+        (sess.start.getTime() <= now ? live : items).push(it);
+      }));
+      if (!found) later.push({ series: s, weekend: d.weekends.find(w => w.sessions.some(x => x.start.getTime() > now)) || null });
+    });
+
+    items.sort((a, b) => a.session.start - b.session.start);
+    $app.innerHTML = V.upcoming({ live, items, later, failed });
   }
 
   function renderRaces() {
@@ -248,6 +292,7 @@
       season: current()?.season || '',
       tables: st.tables,
       source: st.source,
+      updatedAt: st.updatedAt,
       active,
     });
   }
@@ -255,13 +300,25 @@
   /** Carica ciò che serve alla sezione aperta e disegna */
   async function show(force = false) {
     renderChrome();
+
+    if (state.view === 'upcoming') {
+      if (force || UPCOMING_SERIES.some(id => !state.data[id])) {
+        $app.innerHTML = V.skeleton(8);
+        announce('Caricamento');
+      }
+      // Ognuno per conto suo: se un campionato non risponde, gli altri si vedono lo stesso
+      await Promise.all(UPCOMING_SERIES.map(id => ensureCalendar(id, force).catch(err => console.error(err))));
+      if (state.view === 'upcoming') render();
+      return;
+    }
+
     const needsLoad = force || !current() || (state.view === 'standings' && !state.standings[seriesId()]);
     if (needsLoad) {
-      $app.innerHTML = V.message('', 'Caricamento…');
+      $app.innerHTML = V.skeleton();
       announce('Caricamento');
     }
     try {
-      await ensureCalendar(force);
+      await ensureCalendar(seriesId(), force);
       if (state.view === 'standings') await ensureStandings(force);
       render();
     } catch (err) {
@@ -306,7 +363,7 @@
     if (!b || b.dataset.view === state.view) return;
     state.view = b.dataset.view;
     state.sessionIdx = null;
-    store.set('paddock:view', state.view);
+    window.scrollTo(0, 0);
     show();
   });
 
@@ -316,9 +373,8 @@
     $refresh.classList.add('spinning');
     $refresh.setAttribute('aria-busy', 'true');
     Paddock.cache.clearRecent();
-    const id = seriesId();
-    delete state.data[id];
-    delete state.standings[id];
+    const ids = state.view === 'upcoming' ? UPCOMING_SERIES : [seriesId()];
+    ids.forEach(id => { delete state.data[id]; delete state.standings[id]; });
     await show(true);       // il weekend scelto resta: lo ripristina syncWeekend
     $refresh.classList.remove('spinning');
     $refresh.removeAttribute('aria-busy');
@@ -326,7 +382,28 @@
   }
 
   /* ---------------- Eventi: contenuto ---------------- */
+
+  /** Da "Prossimi" a una sessione: apre Gare su quel campionato, weekend e sessione */
+  function openFromUpcoming(key) {
+    const [id, wi, si] = key.split(':');
+    const g = Paddock.groups.find(x => x.series.includes(id));
+    state.groupId = g.id;
+    state.classBy[g.id] = id;
+    store.set('paddock:group', state.groupId);
+    store.set('paddock:class', state.classBy);
+    state.view = 'races';
+    chooseWeekend(Number(wi));
+    state.sessionIdx = Number(si);
+    if (!isWide()) history.pushState({ session: true }, '');
+    render();
+    window.scrollTo(0, 0);
+    focusEl(isWide() ? `[data-session="${si}"]` : '#detail-title');
+  }
+
   $app.addEventListener('click', e => {
+    const up = e.target.closest('[data-up]');
+    if (up) { openFromUpcoming(up.dataset.up); return; }
+
     const go = e.target.closest('[data-go]');
     if (go) {
       chooseWeekend(current().index + Number(go.dataset.go));
@@ -343,6 +420,8 @@
       announce(current().weekends[current().index].name);
       return;
     }
+
+    if (e.target.closest('[data-open-season]')) { openSeason(); return; }
 
     if (e.target.closest('[data-retry]')) { refresh(); return; }
 
@@ -389,11 +468,35 @@
   window.addEventListener('popstate', () => { if (state.sessionIdx !== null) closeSession(); });
 
   // Rotazione / ridimensionamento: passa da una a due colonne e viceversa
-  wideMQ.addEventListener('change', () => { if (current()) render(); });
+  wideMQ.addEventListener('change', () => { if (current() || state.view === 'upcoming') render(); });
 
   // Riaprendo l'app dopo un po', aggiorna i conti alla rovescia
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible' && current() && state.view === 'races') render();
+    if (document.visibilityState === 'visible' && state.view !== 'standings' && (current() || state.view === 'upcoming')) render();
+  });
+
+  /* ---------------- Calendario della stagione ---------------- */
+  function openSeason() {
+    const d = current();
+    $season.innerHTML = V.seasonList({
+      weekends: d.weekends, index: d.index, currentIndex: d.currentIndex,
+      season: d.season, seriesName: group().label,
+    });
+    $season.showModal();
+    const sel = $season.querySelector('[aria-current="true"]');
+    if (sel) { sel.scrollIntoView({ block: 'center' }); sel.focus(); }
+  }
+
+  $season.addEventListener('click', e => {
+    if (e.target === $season || e.target.closest('[data-close]')) { $season.close(); return; }
+    const pick = e.target.closest('[data-pick]');
+    if (!pick) return;
+    chooseWeekend(Number(pick.dataset.pick));
+    $season.close();
+    render();
+    window.scrollTo(0, 0);
+    focusEl('#weekend-title');
+    announce(current().weekends[current().index].name);
   });
 
   /* ---------------- Impostazioni: filtro sessioni e tema ---------------- */
@@ -415,7 +518,7 @@
       state.theme = input.value;
       store.set('paddock:theme', state.theme);
     }
-    if (current()) render();
+    if (current() || state.view === 'upcoming') render();
   });
 
   // Tocco fuori dalla finestra = chiudi

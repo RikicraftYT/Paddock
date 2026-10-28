@@ -24,3 +24,5 @@ SOFTWARE.
 This license covers only the source code of this repository. It does not cover
 the contents of the data/ folder, which are downloaded from third-party services
 and remain the property of their respective owners (see README.md).
+The flags in assets/flags/ come from flag-icons (https://github.com/lipis/flag-icons),
+MIT License, Copyright (c) 2013 Panayiotis Lipiridis.

@@ -20,6 +20,7 @@
       const cal = await data.calendar(info.id, 10 * MIN);
       return {
         season: cal.season,
+        updatedAt: cal.updatedAt ? new Date(cal.updatedAt) : null,
         weekends: cal.weekends.map(w => {
           const c = U.countryByCode(w.country);
           return {
@@ -30,6 +31,7 @@
             flag: c.flag,
             city: w.city,
             circuit: w.circuit,
+            winners: w.winners || [],
             sessions: w.sessions.map(s => ({
               id: s.id,
               label: s.label,
@@ -52,7 +54,7 @@
 
     async function getStandings() {
       const st = await data.standings(info.id, 10 * MIN);
-      return { tables: st.tables || [], source: st.source || null };
+      return { tables: st.tables || [], source: st.source || null, updatedAt: st.updatedAt ? new Date(st.updatedAt) : null };
     }
 
     return { ...info, getCalendar, getResults, getStandings };
