@@ -22,7 +22,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { motogpCalendar, motogpResultsReader, motogpStandings, motogpTeamColors } from './sources/motogp.mjs';
+import { motogpCalendar, motogpResultsReader, motogpStandings, motogpTeamColors, motogpConstructors } from './sources/motogp.mjs';
 import { sbkCalendar, sbkResultsReader, sbkStandings } from './sources/sbk.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,6 +41,7 @@ const motoClass = classId => ({
   reader: o => motogpResultsReader({ ...o, classId }),
   standings: o => motogpStandings({ ...o, classId }),
   teamColors: o => motogpTeamColors({ ...o, classId }),
+  constructors: motogpConstructors,
   source: 'MotoGP.com',
 });
 
@@ -131,6 +132,8 @@ async function updateSeries(id, def) {
   const read = def.reader({ year: YEAR, fetchJSON });
   let recentRace = false;
   const winners = {};       // weekend -> [{ label, name }], per il calendario della stagione
+  const raceRows = [];      // classifiche di gare e sprint, per il Mondiale costruttori
+  const isRace = s => s.kind === 'race' || s.kind === 'sprint';
 
   for (const w of calendar.weekends) {
     const ended = w.sessions.filter(s => new Date(s.end).getTime() < now);
@@ -141,7 +144,10 @@ async function updateSeries(id, def) {
     const next = { weekend: w.id, sessions: { ...prev.sessions } };
 
     for (const s of ended) {
-      if (prev.sessions[s.id]?.final) continue;
+      // Gare e sprint salvate prima che le righe avessero punti e costruttore: si riscaricano una volta
+      const old = prev.sessions[s.id];
+      const missing = def.constructors && isRace(s) && old?.rows?.length > 0 && !('maker' in old.rows[0]);
+      if (old?.final && !missing) continue;
       if (s.kind === 'race' || s.kind === 'sprint') recentRace = true;
       try {
         const rows = await read(w, s);
@@ -154,6 +160,8 @@ async function updateSeries(id, def) {
     }
     if (colorOf) Object.values(next.sessions).forEach(s => recolor(s.rows, colorOf, 'team'));
     if (await writeIfChanged(path, next)) log(`classifiche ${w.id} aggiornate`);
+
+    w.sessions.filter(isRace).forEach(s => { if (next.sessions[s.id]) raceRows.push(next.sessions[s.id].rows || []); });
 
     winners[w.id] = w.sessions
       .filter(s => s.kind === 'race')
@@ -189,11 +197,18 @@ async function updateSeries(id, def) {
   }
 
   // Squadre: nella tabella "teams" il nome della squadra è in name, altrove in team
-  const saved = colorOf && (await readJSON(standingsPath));
+  const saved = (colorOf || def.constructors) && (await readJSON(standingsPath));
   if (saved) {
     const { updatedAt, ...rest } = saved;
-    rest.tables.forEach(tb => recolor(tb.rows, colorOf, tb.id === 'teams' ? 'name' : 'team'));
-    if (await writeIfChanged(standingsPath, rest)) log('colori squadre aggiornati');
+    if (colorOf) rest.tables.forEach(tb => recolor(tb.rows, colorOf, tb.id === 'teams' ? 'name' : 'team'));
+
+    // Costruttori subito dopo i piloti; solo se tutte le gare hanno già punti e costruttore
+    if (def.constructors && raceRows.every(rows => rows.every(r => 'maker' in r))) {
+      const others = rest.tables.filter(tb => tb.id !== 'constructors');
+      const rows = def.constructors(raceRows);
+      if (rows.length) rest.tables = [others[0], { id: 'constructors', label: 'Costruttori', rows }, ...others.slice(1)];
+    }
+    if (await writeIfChanged(standingsPath, rest)) log('mondiale aggiornato (colori e costruttori)');
   }
 }
 

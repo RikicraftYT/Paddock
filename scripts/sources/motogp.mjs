@@ -209,8 +209,33 @@ function toRows(list, kind) {
       team: r.team?.name || '',
       color: makerColor(r.constructor?.name, r.team?.name),
       value, out,
+      // Gare e sprint: punti ufficiali e costruttore, per il Mondiale costruttori
+      ...(isRace ? { points: Number(r.points) || 0, maker: r.constructor?.name || '' } : {}),
     };
   });
+}
+
+/* ---------------- Mondiale costruttori ---------------- */
+
+/**
+ * Il servizio non lo fornisce, quindi si calcola come da regolamento:
+ * in ogni gara e sprint ogni casa prende i punti del suo pilota meglio piazzato.
+ * Si usano i punti ufficiali della sessione, così valgono anche le gare a punteggio dimezzato.
+ * @param raceSessions  righe di classifica di tutte le gare e sprint della stagione
+ */
+export function motogpConstructors(raceSessions) {
+  const total = {};
+  for (const rows of raceSessions) {
+    const best = {};
+    for (const r of rows) {
+      if (!r.maker) continue;
+      best[r.maker] = Math.max(best[r.maker] || 0, Number(r.points) || 0);
+    }
+    for (const [maker, pts] of Object.entries(best)) total[maker] = (total[maker] || 0) + pts;
+  }
+  return Object.entries(total)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, points], i) => ({ pos: i + 1, name, team: '', color: makerColor(name), points }));
 }
 
 /* ---------------- Classifica mondiale ---------------- */
