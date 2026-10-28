@@ -400,6 +400,9 @@
   // Tocco fuori dalla finestra = chiudi
   $dialog.addEventListener('click', e => { if (e.target === $dialog) $dialog.close(); });
 
+  // Niente inviti automatici a installare l'app (Chrome, Edge): chi la vuole la installa dal menu del browser
+  window.addEventListener('beforeinstallprompt', e => e.preventDefault());
+
   /* ---------------- Avvio ---------------- */
   show();
 })();
