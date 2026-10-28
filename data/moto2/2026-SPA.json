@@ -9,7 +9,7 @@
      "pos": 1,
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "1:39.525",
      "out": false
     },
@@ -17,7 +17,7 @@
      "pos": 2,
      "name": "Celestino Vietti",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+0.030",
      "out": false
     },
@@ -25,7 +25,7 @@
      "pos": 3,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.086",
      "out": false
     },
@@ -33,7 +33,7 @@
      "pos": 4,
      "name": "Daniel Holgado",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.093",
      "out": false
     },
@@ -41,7 +41,7 @@
      "pos": 5,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+0.118",
      "out": false
     },
@@ -49,7 +49,7 @@
      "pos": 6,
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.130",
      "out": false
     },
@@ -57,7 +57,7 @@
      "pos": 7,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+0.132",
      "out": false
     },
@@ -65,7 +65,7 @@
      "pos": 8,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.199",
      "out": false
     },
@@ -73,7 +73,7 @@
      "pos": 9,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.385",
      "out": false
     },
@@ -81,7 +81,7 @@
      "pos": 10,
      "name": "David Alonso",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.392",
      "out": false
     },
@@ -89,7 +89,7 @@
      "pos": 11,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.416",
      "out": false
     },
@@ -97,7 +97,7 @@
      "pos": 12,
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.552",
      "out": false
     },
@@ -105,7 +105,7 @@
      "pos": 13,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.566",
      "out": false
     },
@@ -113,7 +113,7 @@
      "pos": 14,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.607",
      "out": false
     },
@@ -121,7 +121,7 @@
      "pos": 15,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+0.675",
      "out": false
     },
@@ -129,7 +129,7 @@
      "pos": 16,
      "name": "Mario Aji",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+0.710",
      "out": false
     },
@@ -137,7 +137,7 @@
      "pos": 17,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.738",
      "out": false
     },
@@ -145,7 +145,7 @@
      "pos": 18,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.745",
      "out": false
     },
@@ -153,7 +153,7 @@
      "pos": 19,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+0.759",
      "out": false
     },
@@ -161,7 +161,7 @@
      "pos": 20,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.782",
      "out": false
     },
@@ -169,7 +169,7 @@
      "pos": 21,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.859",
      "out": false
     },
@@ -177,7 +177,7 @@
      "pos": 22,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.994",
      "out": false
     },
@@ -185,7 +185,7 @@
      "pos": 23,
      "name": "Marcos Ramirez",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+1.007",
      "out": false
     },
@@ -193,7 +193,7 @@
      "pos": 24,
      "name": "Luca Lunetta",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+1.306",
      "out": false
     },
@@ -201,7 +201,7 @@
      "pos": 25,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+1.513",
      "out": false
     },
@@ -209,7 +209,7 @@
      "pos": 26,
      "name": "Jorge Navarro",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+1.527",
      "out": false
     },
@@ -217,7 +217,7 @@
      "pos": 27,
      "name": "Taiyo Furusato",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+1.739",
      "out": false
     },
@@ -225,7 +225,7 @@
      "pos": 28,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+2.380",
      "out": false
     }
@@ -239,7 +239,7 @@
      "pos": 1,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "1:38.973",
      "out": false
     },
@@ -247,7 +247,7 @@
      "pos": 2,
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.079",
      "out": false
     },
@@ -255,7 +255,7 @@
      "pos": 3,
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.129",
      "out": false
     },
@@ -263,7 +263,7 @@
      "pos": 4,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+0.221",
      "out": false
     },
@@ -271,7 +271,7 @@
      "pos": 5,
      "name": "Daniel Holgado",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.241",
      "out": false
     },
@@ -279,7 +279,7 @@
      "pos": 6,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+0.322",
      "out": false
     },
@@ -287,7 +287,7 @@
      "pos": 7,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.370",
      "out": false
     },
@@ -295,7 +295,7 @@
      "pos": 8,
      "name": "Mario Aji",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+0.411",
      "out": false
     },
@@ -303,7 +303,7 @@
      "pos": 9,
      "name": "David Alonso",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.432",
      "out": false
     },
@@ -311,7 +311,7 @@
      "pos": 10,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.433",
      "out": false
     },
@@ -319,7 +319,7 @@
      "pos": 11,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+0.439",
      "out": false
     },
@@ -327,7 +327,7 @@
      "pos": 12,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+0.500",
      "out": false
     },
@@ -335,7 +335,7 @@
      "pos": 13,
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.554",
      "out": false
     },
@@ -343,7 +343,7 @@
      "pos": 14,
      "name": "Celestino Vietti",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+0.562",
      "out": false
     },
@@ -351,7 +351,7 @@
      "pos": 15,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.623",
      "out": false
     },
@@ -359,7 +359,7 @@
      "pos": 16,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.698",
      "out": false
     },
@@ -367,7 +367,7 @@
      "pos": 17,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.775",
      "out": false
     },
@@ -375,7 +375,7 @@
      "pos": 18,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.815",
      "out": false
     },
@@ -383,7 +383,7 @@
      "pos": 19,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.831",
      "out": false
     },
@@ -391,7 +391,7 @@
      "pos": 20,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.940",
      "out": false
     },
@@ -399,7 +399,7 @@
      "pos": 21,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.992",
      "out": false
     },
@@ -407,7 +407,7 @@
      "pos": 22,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+1.006",
      "out": false
     },
@@ -415,7 +415,7 @@
      "pos": 23,
      "name": "Marcos Ramirez",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+1.022",
      "out": false
     },
@@ -423,7 +423,7 @@
      "pos": 24,
      "name": "Luca Lunetta",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+1.120",
      "out": false
     },
@@ -431,7 +431,7 @@
      "pos": 25,
      "name": "Jorge Navarro",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+1.383",
      "out": false
     },
@@ -439,7 +439,7 @@
      "pos": 26,
      "name": "Taiyo Furusato",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+1.518",
      "out": false
     },
@@ -447,7 +447,7 @@
      "pos": 27,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+1.529",
      "out": false
     },
@@ -455,7 +455,7 @@
      "pos": 28,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+1.779",
      "out": false
     }
@@ -469,7 +469,7 @@
      "pos": 1,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "1:53.516",
      "out": false
     },
@@ -477,7 +477,7 @@
      "pos": 2,
      "name": "Mario Aji",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+0.574",
      "out": false
     },
@@ -485,7 +485,7 @@
      "pos": 3,
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.633",
      "out": false
     },
@@ -493,7 +493,7 @@
      "pos": 4,
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.758",
      "out": false
     },
@@ -501,7 +501,7 @@
      "pos": 5,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.938",
      "out": false
     },
@@ -509,7 +509,7 @@
      "pos": 6,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+1.165",
      "out": false
     },
@@ -517,7 +517,7 @@
      "pos": 7,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+1.341",
      "out": false
     },
@@ -525,7 +525,7 @@
      "pos": 8,
      "name": "Daniel Holgado",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+1.489",
      "out": false
     },
@@ -533,7 +533,7 @@
      "pos": 9,
      "name": "Jorge Navarro",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+1.668",
      "out": false
     },
@@ -541,7 +541,7 @@
      "pos": 10,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+2.020",
      "out": false
     },
@@ -549,7 +549,7 @@
      "pos": 11,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+2.305",
      "out": false
     },
@@ -557,7 +557,7 @@
      "pos": 12,
      "name": "Taiyo Furusato",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+2.660",
      "out": false
     },
@@ -565,7 +565,7 @@
      "pos": 13,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+2.733",
      "out": false
     },
@@ -573,7 +573,7 @@
      "pos": 14,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+2.925",
      "out": false
     },
@@ -581,7 +581,7 @@
      "pos": 15,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+2.933",
      "out": false
     },
@@ -589,7 +589,7 @@
      "pos": 16,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+3.185",
      "out": false
     },
@@ -597,7 +597,7 @@
      "pos": 17,
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+3.566",
      "out": false
     },
@@ -605,7 +605,7 @@
      "pos": 18,
      "name": "Celestino Vietti",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+3.658",
      "out": false
     },
@@ -613,7 +613,7 @@
      "pos": 19,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+3.905",
      "out": false
     },
@@ -621,7 +621,7 @@
      "pos": 20,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+4.103",
      "out": false
     },
@@ -629,7 +629,7 @@
      "pos": 21,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+4.274",
      "out": false
     },
@@ -637,7 +637,7 @@
      "pos": 22,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+4.312",
      "out": false
     },
@@ -645,7 +645,7 @@
      "pos": 23,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+4.733",
      "out": false
     },
@@ -653,7 +653,7 @@
      "pos": 24,
      "name": "David Alonso",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+5.011",
      "out": false
     },
@@ -661,7 +661,7 @@
      "pos": 25,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+5.236",
      "out": false
     },
@@ -669,7 +669,7 @@
      "pos": 26,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+5.506",
      "out": false
     },
@@ -677,7 +677,7 @@
      "pos": 27,
      "name": "Luca Lunetta",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+6.024",
      "out": false
     },
@@ -685,7 +685,7 @@
      "pos": 28,
      "name": "Marcos Ramirez",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+7.652",
      "out": false
     }
@@ -699,7 +699,7 @@
      "pos": 1,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "1:39.988",
      "out": false
     },
@@ -707,7 +707,7 @@
      "pos": 2,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.042",
      "out": false
     },
@@ -715,7 +715,7 @@
      "pos": 3,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.058",
      "out": false
     },
@@ -723,7 +723,7 @@
      "pos": 4,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.059",
      "out": false
     },
@@ -731,7 +731,7 @@
      "pos": 5,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.064",
      "out": false
     },
@@ -739,7 +739,7 @@
      "pos": 6,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.131",
      "out": false
     },
@@ -747,7 +747,7 @@
      "pos": 7,
      "name": "Marcos Ramirez",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+0.245",
      "out": false
     },
@@ -755,7 +755,7 @@
      "pos": 8,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.296",
      "out": false
     },
@@ -763,7 +763,7 @@
      "pos": 9,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+0.542",
      "out": false
     },
@@ -771,7 +771,7 @@
      "pos": 10,
      "name": "Taiyo Furusato",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+0.666",
      "out": false
     },
@@ -779,7 +779,7 @@
      "pos": 11,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+0.703",
      "out": false
     },
@@ -787,7 +787,7 @@
      "pos": 12,
      "name": "Luca Lunetta",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+0.856",
      "out": false
     },
@@ -795,7 +795,7 @@
      "pos": 13,
      "name": "Jorge Navarro",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+0.898",
      "out": false
     },
@@ -803,7 +803,7 @@
      "pos": 14,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+0.925",
      "out": false
     }
@@ -817,7 +817,7 @@
      "pos": 1,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "1:39.101",
      "out": false
     },
@@ -825,7 +825,7 @@
      "pos": 2,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+0.057",
      "out": false
     },
@@ -833,7 +833,7 @@
      "pos": 3,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.095",
      "out": false
     },
@@ -841,7 +841,7 @@
      "pos": 4,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.154",
      "out": false
     },
@@ -849,7 +849,7 @@
      "pos": 5,
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+0.155",
      "out": false
     },
@@ -857,7 +857,7 @@
      "pos": 6,
      "name": "David Alonso",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.267",
      "out": false
     },
@@ -865,7 +865,7 @@
      "pos": 7,
      "name": "Daniel Holgado",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+0.326",
      "out": false
     },
@@ -873,7 +873,7 @@
      "pos": 8,
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.332",
      "out": false
     },
@@ -881,7 +881,7 @@
      "pos": 9,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+0.528",
      "out": false
     },
@@ -889,7 +889,7 @@
      "pos": 10,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+0.539",
      "out": false
     },
@@ -897,7 +897,7 @@
      "pos": 11,
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+0.584",
      "out": false
     },
@@ -905,7 +905,7 @@
      "pos": 12,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+0.639",
      "out": false
     },
@@ -913,7 +913,7 @@
      "pos": 13,
      "name": "Celestino Vietti",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+0.667",
      "out": false
     },
@@ -921,7 +921,7 @@
      "pos": 14,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+0.705",
      "out": false
     },
@@ -929,7 +929,7 @@
      "pos": 15,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+0.765",
      "out": false
     },
@@ -937,7 +937,7 @@
      "pos": 16,
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+1.034",
      "out": false
     },
@@ -945,7 +945,7 @@
      "pos": 17,
      "name": "Mario Aji",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "+1.104",
      "out": false
     },
@@ -953,7 +953,7 @@
      "pos": "–",
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "",
      "out": false
     }
@@ -967,7 +967,7 @@
      "pos": 1,
      "name": "Senna Agius",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "35:17.948",
      "out": false,
      "points": 25,
@@ -977,7 +977,7 @@
      "pos": 2,
      "name": "Manuel Gonzalez",
      "team": "LIQUI MOLY Dynavolt Intact GP",
-     "color": "#1F5AA6",
+     "color": "#D4D7DB",
      "value": "+0.885",
      "out": false,
      "points": 20,
@@ -987,7 +987,7 @@
      "pos": 3,
      "name": "Collin Veijer",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+1.107",
      "out": false,
      "points": 16,
@@ -997,7 +997,7 @@
      "pos": 4,
      "name": "David Alonso",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+2.032",
      "out": false,
      "points": 13,
@@ -1007,7 +1007,7 @@
      "pos": 5,
      "name": "Celestino Vietti",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+4.212",
      "out": false,
      "points": 11,
@@ -1017,7 +1017,7 @@
      "pos": 6,
      "name": "Daniel Muñoz",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "+10.013",
      "out": false,
      "points": 10,
@@ -1027,7 +1027,7 @@
      "pos": 7,
      "name": "Izan Guevara",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+10.660",
      "out": false,
      "points": 9,
@@ -1037,7 +1037,7 @@
      "pos": 8,
      "name": "Tony Arbolino",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "+11.649",
      "out": false,
      "points": 8,
@@ -1047,7 +1047,7 @@
      "pos": 9,
      "name": "Alex Escrig",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "+12.289",
      "out": false,
      "points": 7,
@@ -1057,7 +1057,7 @@
      "pos": 10,
      "name": "Ivan Ortola",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+12.564",
      "out": false,
      "points": 6,
@@ -1067,7 +1067,7 @@
      "pos": 11,
      "name": "Daniel Holgado",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#00A3A3",
      "value": "+12.934",
      "out": false,
      "points": 5,
@@ -1077,7 +1077,7 @@
      "pos": 12,
      "name": "Ayumu Sasaki",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+14.893",
      "out": false,
      "points": 4,
@@ -1087,7 +1087,7 @@
      "pos": 13,
      "name": "Deniz öncü",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "+15.386",
      "out": false,
      "points": 3,
@@ -1097,7 +1097,7 @@
      "pos": 14,
      "name": "Filip Salac",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+15.539",
      "out": false,
      "points": 2,
@@ -1107,7 +1107,7 @@
      "pos": 15,
      "name": "Joe Roberts",
      "team": "OnlyFans American Racing Team",
-     "color": "#0D34B2",
+     "color": "#1035A3",
      "value": "+16.239",
      "out": false,
      "points": 1,
@@ -1117,7 +1117,7 @@
      "pos": 16,
      "name": "Marcos Ramirez",
      "team": "QJMOTOR - GALFER - MSI",
-     "color": "#D80C24",
+     "color": "#D30027",
      "value": "+17.444",
      "out": false,
      "points": 0,
@@ -1127,7 +1127,7 @@
      "pos": 17,
      "name": "Zonta Vd Goorbergh",
      "team": "Momoven Idrofoglia RW Racing Team",
-     "color": "#EB5B1D",
+     "color": "#ED4E23",
      "value": "+20.838",
      "out": false,
      "points": 0,
@@ -1137,7 +1137,7 @@
      "pos": 18,
      "name": "Luca Lunetta",
      "team": "Beta Tools SpeedRS Team",
-     "color": "#F24D44",
+     "color": "#A0A4DA",
      "value": "+27.305",
      "out": false,
      "points": 0,
@@ -1147,7 +1147,7 @@
      "pos": 19,
      "name": "Sergio Garcia",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "+28.559",
      "out": false,
      "points": 0,
@@ -1157,7 +1157,7 @@
      "pos": 20,
      "name": "Jose Antonio Rueda",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EE5913",
      "value": "+29.672",
      "out": false,
      "points": 0,
@@ -1167,7 +1167,7 @@
      "pos": 21,
      "name": "Alberto Ferrandez",
      "team": "BLU CRU Pramac Yamaha Moto2",
-     "color": "#8E44AD",
+     "color": "#1B3C9B",
      "value": "+36.244",
      "out": false,
      "points": 0,
@@ -1177,7 +1177,7 @@
      "pos": "–",
      "name": "Mario Aji",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1187,7 +1187,7 @@
      "pos": "–",
      "name": "Jorge Navarro",
      "team": "KLINT Racing Team",
-     "color": "#73CDBA",
+     "color": "#72CEAE",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1197,7 +1197,7 @@
      "pos": "–",
      "name": "Taiyo Furusato",
      "team": "Idemitsu Honda Team Asia",
-     "color": "#FAFAFA",
+     "color": "#FFFFFF",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1207,7 +1207,7 @@
      "pos": "–",
      "name": "Alonso Lopez",
      "team": "ITALJET Gresini Moto2",
-     "color": "#9BAEE4",
+     "color": "#383C3F",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1217,7 +1217,7 @@
      "pos": "–",
      "name": "Barry Baltus",
      "team": "REDS Fantic Racing",
-     "color": "#AFB9B9",
+     "color": "#5E172B",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1227,7 +1227,7 @@
      "pos": "–",
      "name": "Aron Canet",
      "team": "ELF Marc VDS Racing Team",
-     "color": "#682A38",
+     "color": "#C0C5CA",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1237,7 +1237,7 @@
      "pos": "–",
      "name": "Adrian Huertas",
      "team": "Italtrans Racing Team",
-     "color": "#106BA9",
+     "color": "#1072BA",
      "value": "Ritirato",
      "out": true,
      "points": 0,
@@ -1246,5 +1246,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-28T17:18:02.954Z"
+ "updatedAt": "2026-10-28T18:04:46.921Z"
 }

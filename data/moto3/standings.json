@@ -10,49 +10,49 @@
      "pos": 1,
      "name": "Maximo Quiles",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#18A0A2",
      "points": 351
     },
     {
      "pos": 2,
      "name": "David Almansa",
      "team": "Liqui Moly Dynavolt Intact GP",
-     "color": "#535357",
+     "color": "#555B62",
      "points": 217
     },
     {
      "pos": 3,
      "name": "Brian Uriarte",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EA5B0C",
      "points": 198
     },
     {
      "pos": 4,
      "name": "Alvaro Carpe",
      "team": "Red Bull KTM Ajo",
-     "color": "#FF6600",
+     "color": "#EA5B0C",
      "points": 189
     },
     {
      "pos": 5,
      "name": "Adrian Fernandez",
      "team": "Leopard Racing",
-     "color": "#75CBD1",
+     "color": "#78D5CB",
      "points": 148
     },
     {
      "pos": 6,
      "name": "Marco Morelli",
      "team": "CFMOTO Gaviota Aspar Team",
-     "color": "#009BB4",
+     "color": "#18A0A2",
      "points": 140
     },
     {
      "pos": 7,
      "name": "Valentin Perrone",
      "team": "Red Bull KTM Tech3",
-     "color": "#D85700",
+     "color": "#EA5B0C",
      "points": 120
     },
     {
@@ -66,98 +66,98 @@
      "pos": 9,
      "name": "Hakim Danish",
      "team": "AEON Credit - MT Helmets - MSI",
-     "color": "#FF4133",
+     "color": "#E62B32",
      "points": 103
     },
     {
      "pos": 10,
      "name": "Matteo Bertelle",
      "team": "LEVEL UP - MTA",
-     "color": "#E04F4F",
+     "color": "#BD2745",
      "points": 103
     },
     {
      "pos": 11,
      "name": "Rico Salmela",
      "team": "Red Bull KTM Tech3",
-     "color": "#D85700",
+     "color": "#EA5B0C",
      "points": 89
     },
     {
      "pos": 12,
      "name": "Adrian Cruces",
      "team": "CIP Green Power",
-     "color": "#77CD5C",
+     "color": "#76D254",
      "points": 78
     },
     {
      "pos": 13,
      "name": "Guido Pini",
      "team": "Leopard Racing",
-     "color": "#75CBD1",
+     "color": "#78D5CB",
      "points": 77
     },
     {
      "pos": 14,
      "name": "Joel Esteban",
      "team": "LEVEL UP - MTA",
-     "color": "#E04F4F",
+     "color": "#BD2745",
      "points": 68
     },
     {
      "pos": 15,
      "name": "Casey O'gorman",
      "team": "SIC58 Squadra Corse",
-     "color": "#E42327",
+     "color": "#E62B32",
      "points": 66
     },
     {
      "pos": 16,
      "name": "Joel Kelso",
      "team": "GRYD Racing",
-     "color": "#D01012",
+     "color": "#3C82B3",
      "points": 64
     },
     {
      "pos": 17,
      "name": "Eddie O'shea",
      "team": "GRYD Racing",
-     "color": "#D01012",
+     "color": "#3C82B3",
      "points": 60
     },
     {
      "pos": 18,
      "name": "David Muñoz",
      "team": "Liqui Moly Dynavolt Intact GP",
-     "color": "#535357",
+     "color": "#555B62",
      "points": 56
     },
     {
      "pos": 19,
      "name": "Jesus Rios",
      "team": "Rivacold Snipers Team",
-     "color": "#FFE000",
+     "color": "#E5DB18",
      "points": 48
     },
     {
      "pos": 20,
      "name": "Ryusei Yamanaka",
      "team": "AEON Credit - MT Helmets - MSI",
-     "color": "#FF4133",
+     "color": "#E62B32",
      "points": 41
     },
     {
      "pos": 21,
      "name": "Scott Ogden",
      "team": "CIP Green Power",
-     "color": "#77CD5C",
+     "color": "#76D254",
      "points": 33
     },
     {
      "pos": 22,
      "name": "David Gonzalez",
      "team": "Liqui Moly Dynavolt Intact GP",
-     "color": "#535357",
+     "color": "#555B62",
      "points": 7
     },
     {
@@ -178,14 +178,14 @@
      "pos": 25,
      "name": "Leo Rammerstorfer",
      "team": "SIC58 Squadra Corse",
-     "color": "#E42327",
+     "color": "#E62B32",
      "points": 2
     },
     {
      "pos": 26,
      "name": "Kiattisak Singhapong",
      "team": "Rivacold Snipers Team",
-     "color": "#FFE000",
+     "color": "#E5DB18",
      "points": 1
     },
     {
@@ -213,7 +213,7 @@
      "pos": 30,
      "name": "Nicola Carraro",
      "team": "Rivacold Snipers Team",
-     "color": "#FFE000",
+     "color": "#E5DB18",
      "points": 0
     },
     {
@@ -241,56 +241,56 @@
      "pos": 1,
      "name": "CFMOTO Gaviota Aspar Team",
      "team": "KTM",
-     "color": "#009BB4",
+     "color": "#18A0A2",
      "points": 491
     },
     {
      "pos": 2,
      "name": "Red Bull KTM Ajo",
      "team": "KTM",
-     "color": "#FF6600",
+     "color": "#EA5B0C",
      "points": 387
     },
     {
      "pos": 3,
      "name": "Liqui Moly Dynavolt Intact GP",
      "team": "KTM",
-     "color": "#535357",
+     "color": "#555B62",
      "points": 280
     },
     {
      "pos": 4,
      "name": "Leopard Racing",
      "team": "Honda",
-     "color": "#75CBD1",
+     "color": "#78D5CB",
      "points": 225
     },
     {
      "pos": 5,
      "name": "Red Bull KTM Tech3",
      "team": "KTM",
-     "color": "#D85700",
+     "color": "#EA5B0C",
      "points": 209
     },
     {
      "pos": 6,
      "name": "LEVEL UP - MTA",
      "team": "KTM",
-     "color": "#E04F4F",
+     "color": "#BD2745",
      "points": 171
     },
     {
      "pos": 7,
      "name": "AEON Credit - MT Helmets - MSI",
      "team": "KTM",
-     "color": "#FF4133",
+     "color": "#E62B32",
      "points": 144
     },
     {
      "pos": 8,
      "name": "GRYD Racing",
      "team": "Honda",
-     "color": "#D01012",
+     "color": "#3C82B3",
      "points": 124
     },
     {
@@ -304,21 +304,21 @@
      "pos": 10,
      "name": "CIP Green Power",
      "team": "KTM",
-     "color": "#77CD5C",
+     "color": "#76D254",
      "points": 111
     },
     {
      "pos": 11,
      "name": "SIC58 Squadra Corse",
      "team": "Honda",
-     "color": "#E42327",
+     "color": "#E62B32",
      "points": 68
     },
     {
      "pos": 12,
      "name": "Rivacold Snipers Team",
      "team": "Honda",
-     "color": "#FFE000",
+     "color": "#E5DB18",
      "points": 49
     },
     {
@@ -352,5 +352,5 @@
   }
  ],
  "source": "MotoGP.com",
- "updatedAt": "2026-10-28T17:36:22.668Z"
+ "updatedAt": "2026-10-28T18:04:48.728Z"
 }
