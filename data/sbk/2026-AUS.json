@@ -1,0 +1,1224 @@
+{
+ "weekend": "2026-AUS",
+ "sessions": {
+  "FP1": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "1:28.858",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+0.524",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.689",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.703",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.757",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+0.811",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+0.834",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.852",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.888",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+0.901",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+0.951",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+1.034",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+1.035",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+1.059",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.455",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+1.561",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.696",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.702",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.719",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.192",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.754",
+     "out": false
+    }
+   ]
+  },
+  "FP2": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "1:28.858",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.496",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+0.524",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.610",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.624",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+0.626",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.703",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+0.799",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+0.834",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.888",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+0.948",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.976",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+1.035",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+1.059",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+1.202",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.455",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.462",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.530",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.696",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+1.928",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.754",
+     "out": false
+    }
+   ]
+  },
+  "FP3": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "1:28.273",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+0.302",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.449",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.469",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+0.470",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+0.488",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.515",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.565",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.569",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.576",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+0.649",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+0.767",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+0.908",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+1.204",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.298",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+1.481",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.541",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.883",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.018",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+2.023",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.562",
+     "out": false
+    }
+   ]
+  },
+  "SP": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "1:28.244",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+0.419",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+0.485",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.699",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+0.728",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+0.805",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+0.947",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+0.993",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+1.001",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+1.043",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+1.089",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+1.119",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+1.130",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+1.191",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+1.516",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.725",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+1.742",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+2.136",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.256",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+2.733",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "Non classificato",
+     "out": true
+    }
+   ]
+  },
+  "RC1": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "32:56.857",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+4.776",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+6.147",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+6.183",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+8.249",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+12.549",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+13.746",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+20.610",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+21.663",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+22.250",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+22.267",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+22.724",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+30.799",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+35.308",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+35.311",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+59.515",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+74.921",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 19,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 20,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 21,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "Ritirato",
+     "out": true
+    }
+   ]
+  },
+  "SPRC": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "14:56.175",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+2.752",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+3.563",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+3.585",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "+3.985",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+4.250",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+5.118",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+8.178",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+9.291",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+9.512",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+9.893",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+11.264",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+14.366",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+14.565",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+14.887",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+15.151",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+19.065",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+19.207",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+22.042",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+29.157",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "Ritirato",
+     "out": true
+    }
+   ]
+  },
+  "RC2": {
+   "final": true,
+   "source": "WorldSBK.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Nicolo Bulega",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "37:21.038",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Axel Bassani",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "+11.336",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Alvaro Bautista",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "+17.790",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Tarran Mackenzie",
+     "team": "MGM Optical Express Racing",
+     "color": null,
+     "value": "+28.356",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Andrea Locatelli",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "+30.966",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Danilo Petrucci",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+31.901",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Miguel Oliveira",
+     "team": "ROKiT BMW Motorrad WorldSBK Team",
+     "color": "#1C69D4",
+     "value": "+32.135",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Iker Lecuona",
+     "team": "Aruba.it Racing - Ducati",
+     "color": "#D40E14",
+     "value": "+32.608",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Lorenzo Baldassarri",
+     "team": "Team Goeleven",
+     "color": null,
+     "value": "+33.241",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Garrett Gerloff",
+     "team": "Kawasaki WorldSBK Team",
+     "color": "#5DBB46",
+     "value": "+48.734",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Tetsuta Nagashima",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "+52.224",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Alberto Surra",
+     "team": "Motocorsa Racing",
+     "color": null,
+     "value": "+58.908",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Remy Gardner",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+66.503",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Stefano Manzi",
+     "team": "GYTR GRT Yamaha WorldSBK Team",
+     "color": "#2B4FD6",
+     "value": "+93.080",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "Bahattin Sofuoglu",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "+100.750",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Alex Lowes",
+     "team": "bimota by Kawasaki Racing Team",
+     "color": "#C9C9C9",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 17,
+     "name": "Yari Montella",
+     "team": "Barni Spark Racing Team",
+     "color": null,
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 18,
+     "name": "Xavi Vierge",
+     "team": "Pata Maxus Yamaha",
+     "color": "#2B4FD6",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 19,
+     "name": "Sam Lowes",
+     "team": "ELF Marc VDS Racing Team",
+     "color": null,
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 20,
+     "name": "Ryan Vickers",
+     "team": "Honda HRC",
+     "color": "#E8E8E8",
+     "value": "Ritirato",
+     "out": true
+    },
+    {
+     "pos": 21,
+     "name": "Mattia Rato",
+     "team": "Motoxracing WorldSBK Team",
+     "color": null,
+     "value": "Ritirato",
+     "out": true
+    }
+   ]
+  }
+ },
+ "updatedAt": "2026-10-28T16:15:25.636Z"
+}
