@@ -9,7 +9,7 @@
      "pos": 1,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "1:46.242",
      "out": false
     },
@@ -17,7 +17,7 @@
      "pos": 2,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.369",
      "out": false
     },
@@ -33,7 +33,7 @@
      "pos": 4,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+0.452",
      "out": false
     },
@@ -41,7 +41,7 @@
      "pos": 5,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+0.502",
      "out": false
     },
@@ -49,7 +49,7 @@
      "pos": 6,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.552",
      "out": false
     },
@@ -57,7 +57,7 @@
      "pos": 7,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+0.674",
      "out": false
     },
@@ -65,7 +65,7 @@
      "pos": 8,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.729",
      "out": false
     },
@@ -81,7 +81,7 @@
      "pos": 10,
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+0.996",
      "out": false
     },
@@ -89,7 +89,7 @@
      "pos": 11,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+1.004",
      "out": false
     },
@@ -97,7 +97,7 @@
      "pos": 12,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+1.035",
      "out": false
     },
@@ -105,7 +105,7 @@
      "pos": 13,
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+1.150",
      "out": false
     },
@@ -113,7 +113,7 @@
      "pos": 14,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+1.173",
      "out": false
     },
@@ -121,7 +121,7 @@
      "pos": 15,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+1.177",
      "out": false
     },
@@ -129,7 +129,7 @@
      "pos": 16,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+1.180",
      "out": false
     },
@@ -137,7 +137,7 @@
      "pos": 17,
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+1.206",
      "out": false
     },
@@ -145,7 +145,7 @@
      "pos": 18,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+1.278",
      "out": false
     },
@@ -153,7 +153,7 @@
      "pos": 19,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+1.308",
      "out": false
     },
@@ -161,7 +161,7 @@
      "pos": 20,
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+1.501",
      "out": false
     },
@@ -169,7 +169,7 @@
      "pos": 21,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+1.823",
      "out": false
     },
@@ -177,7 +177,7 @@
      "pos": 22,
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+3.671",
      "out": false
     }
@@ -191,7 +191,7 @@
      "pos": 1,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "1:44.808",
      "out": false
     },
@@ -199,7 +199,7 @@
      "pos": 2,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.091",
      "out": false
     },
@@ -207,7 +207,7 @@
      "pos": 3,
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+0.103",
      "out": false
     },
@@ -215,7 +215,7 @@
      "pos": 4,
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+0.151",
      "out": false
     },
@@ -223,7 +223,7 @@
      "pos": 5,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+0.196",
      "out": false
     },
@@ -231,7 +231,7 @@
      "pos": 6,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.202",
      "out": false
     },
@@ -239,7 +239,7 @@
      "pos": 7,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.216",
      "out": false
     },
@@ -247,7 +247,7 @@
      "pos": 8,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.324",
      "out": false
     },
@@ -255,7 +255,7 @@
      "pos": 9,
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+0.341",
      "out": false
     },
@@ -263,7 +263,7 @@
      "pos": 10,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+0.354",
      "out": false
     },
@@ -287,7 +287,7 @@
      "pos": 13,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.486",
      "out": false
     },
@@ -295,7 +295,7 @@
      "pos": 14,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+0.661",
      "out": false
     },
@@ -303,7 +303,7 @@
      "pos": 15,
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+0.787",
      "out": false
     },
@@ -311,7 +311,7 @@
      "pos": 16,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+0.809",
      "out": false
     },
@@ -319,7 +319,7 @@
      "pos": 17,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+0.862",
      "out": false
     },
@@ -327,7 +327,7 @@
      "pos": 18,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.996",
      "out": false
     },
@@ -335,7 +335,7 @@
      "pos": 19,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+1.146",
      "out": false
     },
@@ -343,7 +343,7 @@
      "pos": 20,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+1.491",
      "out": false
     },
@@ -351,7 +351,7 @@
      "pos": 21,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+2.034",
      "out": false
     },
@@ -359,7 +359,7 @@
      "pos": 22,
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+3.280",
      "out": false
     }
@@ -373,7 +373,7 @@
      "pos": 1,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "1:45.641",
      "out": false
     },
@@ -381,7 +381,7 @@
      "pos": 2,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.244",
      "out": false
     },
@@ -389,7 +389,7 @@
      "pos": 3,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.270",
      "out": false
     },
@@ -397,7 +397,7 @@
      "pos": 4,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+0.301",
      "out": false
     },
@@ -413,7 +413,7 @@
      "pos": 6,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.429",
      "out": false
     },
@@ -421,7 +421,7 @@
      "pos": 7,
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+0.445",
      "out": false
     },
@@ -429,7 +429,7 @@
      "pos": 8,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.463",
      "out": false
     },
@@ -437,7 +437,7 @@
      "pos": 9,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.490",
      "out": false
     },
@@ -445,7 +445,7 @@
      "pos": 10,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+0.509",
      "out": false
     },
@@ -461,7 +461,7 @@
      "pos": 12,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.762",
      "out": false
     },
@@ -469,7 +469,7 @@
      "pos": 13,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+0.843",
      "out": false
     },
@@ -477,7 +477,7 @@
      "pos": 14,
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+0.854",
      "out": false
     },
@@ -485,7 +485,7 @@
      "pos": 15,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+1.019",
      "out": false
     },
@@ -493,7 +493,7 @@
      "pos": 16,
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+1.104",
      "out": false
     },
@@ -501,7 +501,7 @@
      "pos": 17,
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+1.160",
      "out": false
     },
@@ -509,7 +509,7 @@
      "pos": 18,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+1.203",
      "out": false
     },
@@ -517,7 +517,7 @@
      "pos": 19,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+1.356",
      "out": false
     },
@@ -525,7 +525,7 @@
      "pos": 20,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+1.700",
      "out": false
     },
@@ -533,7 +533,7 @@
      "pos": 21,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+2.005",
      "out": false
     },
@@ -541,7 +541,7 @@
      "pos": 22,
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+2.909",
      "out": false
     }
@@ -563,7 +563,7 @@
      "pos": 2,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.227",
      "out": false
     },
@@ -579,7 +579,7 @@
      "pos": 4,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.370",
      "out": false
     },
@@ -587,7 +587,7 @@
      "pos": 5,
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+0.736",
      "out": false
     },
@@ -595,7 +595,7 @@
      "pos": 6,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+0.741",
      "out": false
     },
@@ -603,7 +603,7 @@
      "pos": 7,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+0.750",
      "out": false
     },
@@ -611,7 +611,7 @@
      "pos": 8,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+0.960",
      "out": false
     },
@@ -619,7 +619,7 @@
      "pos": 9,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+1.335",
      "out": false
     },
@@ -627,7 +627,7 @@
      "pos": 10,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+1.599",
      "out": false
     },
@@ -635,7 +635,7 @@
      "pos": 11,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+1.623",
      "out": false
     },
@@ -643,7 +643,7 @@
      "pos": 12,
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+2.554",
      "out": false
     }
@@ -657,7 +657,7 @@
      "pos": 1,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "1:43.921",
      "out": false
     },
@@ -673,7 +673,7 @@
      "pos": 3,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+0.363",
      "out": false
     },
@@ -681,7 +681,7 @@
      "pos": 4,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.373",
      "out": false
     },
@@ -689,7 +689,7 @@
      "pos": 5,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+0.392",
      "out": false
     },
@@ -697,7 +697,7 @@
      "pos": 6,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+0.561",
      "out": false
     },
@@ -705,7 +705,7 @@
      "pos": 7,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+0.577",
      "out": false
     },
@@ -713,7 +713,7 @@
      "pos": 8,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+0.713",
      "out": false
     },
@@ -721,7 +721,7 @@
      "pos": 9,
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+0.734",
      "out": false
     },
@@ -729,7 +729,7 @@
      "pos": 10,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+0.789",
      "out": false
     },
@@ -737,7 +737,7 @@
      "pos": 11,
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+0.942",
      "out": false
     },
@@ -745,7 +745,7 @@
      "pos": 12,
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+1.128",
      "out": false
     }
@@ -761,55 +761,69 @@
      "team": "Trackhouse MotoGP Team",
      "color": "#6E3FA3",
      "value": "19:28.408",
-     "out": false
+     "out": false,
+     "points": 12,
+     "maker": "Aprilia"
     },
     {
      "pos": 2,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+1.289",
-     "out": false
+     "out": false,
+     "points": 9,
+     "maker": "Aprilia"
     },
     {
      "pos": 3,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+3.287",
-     "out": false
+     "out": false,
+     "points": 7,
+     "maker": "Ducati"
     },
     {
      "pos": 4,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+4.481",
-     "out": false
+     "out": false,
+     "points": 6,
+     "maker": "Aprilia"
     },
     {
      "pos": 5,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+9.055",
-     "out": false
+     "out": false,
+     "points": 5,
+     "maker": "Ducati"
     },
     {
      "pos": 6,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+9.758",
-     "out": false
+     "out": false,
+     "points": 4,
+     "maker": "Ducati"
     },
     {
      "pos": 7,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+10.983",
-     "out": false
+     "out": false,
+     "points": 3,
+     "maker": "Ducati"
     },
     {
      "pos": 8,
@@ -817,119 +831,149 @@
      "team": "Trackhouse MotoGP Team",
      "color": "#6E3FA3",
      "value": "+11.411",
-     "out": false
+     "out": false,
+     "points": 2,
+     "maker": "Aprilia"
     },
     {
      "pos": 9,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+11.809",
-     "out": false
+     "out": false,
+     "points": 1,
+     "maker": "KTM"
     },
     {
      "pos": 10,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+12.932",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Honda"
     },
     {
      "pos": 11,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+16.690",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "KTM"
     },
     {
      "pos": 12,
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+17.043",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 13,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+18.407",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Honda"
     },
     {
      "pos": 14,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+20.619",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 15,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+20.669",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "KTM"
     },
     {
      "pos": 16,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+22.907",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 17,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+25.423",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 18,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+27.085",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Ducati"
     },
     {
      "pos": 19,
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+39.671",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Honda"
     },
     {
      "pos": "–",
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "Honda"
     },
     {
      "pos": "–",
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "Ducati"
     },
     {
      "pos": "–",
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "KTM"
     }
    ]
   },
@@ -941,25 +985,31 @@
      "pos": 1,
      "name": "Marco Bezzecchi",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "40:57.347",
-     "out": false
+     "out": false,
+     "points": 25,
+     "maker": "Aprilia"
     },
     {
      "pos": 2,
      "name": "Jorge Martin",
      "team": "Aprilia Racing",
-     "color": "#6E3FA3",
+     "color": "#5F259F",
      "value": "+3.559",
-     "out": false
+     "out": false,
+     "points": 20,
+     "maker": "Aprilia"
     },
     {
      "pos": 3,
      "name": "Francesco Bagnaia",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+5.098",
-     "out": false
+     "out": false,
+     "points": 16,
+     "maker": "Ducati"
     },
     {
      "pos": 4,
@@ -967,39 +1017,49 @@
      "team": "Trackhouse MotoGP Team",
      "color": "#6E3FA3",
      "value": "+5.132",
-     "out": false
+     "out": false,
+     "points": 13,
+     "maker": "Aprilia"
     },
     {
      "pos": 5,
      "name": "Fabio Di Giannantonio",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+5.453",
-     "out": false
+     "out": false,
+     "points": 11,
+     "maker": "Ducati"
     },
     {
      "pos": 6,
      "name": "Pedro Acosta",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+7.467",
-     "out": false
+     "out": false,
+     "points": 10,
+     "maker": "KTM"
     },
     {
      "pos": 7,
      "name": "Marc Marquez",
      "team": "Ducati Lenovo Team",
-     "color": "#D40E14",
+     "color": "#AD0000",
      "value": "+10.762",
-     "out": false
+     "out": false,
+     "points": 9,
+     "maker": "Ducati"
     },
     {
      "pos": 8,
      "name": "Fermin Aldeguer",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+14.644",
-     "out": false
+     "out": false,
+     "points": 8,
+     "maker": "Ducati"
     },
     {
      "pos": 9,
@@ -1007,114 +1067,142 @@
      "team": "Trackhouse MotoGP Team",
      "color": "#6E3FA3",
      "value": "+13.380",
-     "out": false
+     "out": false,
+     "points": 7,
+     "maker": "Aprilia"
     },
     {
      "pos": 10,
      "name": "Diogo Moreira",
      "team": "Pro Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "+21.366",
-     "out": false
+     "out": false,
+     "points": 6,
+     "maker": "Honda"
     },
     {
      "pos": 11,
      "name": "Brad Binder",
      "team": "Red Bull KTM Factory Racing",
-     "color": "#FF6600",
+     "color": "#FF7E27",
      "value": "+21.479",
-     "out": false
+     "out": false,
+     "points": 5,
+     "maker": "KTM"
     },
     {
      "pos": 12,
      "name": "Joan Mir",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+21.795",
-     "out": false
+     "out": false,
+     "points": 4,
+     "maker": "Honda"
     },
     {
      "pos": 13,
      "name": "Luca Marini",
      "team": "Honda HRC Castrol",
-     "color": "#E8E8E8",
+     "color": "#E50000",
      "value": "+22.059",
-     "out": false
+     "out": false,
+     "points": 3,
+     "maker": "Honda"
     },
     {
      "pos": 14,
      "name": "Franco Morbidelli",
      "team": "Pertamina Enduro VR46 Racing Team",
-     "color": "#D40E14",
+     "color": "#FFD200",
      "value": "+29.789",
-     "out": false
+     "out": false,
+     "points": 2,
+     "maker": "Ducati"
     },
     {
      "pos": 15,
      "name": "Jack Miller",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+32.289",
-     "out": false
+     "out": false,
+     "points": 1,
+     "maker": "Yamaha"
     },
     {
      "pos": 16,
      "name": "Toprak Razgatlioglu",
      "team": "Prima Pramac Yamaha MotoGP",
-     "color": "#2B4FD6",
+     "color": "#8E44AD",
      "value": "+31.920",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 17,
      "name": "Maverick Viñales",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "+32.717",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "KTM"
     },
     {
      "pos": 18,
      "name": "Fabio Quartararo",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "+34.335",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Yamaha"
     },
     {
      "pos": 19,
      "name": "Michele Pirro",
      "team": "BK8 Gresini Racing MotoGP",
-     "color": "#D40E14",
+     "color": "#9BAEE4",
      "value": "+40.553",
-     "out": false
+     "out": false,
+     "points": 0,
+     "maker": "Ducati"
     },
     {
      "pos": "–",
      "name": "Enea Bastianini",
      "team": "Red Bull KTM Tech3",
-     "color": "#FF6600",
+     "color": "#2B4C9B",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "KTM"
     },
     {
      "pos": "–",
      "name": "Cal Crutchlow",
      "team": "Castrol Honda LCR",
-     "color": "#E8E8E8",
+     "color": "#FAFAFA",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "Honda"
     },
     {
      "pos": "–",
      "name": "Alex Rins",
      "team": "Monster Energy Yamaha MotoGP Team",
-     "color": "#2B4FD6",
+     "color": "#0A2D82",
      "value": "Ritirato",
-     "out": true
+     "out": true,
+     "points": 0,
+     "maker": "Yamaha"
     }
    ]
   }
  },
- "updatedAt": "2026-10-28T16:11:57.691Z"
+ "updatedAt": "2026-10-28T17:17:23.131Z"
 }
