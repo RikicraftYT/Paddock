@@ -40,6 +40,7 @@
     view: store.get('paddock:view') || 'races',
     filter: { ...DEFAULT_FILTER, ...(store.get('paddock:filter') || {}) },
     theme: store.get('paddock:theme') || 'auto',
+    weekendBy: {},          // weekend scelto per gruppo, uguale per tutte le classi (assente = quello attuale)
     sessionIdx: null,       // sessione aperta (null = nessuna scelta esplicita)
     standingsTab: {},       // tabella mondiale scelta per campionato (telefono)
     data: {},               // calendari caricati, per campionato
@@ -53,6 +54,29 @@
   };
   const series = () => Paddock.series[seriesId()];
   const current = () => state.data[seriesId()];
+
+  /* ---------------- Weekend scelto (condiviso da MotoGP, Moto2 e Moto3) ---------------- */
+
+  /** Porta il calendario della classe aperta sul weekend scelto per il gruppo */
+  function syncWeekend(d) {
+    const wanted = state.weekendBy[state.groupId];
+    if (!wanted) { d.index = d.currentIndex; return; }
+    const i = d.weekends.findIndex(w => w.id === wanted.id);
+    // Classe che non corre quel weekend: il più vicino per data
+    d.index = i !== -1 ? i : d.weekends.reduce((best, w, j) =>
+      Math.abs(firstStart(w) - wanted.start) < Math.abs(firstStart(d.weekends[best]) - wanted.start) ? j : best, 0);
+  }
+
+  const firstStart = w => w.sessions[0]?.start.getTime() ?? 0;
+
+  function chooseWeekend(i) {
+    const d = current();
+    const w = d.weekends[i];
+    if (i === d.currentIndex) delete state.weekendBy[state.groupId];
+    else state.weekendBy[state.groupId] = { id: w.id, start: firstStart(w) };
+    d.index = i;
+    state.sessionIdx = null;
+  }
 
   /** Messaggio letto da VoiceOver senza spostare il focus */
   function announce(msg) {
@@ -136,6 +160,7 @@
   function renderRaces() {
     const d = current();
     if (!d) return;
+    syncWeekend(d);
     const w = d.weekends[d.index];
     const visible = visibleSessions(w);
     const chosen = visible.includes(state.sessionIdx) ? state.sessionIdx : null;
@@ -292,11 +317,9 @@
     $refresh.setAttribute('aria-busy', 'true');
     Paddock.cache.clearRecent();
     const id = seriesId();
-    const keep = state.data[id] ? { index: state.data[id].index } : null;
     delete state.data[id];
     delete state.standings[id];
-    await show(true);
-    if (keep && state.data[id]) { state.data[id].index = Math.min(keep.index, state.data[id].weekends.length - 1); render(); }
+    await show(true);       // il weekend scelto resta: lo ripristina syncWeekend
     $refresh.classList.remove('spinning');
     $refresh.removeAttribute('aria-busy');
     announce('Dati aggiornati');
@@ -306,8 +329,7 @@
   $app.addEventListener('click', e => {
     const go = e.target.closest('[data-go]');
     if (go) {
-      current().index += Number(go.dataset.go);
-      state.sessionIdx = null;
+      chooseWeekend(current().index + Number(go.dataset.go));
       render();
       focusEl(`[data-go="${go.dataset.go}"]:not(:disabled)`) || focusEl('#weekend-title');
       announce(current().weekends[current().index].name);
@@ -315,8 +337,7 @@
     }
 
     if (e.target.closest('[data-go-current]')) {
-      current().index = current().currentIndex;
-      state.sessionIdx = null;
+      chooseWeekend(current().currentIndex);
       render();
       focusEl('#weekend-title');
       announce(current().weekends[current().index].name);
