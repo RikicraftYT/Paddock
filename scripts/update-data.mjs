@@ -22,7 +22,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { motogpCalendar, motogpResultsReader, motogpStandings, motogpTeamColors, motogpConstructors } from './sources/motogp.mjs';
+import { motogpCalendar, motogpResultsReader, motogpStandings, motogpTeams, motogpConstructors } from './sources/motogp.mjs';
+import { makerColor } from './lib/format.mjs';
 import { sbkCalendar, sbkResultsReader, sbkStandings } from './sources/sbk.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -40,7 +41,7 @@ const motoClass = classId => ({
   calendar: o => motogpCalendar({ ...o, classId }),
   reader: o => motogpResultsReader({ ...o, classId }),
   standings: o => motogpStandings({ ...o, classId }),
-  teamColors: o => motogpTeamColors({ ...o, classId }),
+  teams: o => motogpTeams({ ...o, classId }),
   constructors: motogpConstructors,
   source: 'MotoGP.com',
 });
@@ -49,7 +50,11 @@ const SOURCES = {
   motogp: motoClass('motogp'),
   moto2: motoClass('moto2'),
   moto3: motoClass('moto3'),
-  sbk: { calendar: sbkCalendar, reader: sbkResultsReader, standings: sbkStandings, source: 'WorldSBK.com' },
+  sbk: {
+    calendar: sbkCalendar, reader: sbkResultsReader, standings: sbkStandings, source: 'WorldSBK.com',
+    // Nessun elenco squadre: il colore viene dal costruttore scritto nel nome
+    teams: async () => name => (makerColor(name) ? { color: makerColor(name) } : null),
+  },
 };
 
 /* ---------------- Rete ---------------- */
@@ -115,6 +120,20 @@ function recolor(rows, colorOf, key) {
   }
 }
 
+/** Classifica squadre: unisce le righe della stessa squadra con sponsor diversi (es. Honda LCR) */
+function mergeTeams(rows, teamOf) {
+  const byName = new Map();
+  for (const r of rows) {
+    const key = teamOf(r.name)?.name || r.name;
+    const same = byName.get(key);
+    if (same) { same.points += Number(r.points) || 0; same.name = key; }
+    else byName.set(key, { ...r, points: Number(r.points) || 0 });
+  }
+  return [...byName.values()]
+    .sort((a, b) => b.points - a.points)
+    .map((r, i) => ({ ...r, pos: i + 1, points: Math.round(r.points * 10) / 10 }));
+}
+
 async function updateSeries(id, def) {
   const dir = join(DATA, id);
   const now = Date.now();
@@ -124,9 +143,10 @@ async function updateSeries(id, def) {
   const calendar = await def.calendar({ year: YEAR, fetchJSON });
   if (!calendar.weekends.length) throw new Error('calendario vuoto');
 
-  const colorOf = def.teamColors
-    ? await def.teamColors({ year: YEAR, fetchJSON }).catch(err => { log('colori squadre non disponibili:', err.message); return null; })
+  const teamOf = def.teams
+    ? await def.teams({ year: YEAR, fetchJSON }).catch(err => { log('elenco squadre non disponibile:', err.message); return null; })
     : null;
+  const colorOf = teamOf && (name => teamOf(name)?.color);
 
   /* Classifiche di sessione */
   const read = def.reader({ year: YEAR, fetchJSON });
@@ -196,17 +216,22 @@ async function updateSeries(id, def) {
     }
   }
 
-  // Squadre: nella tabella "teams" il nome della squadra è in name, altrove in team
-  const saved = (colorOf || def.constructors) && (await readJSON(standingsPath));
+  const saved = (teamOf || def.constructors) && (await readJSON(standingsPath));
   if (saved) {
     const { updatedAt, ...rest } = saved;
-    if (colorOf) rest.tables.forEach(tb => recolor(tb.rows, colorOf, tb.id === 'teams' ? 'name' : 'team'));
+    if (teamOf) {
+      const teams = rest.tables.find(tb => tb.id === 'teams');
+      if (teams) teams.rows = mergeTeams(teams.rows, teamOf);
+      // Squadre e case: il nome è in name; piloti: la squadra è in team
+      rest.tables
+        .filter(tb => tb.id !== 'constructors')
+        .forEach(tb => recolor(tb.rows, colorOf, tb.id === 'teams' || tb.id === 'makers' ? 'name' : 'team'));
+    }
 
-    // Costruttori subito dopo i piloti; solo se tutte le gare hanno già punti e costruttore
+    // Costruttori in fondo (dopo le squadre); solo se tutte le gare hanno già punti e costruttore
     if (def.constructors && raceRows.every(rows => rows.every(r => 'maker' in r))) {
-      const others = rest.tables.filter(tb => tb.id !== 'constructors');
       const rows = def.constructors(raceRows);
-      if (rows.length) rest.tables = [others[0], { id: 'constructors', label: 'Costruttori', rows }, ...others.slice(1)];
+      if (rows.length) rest.tables = [...rest.tables.filter(tb => tb.id !== 'constructors'), { id: 'constructors', label: 'Costruttori', rows }];
     }
     if (await writeIfChanged(standingsPath, rest)) log('mondiale aggiornato (colori e costruttori)');
   }

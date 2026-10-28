@@ -85,12 +85,32 @@ const LIVERY = [
   ['intact', '#1F5AA6'],
 ];
 
+// MotoGP: colori scelti a mano, con la precedenza su quelli del servizio.
+// L'ordine conta: prima le squadre satellite, poi le case ("gresini" va prima di "ducati").
+const MOTOGP_COLORS = [
+  ['gresini', '#92A8D1'],
+  ['vr46', '#CCFF00'],
+  ['pramac', '#1A53D8'],
+  ['tech3', '#E96B1E'],
+  ['lcr', '#E0E0E0'],
+  ['trackhouse', '#008DD2'],
+  ['aprilia', '#8A2BE2'],
+  ['ducati', '#C51E14'],
+  ['ktm', '#F37021'],
+  ['yamaha', '#0033A0'],
+  ['honda', '#D01012'],
+];
+
 // Parole che non aiutano a riconoscere una squadra
 const STOP = new Set(['team', 'racing', 'motogp', 'moto2', 'moto3', 'the']);
 const words = s => String(s).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 1 && !STOP.has(w));
 const compact = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
 
-function teamColor(t) {
+function teamColor(t, classId) {
+  if (classId === 'motogp') {
+    const own = MOTOGP_COLORS.find(([k]) => compact(t.name).includes(k));
+    if (own) return own[1];
+  }
   const c = String(t.color || '').toLowerCase();
   if (/^#[0-9a-f]{6}$/.test(c) && c !== NO_COLOR) return c.toUpperCase();
   const hit = LIVERY.find(([k]) => compact(t.name).includes(k));
@@ -98,16 +118,17 @@ function teamColor(t) {
 }
 
 /**
- * Restituisce una funzione: nome squadra (come nelle classifiche) -> colore, o null.
- * I nomi delle classifiche cambiano con gli sponsor ("Castrol Honda LCR" / "Honda LCR"),
+ * Restituisce una funzione: nome squadra (come nelle classifiche) -> { name, color }, o null.
+ * name è il nome ufficiale della squadra: "Pro Honda LCR" e "Castrol Honda LCR" sono
+ * entrambe "Honda LCR". I nomi delle classifiche cambiano con gli sponsor,
  * quindi si sceglie la squadra con più parole in comune.
  */
-export async function motogpTeamColors({ year, fetchJSON, classId = 'motogp' }) {
+export async function motogpTeams({ year, fetchJSON, classId = 'motogp' }) {
   const cats = await fetchJSON(`${BROADCAST}/categories?seasonYear=${year}`);
   const cat = cats.find(c => compact(c.name).startsWith(compact(CLASSES[classId].name)));
   if (!cat) return () => null;
   const teams = (await fetchJSON(`${BROADCAST}/teams?categoryUuid=${cat.id}&seasonYear=${year}`))
-    .map(t => ({ words: words(t.name), color: teamColor(t) }))
+    .map(t => ({ words: words(t.name), name: t.name, color: teamColor(t, classId) }))
     .filter(t => t.words.length);
 
   const memo = {};
@@ -120,7 +141,7 @@ export async function motogpTeamColors({ year, fetchJSON, classId = 'motogp' }) 
       const s = t.words.filter(w => c.includes(w)).length / t.words.length;
       if (s > score) { score = s; best = t; }
     }
-    return (memo[name] = score >= 0.6 ? best.color : null);
+    return (memo[name] = score >= 0.6 ? { name: best.name, color: best.color } : null);
   };
 }
 

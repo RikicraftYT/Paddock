@@ -76,11 +76,11 @@ export function iso2(code) {
 /** Colore della barra a sinistra in classifica, in base al costruttore */
 const MAKER_COLORS = [
   ['bimota', '#C9C9C9'],
-  ['ducati', '#D40E14'],
-  ['aprilia', '#6E3FA3'],
-  ['ktm', '#FF6600'],
-  ['yamaha', '#2B4FD6'],
-  ['honda', '#E8E8E8'],
+  ['ducati', '#C51E14'],
+  ['aprilia', '#8A2BE2'],
+  ['ktm', '#F37021'],
+  ['yamaha', '#0033A0'],
+  ['honda', '#D01012'],
   ['bmw', '#1C69D4'],
   ['kawasaki', '#5DBB46'],
   ['triumph', '#9AA0A6'],
