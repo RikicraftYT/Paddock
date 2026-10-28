@@ -54,6 +54,51 @@
 
   <main id="app" tabindex="-1"></main>
 
+  <!-- Note su dati, privacy e licenze: chiuse di base, si aprono con un tocco -->
+  <footer class="site-footer" id="footer">
+    <p class="footer-lead">
+      <b>Paddock</b> è un'app personale e <b>non ufficiale</b>.
+      Orari e classifiche possono arrivare in ritardo o contenere errori: per le informazioni ufficiali fai riferimento ai siti dei campionati.
+    </p>
+
+    <details>
+      <summary>Quando arrivano i dati</summary>
+      <ul>
+        <li><b>Orari</b>: sono mostrati nel fuso orario del tuo dispositivo. Gli organizzatori possono cambiarli anche all'ultimo momento.</li>
+        <li><b>Formula 1</b>: l'app chiede i dati direttamente a OpenF1 e Jolpica. Le classifiche di solito compaiono da pochi minuti a qualche ora dopo la fine della sessione; qualifiche, sprint e gara su Jolpica possono richiedere qualche ora in più.</li>
+        <li><b>MotoGP, Moto2, Moto3 e Superbike</b>: i dati sono copiati dai siti ufficiali da un programma automatico che gira ogni 15 minuti su GitHub. GitHub può ritardarne l'avvio, quindi una classifica compare di solito tra 15 e 45 minuti dopo la pubblicazione sul sito ufficiale.</li>
+        <li><b>Correzioni</b>: penalità e reclami possono cambiare i risultati dopo la sessione. Per MotoGP e Superbike le classifiche vengono ricontrollate per 3 ore dalla fine della sessione, e il Mondiale dopo ogni gara e comunque ogni 6 ore.</li>
+        <li><b>Sul tuo dispositivo</b> le classifiche appena concluse restano in memoria per qualche minuto: il pulsante <i>Aggiorna</i> in alto le riscarica subito.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Privacy e cookie</summary>
+      <ul>
+        <li><b>Nessun cookie, nessun account, nessuna statistica.</b> L'app non usa strumenti di tracciamento né pubblicità.</li>
+        <li>Le preferenze (campionato, filtro, tema) e una copia dei dati scaricati sono salvate solo nella memoria del tuo browser (localStorage). Non vengono inviate a nessuno e puoi cancellarle dalle impostazioni del browser.</li>
+        <li>Il sito è ospitato da GitHub Pages; per la Formula 1 il browser si collega anche a <code>api.jolpi.ca</code> e <code>api.openf1.org</code>. Come ogni sito web, questi servizi ricevono l'indirizzo IP del tuo dispositivo e lo trattano secondo le proprie informative (ad esempio la <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy di GitHub</a>).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Note legali e licenze</summary>
+      <ul>
+        <li>Paddock non ha legami con Formula One Group, FIA, Dorna Sports, MotoGP o WorldSBK. Nomi, loghi e marchi citati appartengono ai rispettivi proprietari e sono usati solo per identificare i campionati.</li>
+        <li><b>Dati</b>: Jolpica, OpenF1, MotoGP.com e WorldSBK.com. Restano di proprietà dei rispettivi titolari e sono mostrati a scopo personale e non commerciale. Se sei titolare di questi dati e vuoi che vengano rimossi, <a href="https://github.com/RikicraftYT/Paddock/issues" target="_blank" rel="noopener">apri una segnalazione</a>.</li>
+        <li><b>Codice</b>: licenza MIT. <b>Bandiere</b>: flag-icons, licenza MIT. L'app è fornita "così com'è", senza garanzie.</li>
+      </ul>
+    </details>
+
+    <p class="footer-links">
+      <a href="https://github.com/RikicraftYT/Paddock" target="_blank" rel="noopener">Codice su GitHub</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/RikicraftYT/Paddock/blob/main/LICENSE" target="_blank" rel="noopener">Licenza</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/RikicraftYT/Paddock/issues" target="_blank" rel="noopener">Segnala un problema</a>
+    </p>
+  </footer>
+
   <!-- Annunci per VoiceOver (caricamenti, errori) -->
   <div id="status" class="sr-only" role="status" aria-live="polite"></div>
 
@@ -93,9 +138,8 @@
 
         <section class="about" aria-labelledby="about-title">
           <h3 id="about-title">Informazioni</h3>
-          <p>App personale e non ufficiale, senza legami con Formula 1, FIA, Dorna, MotoGP o WorldSBK. Nomi e marchi appartengono ai rispettivi proprietari.</p>
-          <p>Dati: Jolpica, OpenF1, MotoGP.com, WorldSBK.com. Possono contenere errori o ritardi.</p>
-          <p><a href="https://github.com/RikicraftYT/Paddock" target="_blank" rel="noopener">Codice su GitHub</a> · licenza MIT</p>
+          <p>App personale e non ufficiale. I dati possono arrivare in ritardo o contenere errori.</p>
+          <p>Dettagli su dati, privacy e licenze in fondo alla pagina.</p>
         </section>
       </div>
       <div class="dialog-actions">

@@ -493,6 +493,32 @@ legend { font-weight: 700; margin-bottom: var(--s2); padding: 0; }
 .season-row.is-current .name { font-weight: 800; }
 .season-row.is-current .season-round { color: var(--accent-text); }
 
+/* ---------- Footer: note su dati, privacy e licenze ---------- */
+.site-footer {
+  margin-top: 3rem; padding: var(--s5) var(--s1) 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem; line-height: 1.5;
+  max-width: 44rem;
+}
+.site-footer b { color: var(--text); font-weight: 600; }
+.site-footer a { color: var(--accent-text); font-weight: 600; text-underline-offset: 3px; }
+.site-footer code { font-size: .8rem; }
+.footer-lead { margin: 0 0 var(--s3); }
+.site-footer details { border-bottom: 1px solid var(--line); }
+.site-footer summary {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: var(--tap);
+  color: var(--text); font-weight: 600; cursor: pointer;
+  list-style: none;
+}
+.site-footer summary::-webkit-details-marker { display: none; }
+.site-footer summary::after { content: "+"; font-size: 1.2rem; color: var(--muted); }
+.site-footer details[open] summary::after { content: "−"; }
+.site-footer ul { margin: 0 0 var(--s4); padding-left: 1.1rem; }
+.site-footer li + li { margin-top: var(--s2); }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1) var(--s2); margin: var(--s3) 0 0; }
+.footer-links a { display: inline-flex; align-items: center; min-height: var(--tap); }
+
 /* ---------- Movimento ridotto ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
