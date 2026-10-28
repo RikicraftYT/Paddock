@@ -38,8 +38,9 @@
   const RETRY = { label: 'Riprova', attr: 'data-retry' };
   const DEFAULT_FILTER = { practice: true, quali: true, sprint: true, race: true };
 
-  // Campionati mostrati in "Prossimi": per la MotoGP solo la classe regina
-  const UPCOMING_SERIES = ['f1', 'motogp', 'sbk'];
+  // Campionati che si possono mostrare in "Prossimi" (scelta nelle Impostazioni, tutti attivi all'inizio)
+  const UPCOMING_ALL = ['f1', 'motogp', 'moto2', 'moto3', 'sbk'];
+  const upcomingSeries = () => UPCOMING_ALL.filter(id => state.upcoming[id] !== false);
   const UPCOMING_DAYS = 7;
 
   /* ---------------- Stato (le preferenze restano salvate sul telefono) ---------------- */
@@ -48,6 +49,7 @@
     classBy: store.get('paddock:class') || {},           // classe scelta per gruppo, es. { moto: 'moto2' }
     view: 'upcoming',                                     // l'app si apre sempre su "Prossimi"
     filter: { ...DEFAULT_FILTER, ...(store.get('paddock:filter') || {}) },
+    upcoming: store.get('paddock:upcoming') || {},       // campionati nascosti in "Prossimi", es. { moto3: false }
     theme: store.get('paddock:theme') || 'auto',
     weekendBy: {},          // weekend scelto per gruppo, uguale per tutte le classi (assente = quello attuale)
     sessionIdx: null,       // sessione aperta (null = nessuna scelta esplicita)
@@ -183,7 +185,7 @@
     const limit = now + UPCOMING_DAYS * DAY;
     const live = [], items = [], later = [], failed = [];
 
-    UPCOMING_SERIES.forEach(id => {
+    upcomingSeries().forEach(id => {
       const s = Paddock.series[id];
       const d = state.data[id];
       if (!d) { failed.push(s); return; }
@@ -304,12 +306,12 @@
     renderChrome();
 
     if (state.view === 'upcoming') {
-      if (force || UPCOMING_SERIES.some(id => !state.data[id])) {
+      if (force || upcomingSeries().some(id => !state.data[id])) {
         $app.innerHTML = V.skeleton(8);
         announce('Caricamento');
       }
       // Ognuno per conto suo: se un campionato non risponde, gli altri si vedono lo stesso
-      await Promise.all(UPCOMING_SERIES.map(id => ensureCalendar(id, force).catch(err => console.error(err))));
+      await Promise.all(upcomingSeries().map(id => ensureCalendar(id, force).catch(err => console.error(err))));
       if (state.view === 'upcoming') render();
       return;
     }
@@ -375,7 +377,7 @@
     $refresh.classList.add('spinning');
     $refresh.setAttribute('aria-busy', 'true');
     Paddock.cache.clearRecent();
-    const ids = state.view === 'upcoming' ? UPCOMING_SERIES : [seriesId()];
+    const ids = state.view === 'upcoming' ? upcomingSeries() : [seriesId()];
     ids.forEach(id => { delete state.data[id]; delete state.standings[id]; });
     await show(true);       // il weekend scelto resta: lo ripristina syncWeekend
     $refresh.classList.remove('spinning');
@@ -506,6 +508,7 @@
 
   function openSettings() {
     $dialog.querySelectorAll('#filter-set input').forEach(i => { i.checked = !!state.filter[i.name]; });
+    $dialog.querySelectorAll('#upcoming-set input').forEach(i => { i.checked = state.upcoming[i.name] !== false; });
     $dialog.querySelectorAll('#theme-set input').forEach(i => { i.checked = i.value === state.theme; });
     $dialog.showModal();
   }
@@ -515,6 +518,11 @@
     if (input.closest('#filter-set')) {
       state.filter[input.name] = input.checked;
       store.set('paddock:filter', state.filter);
+    }
+    if (input.closest('#upcoming-set')) {
+      state.upcoming[input.name] = input.checked;
+      store.set('paddock:upcoming', state.upcoming);
+      if (state.view === 'upcoming') { show(); return; }      // carica i calendari appena attivati
     }
     if (input.name === 'theme') {
       state.theme = input.value;
