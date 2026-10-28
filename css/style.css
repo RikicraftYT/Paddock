@@ -1,0 +1,385 @@
+/* ==========================================================
+   Paddock — stile
+   - Tutte le misure in rem: il testo segue la dimensione scelta
+     nelle impostazioni dell'iPhone (Dimensione testo / Testo più grande).
+   - Tema chiaro e scuro: automatico, oppure scelto nelle impostazioni.
+   - Colori verificati per contrasto minimo 4,5:1 (WCAG AA).
+   - Da 960 px in su (computer, iPad orizzontale) layout a due colonne.
+   I colori del campionato (--accent, --on-accent, --accent-text) li
+   imposta js/app.js in base al campionato selezionato.
+   ========================================================== */
+
+/* ---------- Colori: tema scuro (predefinito) ---------- */
+:root {
+  color-scheme: dark;
+  --bg: #0e0e10;
+  --surface: #18181c;
+  --surface-2: #222228;
+  --line: #2a2a31;
+  --text: #f2f2f4;
+  --muted: #a3a3ad;
+  --live: #3ddc84;
+
+  --accent: #e10600;          /* sfondo pulsante attivo */
+  --on-accent: #ffffff;       /* testo sopra --accent */
+  --accent-text: var(--accent-text-dark, #ff5a4f);   /* accento usato come colore del testo */
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --gutter: 1rem;
+  --tap: 44px;                /* area minima da toccare (Apple HIG) */
+}
+
+/* ---------- Tema chiaro ---------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f2f2f5;
+  --surface: #ffffff;
+  --surface-2: #e9e9ee;
+  --line: #e1e1e7;
+  --text: #16161a;
+  --muted: #5c5c66;
+  --live: #087236;
+  --accent-text: var(--accent-text-light, #c10500);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #f2f2f5;
+    --surface: #ffffff;
+    --surface-2: #e9e9ee;
+    --line: #e1e1e7;
+    --text: #16161a;
+    --muted: #5c5c66;
+    --live: #087236;
+    --accent-text: var(--accent-text-light, #c10500);
+  }
+}
+
+/* ---------- Testo che segue le impostazioni dell'iPhone ---------- */
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+@supports (font: -apple-system-body) {
+  @media (hover: none) and (pointer: coarse) {
+    html { font: -apple-system-body; }
+  }
+}
+@media (min-width: 960px) { html { font-size: 106.25%; } }   /* 17 px sul computer */
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: env(safe-area-inset-top) var(--gutter) calc(2rem + env(safe-area-inset-bottom));
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 960px) { body { padding-left: 2rem; padding-right: 2rem; } }
+
+[hidden] { display: none !important; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+h1, h2, h3 { margin: 0; letter-spacing: -0.01em; }
+
+:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 2px; border-radius: 8px; }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip { position: absolute; left: -9999px; top: 0; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 50; background: var(--surface); padding: .75rem 1rem; border-radius: var(--radius-md); }
+
+/* ---------- Barra superiore ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  padding: .75rem 0 .5rem;
+  background: var(--bg);
+}
+.topbar-row { display: flex; align-items: center; gap: .5rem; }
+.topbar-row + .topbar-row { margin-top: .5rem; flex-wrap: wrap; }
+
+.brand { display: none; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.25rem; margin-right: 1rem; }
+.brand-dot { width: .7rem; height: .7rem; border-radius: 50%; background: var(--accent); }
+@media (min-width: 960px) { .brand { display: inline-flex; } }
+
+/* Gruppo di pulsanti a scelta singola (campionato, classe, sezione) */
+.seg {
+  display: flex; gap: 2px;
+  padding: 3px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+}
+.seg button {
+  flex: 1;
+  display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+  min-height: calc(var(--tap) - 6px);
+  padding: 0 .9rem;
+  border-radius: 9px;
+  font-weight: 600; font-size: .95rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.seg button:hover { color: var(--text); }
+.seg button svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+.topbar-row:first-child { flex-wrap: wrap; row-gap: .5rem; }
+.seg-main { flex: 1 1 auto; }
+.seg-main button { padding: 0 .5rem; min-width: max-content; }
+.actions { display: flex; gap: .5rem; margin-left: auto; }   /* con testo grande vanno a capo insieme, a destra */
+@media (min-width: 960px) { .seg-main { flex: 0 1 26rem; } }
+.seg-sub button { font-size: .9rem; }
+.seg-sub button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
+
+.icon-btn {
+  display: grid; place-items: center;
+  width: var(--tap); height: var(--tap); flex: none;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text);
+}
+.icon-btn svg { width: 1.25rem; height: 1.25rem; }
+.icon-btn:hover { background: var(--surface-2); }
+.btn-label { display: none; }
+@media (min-width: 960px) {
+  .icon-btn { width: auto; grid-auto-flow: column; gap: .45rem; padding: 0 .9rem; font-weight: 600; font-size: .9rem; }
+  .btn-label { display: inline; }
+}
+
+/* Telefono: Gare · Mondiale in una barra in basso, a portata di pollice */
+@media (max-width: 959px) {
+  .topbar-sub { margin-top: 0 !important; }
+  .topbar-sub #classes { margin-top: .5rem; flex: 1; }
+  #views {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    padding: .35rem .75rem calc(.35rem + env(safe-area-inset-bottom));
+    border-radius: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+  #views button { flex-direction: column; gap: .15rem; min-height: 3.25rem; font-size: .8rem; }
+  #views button svg { width: 1.4rem; height: 1.4rem; }
+  #views button[aria-pressed="true"] { background: none; color: var(--accent-text); }
+  body { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+}
+.icon-btn.spinning svg { animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Layout: una colonna, due colonne da 960 px ---------- */
+.layout { display: block; }
+@media (min-width: 960px) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(20rem, 26rem) 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .pane-detail { position: sticky; top: 8.5rem; }
+}
+
+/* ---------- Navigazione tra weekend ---------- */
+.round-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: .5rem 0 .25rem;
+  color: var(--muted); font-size: .9rem;
+}
+.arrow {
+  width: var(--tap); height: var(--tap);
+  display: grid; place-items: center;
+  border-radius: var(--radius-md);
+  font-size: 1.6rem; line-height: 1;
+  color: var(--text);
+}
+.arrow:hover:not(:disabled) { background: var(--surface); }
+.arrow:disabled { color: var(--line); cursor: default; }
+
+/* ---------- Intestazione weekend ---------- */
+.hero { display: flex; align-items: center; gap: 1rem; padding: .5rem .25rem 1rem; }
+.hero .flag { font-size: 3rem; line-height: 1; flex: none; }
+.hero h1 { font-size: 1.6rem; margin: 0 0 .2rem; line-height: 1.2; }
+.hero h1:focus { outline: none; }
+.today-btn { display: block; margin: 0 auto .25rem; }
+
+/* Riquadro "prossima sessione" */
+.next-up {
+  display: grid; gap: .1rem;
+  margin-bottom: 1.25rem; padding: 1rem 1.1rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border-left: 5px solid var(--accent);
+}
+.next-up .next-label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+.next-up b { font-size: 1.3rem; }
+.next-up span { color: var(--muted); }
+.next-up .count { color: var(--text); font-weight: 700; font-size: 1.05rem; margin-top: .2rem; }
+.next-up.is-live { border-left-color: var(--live); }
+.next-up.is-live .next-label { color: var(--live); }
+.next-up.is-live .next-label::before { content: "● "; }
+
+/* Sessioni raggruppate per giorno */
+.day-group + .day-group { margin-top: 1rem; }
+.day-head {
+  margin: 0 0 .4rem .25rem;
+  font-size: .85rem; font-weight: 700;
+  color: var(--muted); letter-spacing: .02em;
+}
+.day-head::first-letter { text-transform: uppercase; }
+.hero p { margin: .15rem 0; color: var(--muted); font-size: .95rem; }
+
+/* ---------- Liste e card ---------- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.list { list-style: none; margin: 0; padding: 0; }
+.list li + li { border-top: 1px solid var(--line); }
+
+/* Riga sessione */
+.sess {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3.4rem minmax(0, 1fr) auto auto;
+  align-items: center; gap: .75rem;
+  min-height: 3.5rem;
+  padding: .7rem 1rem;
+  text-align: left;
+  border-left: 4px solid transparent;
+}
+.sess:hover { background: var(--surface-2); }
+.sess .time { font-variant-numeric: tabular-nums; font-weight: 700; }
+.sess .name { font-weight: 500; grid-column: 2; }
+.sess .badge {
+  grid-column: 3;
+  padding: .2rem .6rem; border-radius: 999px;
+  font-size: .8rem; font-weight: 600; white-space: nowrap;
+  background: var(--surface-2); color: var(--text);
+}
+.sess .chev { grid-column: 4; color: var(--muted); font-size: 1.3rem; line-height: 1; }
+
+.sess.is-race .name { font-weight: 800; }                    /* gare in evidenza */
+.sess.done .time { color: var(--muted); font-weight: 500; }
+.sess.live .badge { color: var(--live); font-weight: 700; }
+.sess.live .badge::before { content: "● "; }
+
+.sess.is-next { border-left-color: var(--accent); background: var(--surface-2); background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
+.sess.is-next .badge { background: var(--accent); color: var(--on-accent); }
+
+.sess[aria-current="true"] { background: var(--surface-2); border-left-color: var(--accent-text); }
+
+.filter-note {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  margin: .75rem .25rem 0;
+  color: var(--muted); font-size: .9rem;
+}
+.link-btn {
+  min-height: var(--tap); padding: 0 .5rem;
+  color: var(--accent-text); font-weight: 600;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* ---------- Dettaglio sessione ---------- */
+.back {
+  display: inline-flex; align-items: center; gap: .25rem;
+  min-height: var(--tap); padding-right: .75rem;
+  color: var(--accent-text); font-weight: 600;
+}
+@media (min-width: 960px) { .back { display: none; } }
+
+.detail-head { margin: .25rem 0 1rem; }
+.detail-head h1, .detail-head h2 { font-size: 1.6rem; line-height: 1.2; }
+.detail-head p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+.detail-head .eyebrow { margin: 0 0 .25rem; font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+@media (min-width: 960px) { .detail-head { margin-top: 3.5rem; } }
+
+/* ---------- Tabelle (classifiche) ---------- */
+.board { width: 100%; border-collapse: collapse; }
+.board td { padding: .65rem 1rem; vertical-align: middle; }
+.board th {
+  padding: .6rem 1rem; text-align: left;
+  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); border-bottom: 1px solid var(--line);
+}
+.board th.val, .board th.pts { text-align: right; }
+.board th:nth-child(2) { padding-left: 1.6rem; }
+.board tr + tr td { border-top: 1px solid var(--line); }
+.board .pos {
+  width: 3rem; padding-right: 0;
+  text-align: right; font-weight: 700; font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.board tbody tr:nth-child(-n+3) .pos { color: var(--text); }
+.board .who { position: relative; padding-left: 1.6rem; }
+.board .who::before {                                   /* barra colore costruttore */
+  content: ""; position: absolute; left: .75rem; top: .6rem; bottom: .6rem;
+  width: 4px; border-radius: 2px; background: var(--team, var(--line));
+}
+.board .who b { display: block; font-weight: 600; }
+.board .who small { display: block; color: var(--muted); font-size: .85rem; }
+.board .val { text-align: right; font-variant-numeric: tabular-nums; font-size: .95rem; white-space: nowrap; }
+.board .val.out { color: var(--muted); }
+.board .pts { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.board .pts small { font-weight: 500; color: var(--muted); font-size: .8rem; }
+
+/* ---------- Classifica mondiale ---------- */
+.page-head { margin: 1rem 0; }
+.page-head h1 { font-size: 1.6rem; }
+.page-head p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+.standings-tabs { margin-bottom: 1rem; max-width: 24rem; }
+.tables { display: grid; gap: 1.25rem; }
+.tables h2 { font-size: 1.15rem; margin: 0 0 .6rem .25rem; }
+.tables .note { margin: .5rem .25rem 0; color: var(--muted); font-size: .85rem; }
+/* sul telefono il titolo della tabella c'è già nei pulsanti: resta solo per VoiceOver */
+@media (max-width: 959px) {
+  .tables h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tables section.is-off { display: none; }
+}
+@media (min-width: 960px) {
+  .standings-tabs { display: none; }
+  .tables { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); align-items: start; }
+}
+
+/* ---------- Messaggi ---------- */
+.msg { text-align: center; color: var(--muted); padding: 2.5rem 1.25rem; line-height: 1.5; }
+.msg b { display: block; margin-bottom: .4rem; color: var(--text); font-size: 1.1rem; }
+.msg p { margin: 0 auto; max-width: 34rem; }
+.msg .btn { margin-top: 1.25rem; }
+.source { text-align: center; color: var(--muted); font-size: .8rem; margin-top: .9rem; }
+
+/* ---------- Impostazioni ---------- */
+dialog {
+  width: min(28rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 0; border-radius: var(--radius-lg);
+  background: var(--surface); color: var(--text);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+dialog::backdrop { background: rgba(0,0,0,.55); }
+.dialog-body { padding: 1.25rem; }
+.dialog-body h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+fieldset { border: 0; padding: 0; margin: 0 0 1.25rem; }
+legend { font-weight: 700; margin-bottom: .5rem; padding: 0; }
+.hint { color: var(--muted); font-size: .85rem; margin: -.25rem 0 .5rem; }
+.opt {
+  display: flex; align-items: center; gap: .75rem;
+  min-height: var(--tap); padding: 0 .25rem;
+  border-radius: 10px; cursor: pointer;
+}
+.opt:hover { background: var(--surface-2); }
+.opt input { width: 1.25rem; height: 1.25rem; accent-color: var(--accent); margin: 0; }
+.dialog-actions { display: flex; justify-content: flex-end; padding: 0 1.25rem 1.25rem; }
+.btn {
+  min-height: var(--tap); padding: 0 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--accent); color: var(--on-accent); font-weight: 700;
+}
+
+/* ---------- Movimento ridotto ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

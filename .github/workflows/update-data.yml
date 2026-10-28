@@ -1,0 +1,44 @@
+# Robot dei dati di Paddock
+# Ogni 15 minuti scarica MotoGP e Superbike e salva i file in data/.
+# Fa un commit solo se qualcosa è cambiato.
+# Si può lanciare anche a mano: scheda "Actions" > "Aggiorna dati" > "Run workflow".
+
+name: Aggiorna dati
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Scarica i dati
+        run: node scripts/update-data.mjs
+
+      - name: Salva le modifiche
+        run: |
+          git config user.name "paddock-bot"
+          git config user.email "paddock-bot@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Nessuna novità."
+          else
+            git commit -m "Aggiorna dati $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          fi
