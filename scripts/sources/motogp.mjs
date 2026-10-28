@@ -85,8 +85,9 @@ const LIVERY = [
   ['intact', '#1F5AA6'],
 ];
 
-// MotoGP: colori scelti a mano, con la precedenza su quelli del servizio.
-// L'ordine conta: prima le squadre satellite, poi le case ("gresini" va prima di "ducati").
+// Colori scelti a mano per classe, con la precedenza su quelli del servizio.
+// Si cercano parole del nome della squadra (senza spazi e accenti); vince la prima trovata,
+// quindi l'ordine conta: prima le squadre satellite, poi le case ("gresini" va prima di "ducati").
 const MOTOGP_COLORS = [
   ['gresini', '#92A8D1'],
   ['vr46', '#CCFF00'],
@@ -101,16 +102,54 @@ const MOTOGP_COLORS = [
   ['honda', '#D01012'],
 ];
 
+const MOTO2_COLORS = [
+  ['pramac', '#1B3C9B'],
+  ['intact', '#D4D7DB'],
+  ['aspar', '#00A3A3'],
+  ['speedup', '#A0A4DA'],
+  ['speedrs', '#A0A4DA'],       // Speed Up con il nome nuovo
+  ['klint', '#72CEAE'],
+  ['forward', '#72CEAE'],
+  ['gresini', '#383C3F'],
+  ['italtrans', '#1072BA'],
+  ['teamasia', '#FFFFFF'],
+  ['americanracing', '#1035A3'],
+  ['idrofoglia', '#ED4E23'],
+  ['sic58', '#2B9DC3'],
+  ['msi', '#D30027'],
+  ['marcvds', '#C0C5CA'],
+  ['ajo', '#EE5913'],
+  ['fantic', '#5E172B'],
+];
+
+const MOTO3_COLORS = [
+  ['aspar', '#18A0A2'],
+  ['ajo', '#EA5B0C'],
+  ['tech3', '#EA5B0C'],
+  ['gryd', '#3C82B3'],
+  ['mlav', '#3C82B3'],
+  ['levelup', '#BD2745'],
+  ['teamasia', '#FFFFFF'],
+  ['cipgreen', '#76D254'],
+  ['msi', '#E62B32'],
+  ['intact', '#555B62'],
+  ['leopard', '#78D5CB'],
+  ['boemotorsports', '#E62B32'],
+  ['sic58', '#E62B32'],
+  ['rivacold', '#E5DB18'],
+  ['snipers', '#E5DB18'],
+];
+
+const CLASS_COLORS = { motogp: MOTOGP_COLORS, moto2: MOTO2_COLORS, moto3: MOTO3_COLORS };
+
 // Parole che non aiutano a riconoscere una squadra
 const STOP = new Set(['team', 'racing', 'motogp', 'moto2', 'moto3', 'the']);
 const words = s => String(s).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 1 && !STOP.has(w));
-const compact = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
+const compact = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
 
 function teamColor(t, classId) {
-  if (classId === 'motogp') {
-    const own = MOTOGP_COLORS.find(([k]) => compact(t.name).includes(k));
-    if (own) return own[1];
-  }
+  const own = (CLASS_COLORS[classId] || []).find(([k]) => compact(t.name).includes(k));
+  if (own) return own[1];
   const c = String(t.color || '').toLowerCase();
   if (/^#[0-9a-f]{6}$/.test(c) && c !== NO_COLOR) return c.toUpperCase();
   const hit = LIVERY.find(([k]) => compact(t.name).includes(k));
