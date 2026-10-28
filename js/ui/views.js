@@ -275,7 +275,7 @@
     sessionShell(weekend, session, seriesName, level = 2) {
       const h = level === 1 ? 'h1' : 'h2';
       return `
-        <button type="button" class="back" data-back>‹ ${esc(weekend.name)}</button>
+        <button type="button" class="back" data-back aria-label="${esc(`Indietro, torna a ${weekend.name}`)}"><span aria-hidden="true">‹</span> Indietro</button>
         <div class="detail-head">
           <p class="eyebrow">${esc(seriesName)} · ${esc(KIND_IT[session.kind] || '')}</p>
           <${h} id="detail-title" tabindex="-1">${esc(session.label)}</${h}>

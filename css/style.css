@@ -354,11 +354,15 @@ h1:focus, h2:focus { outline: none; }
 }
 
 /* ---------- Dettaglio sessione ---------- */
-.back {
-  display: inline-flex; align-items: center; gap: .25rem;
-  min-height: var(--tap); padding-right: var(--s3);
-  color: var(--accent-text); font-weight: 600;
+.back {                                     /* pillola neutra: si distingue dal colore del campionato */
+  display: inline-flex; align-items: center; gap: .35rem;
+  min-height: var(--tap); padding: 0 1rem 0 .75rem;
+  border-radius: 999px;
+  background: var(--surface-2); color: var(--text);
+  font-weight: 700;
 }
+.back span { font-size: 1.3rem; line-height: 1; margin-top: -.1rem; }
+.back:hover { background: var(--line); }
 @media (min-width: 960px) { .back { display: none; } }
 
 .detail-head { margin: var(--s1) 0 var(--s4); }
@@ -393,7 +397,7 @@ h1:focus, h2:focus { outline: none; }
 .board .who b { display: block; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .board .who small { display: block; color: var(--muted); font-size: .8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .board .val, .board .pts { width: 7rem; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.board .val { font-size: .95rem; }
+.board td.val { font-size: .95rem; }
 .board .val.out { color: var(--muted); }
 .board .pts { font-weight: 700; }
 .board .gap { display: block; font-weight: 500; color: var(--muted); font-size: .8rem; }
