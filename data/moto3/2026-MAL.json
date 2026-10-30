@@ -1,0 +1,212 @@
+{
+ "weekend": "2026-MAL",
+ "sessions": {
+  "FP1": {
+   "final": false,
+   "source": "MotoGP.com",
+   "rows": [
+    {
+     "pos": 1,
+     "name": "Alvaro Carpe",
+     "team": "Red Bull KTM Ajo",
+     "color": "#F05C06",
+     "value": "2:11.585",
+     "out": false
+    },
+    {
+     "pos": 2,
+     "name": "Maximo Quiles",
+     "team": "CFMOTO Gaviota Aspar Team",
+     "color": "#0EA9AF",
+     "value": "+0.129",
+     "out": false
+    },
+    {
+     "pos": 3,
+     "name": "Marco Morelli",
+     "team": "CFMOTO Gaviota Aspar Team",
+     "color": "#0EA9AF",
+     "value": "+0.135",
+     "out": false
+    },
+    {
+     "pos": 4,
+     "name": "Veda Pratama",
+     "team": "Honda Team Asia",
+     "color": "#FFFFFF",
+     "value": "+0.234",
+     "out": false
+    },
+    {
+     "pos": 5,
+     "name": "Hakim Danish",
+     "team": "AEON Credit - MT Helmets - MSI",
+     "color": "#F02D35",
+     "value": "+0.249",
+     "out": false
+    },
+    {
+     "pos": 6,
+     "name": "Joel Kelso",
+     "team": "GRYD Racing",
+     "color": "#4692C1",
+     "value": "+0.256",
+     "out": false
+    },
+    {
+     "pos": 7,
+     "name": "Rico Salmela",
+     "team": "Red Bull KTM Tech3",
+     "color": "#CA4E05",
+     "value": "+0.280",
+     "out": false
+    },
+    {
+     "pos": 8,
+     "name": "Scott Ogden",
+     "team": "CIP Green Power",
+     "color": "#7EDC62",
+     "value": "+0.578",
+     "out": false
+    },
+    {
+     "pos": 9,
+     "name": "Brian Uriarte",
+     "team": "Red Bull KTM Ajo",
+     "color": "#F05C06",
+     "value": "+0.688",
+     "out": false
+    },
+    {
+     "pos": 10,
+     "name": "Kiattisak Singhapong",
+     "team": "Rivacold Snipers Team",
+     "color": "#F7EC09",
+     "value": "+0.698",
+     "out": false
+    },
+    {
+     "pos": 11,
+     "name": "Adrian Fernandez",
+     "team": "Leopard Racing",
+     "color": "#80D3CE",
+     "value": "+0.723",
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "Jesus Rios",
+     "team": "Rivacold Snipers Team",
+     "color": "#F7EC09",
+     "value": "+0.741",
+     "out": false
+    },
+    {
+     "pos": 13,
+     "name": "Ryusei Yamanaka",
+     "team": "AEON Credit - MT Helmets - MSI",
+     "color": "#F02D35",
+     "value": "+0.812",
+     "out": false
+    },
+    {
+     "pos": 14,
+     "name": "Zen Mitani",
+     "team": "Honda Team Asia",
+     "color": "#FFFFFF",
+     "value": "+0.827",
+     "out": false
+    },
+    {
+     "pos": 15,
+     "name": "David Muñoz",
+     "team": "Liqui Moly Dynavolt Intact GP",
+     "color": "#525354",
+     "value": "+0.849",
+     "out": false
+    },
+    {
+     "pos": 16,
+     "name": "Guido Pini",
+     "team": "Leopard Racing",
+     "color": "#80D3CE",
+     "value": "+1.047",
+     "out": false
+    },
+    {
+     "pos": 17,
+     "name": "David Almansa",
+     "team": "Liqui Moly Dynavolt Intact GP",
+     "color": "#525354",
+     "value": "+1.121",
+     "out": false
+    },
+    {
+     "pos": 18,
+     "name": "Casey O'gorman",
+     "team": "SIC58 Squadra Corse",
+     "color": "#D20F2A",
+     "value": "+1.228",
+     "out": false
+    },
+    {
+     "pos": 19,
+     "name": "Matteo Bertelle",
+     "team": "LEVEL UP - MTA",
+     "color": "#D04051",
+     "value": "+1.302",
+     "out": false
+    },
+    {
+     "pos": 20,
+     "name": "Valentin Perrone",
+     "team": "Red Bull KTM Tech3",
+     "color": "#CA4E05",
+     "value": "+1.421",
+     "out": false
+    },
+    {
+     "pos": 21,
+     "name": "Ruche Moodley",
+     "team": "CODE Motorsports",
+     "color": "#D90526",
+     "value": "+1.570",
+     "out": false
+    },
+    {
+     "pos": 22,
+     "name": "Joel Esteban",
+     "team": "LEVEL UP - MTA",
+     "color": "#D04051",
+     "value": "+1.573",
+     "out": false
+    },
+    {
+     "pos": 23,
+     "name": "Eddie O'shea",
+     "team": "GRYD Racing",
+     "color": "#4692C1",
+     "value": "+1.846",
+     "out": false
+    },
+    {
+     "pos": 24,
+     "name": "Leo Rammerstorfer",
+     "team": "SIC58 Squadra Corse",
+     "color": "#D20F2A",
+     "value": "+1.850",
+     "out": false
+    },
+    {
+     "pos": 25,
+     "name": "Adrian Cruces",
+     "team": "CIP Green Power",
+     "color": "#7EDC62",
+     "value": "+1.858",
+     "out": false
+    }
+   ]
+  }
+ },
+ "updatedAt": "2026-10-30T02:59:32.400Z"
+}
