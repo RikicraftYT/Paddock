@@ -692,7 +692,7 @@
    ]
   },
   "Q1": {
-   "final": false,
+   "final": true,
    "source": "MotoGP.com",
    "rows": [
     {
@@ -810,7 +810,7 @@
    ]
   },
   "Q2": {
-   "final": false,
+   "final": true,
    "source": "MotoGP.com",
    "rows": [
     {
@@ -960,5 +960,5 @@
    ]
   }
  },
- "updatedAt": "2026-10-31T06:48:51.755Z"
+ "updatedAt": "2026-10-31T13:28:15.908Z"
 }
