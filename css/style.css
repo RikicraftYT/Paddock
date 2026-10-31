@@ -532,7 +532,8 @@ legend { font-weight: 700; margin-bottom: var(--s2); padding: 0; }
   border-bottom: 1px solid var(--line);
 }
 .sheet-head h2 { font-size: 1.15rem; }
-.season-list { flex: 1; min-height: 0; overflow-y: auto; }
+/* flex-basis auto, non 0%: Safari su iPhone schiaccia a 0 la lista se la finestra ha solo max-height */
+.season-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .season-row {
   width: 100%;
   display: grid; grid-template-columns: 1.75rem auto minmax(0, 1fr);
